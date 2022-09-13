@@ -1,0 +1,376 @@
+@font-face {
+    font-family: oxyBold;
+    src: url(Oxygen-Bold.ttf);
+  }
+ 
+  @font-face {
+    font-family: oxyLight;
+    src: url(Oxygen-Light.ttf);
+  }
+ 
+  @font-face {
+    font-family: oxyRegular;
+    src: url(Oxygen-Regular.ttf);
+  }
+ 
+
+
+body
+{
+    background-color: #E5EBF1;
+}
+
+h2
+{
+    font-family: oxyBold;
+    color: #404e5c;
+    text-transform: uppercase;  
+    font-size: 20px !important;
+    line-height: 30px;
+    
+}
+
+h4
+{
+    font-family: oxyBold;
+    color: #404e5c;
+    text-transform: uppercase;  
+    font-size: 16px !important;
+    line-height: 20px;
+    
+}
+
+.searchbar-label
+{
+    font-family: oxyRegular;
+    color: #404e5c;
+    text-transform: uppercase;  
+    font-size: 14px !important;
+    font-weight: 500;
+    line-height: 26px;
+    
+}
+
+.view-all-text
+{
+    color: #404e5c;
+    font-size: 14px;
+    font-family: oxyRegular;
+    text-transform: capitalize;  
+
+
+}
+
+.view-all-text a
+{
+    text-decoration: none;
+    color: #404e5c;
+
+}
+
+.view-all-text a:hover
+{
+    color: black;
+}
+
+.heading-row-title
+{
+    margin-top: 50px;
+ 
+}
+
+.anime-grid-list-image
+{
+    border-radius: 10px;
+    width: 100%;
+    height: 94%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+
+}
+
+.anime-grid-list
+{
+    margin-top: 40px;
+}
+
+.anime-title-list-grid
+{
+    margin-top: 6%;
+    margin-bottom: 10%;
+
+    color: #404e5c;
+    font-size: 12px;
+    line-height: 16px;
+    font-family: oxyBold;
+    text-transform: capitalize;  
+}
+
+.anime-title-list-grid:hover
+{
+    color: black; 
+}
+
+.extra-padding-container
+{
+    padding-left: 4%;
+    padding-right: 4%;
+
+}
+
+.text-decor
+{
+    text-decoration: none;
+}
+
+
+.my-footer
+{
+    background-color: #2B2D42;
+    color: #E5EBF1;
+}
+
+.footer-color
+{
+    color: #E5EBF1;
+}
+
+.my-navbar
+{
+    margin-top: 2%;
+    background-color: #54229E;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+
+}
+
+.my-navbar-color-item
+{
+    color: whitesmoke !important;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: oxyRegular;
+    
+}
+
+.anime-detail-anime-cover-image
+{
+    border-radius: 10px;
+    width: 100%;
+    height: 90%;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+
+}
+
+.anime-detail-below-cover-genere
+{
+    margin-top:10px;
+    color: #404e5c;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: oxyRegular;
+}
+
+.anime-detail-anime-title-des-section
+{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 4%;
+}
+
+.anime-detail-anime-title
+{
+    color: #4B5961 !important;
+    font-size: 32px;
+    line-height: 46px;
+    font-family: oxyBold;
+}
+
+.anime-detail-anime-synopsis
+{
+    color: #4B5961 !important;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: oxyBold;
+}
+
+.anime-detail-anime-trailer
+{
+    color: #4B5961 !important;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: oxyBold;
+}
+
+.anime-detail-anime-des
+{
+    color: #4B5961 !important;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: oxyRegular;
+}
+
+.anime-detail-anime-cover img
+{
+
+    background-image: url('https://s4.anilist.co/file/anilistcdn/media/anime/banner/141391-JErChZ8G3b49.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 10% 0% 10% 0%;
+    opacity: 0.6;
+    filter: blur('12%');
+
+}
+
+
+.anime-detail-page-source-text 
+{
+    color: #4B5961 !important;
+    font-family: oxyRegular;
+    text-decoration: none;
+}
+
+
+.anime-detail-page-source-text a
+{
+    color: #4B5961 !important;
+    font-family: oxyRegular;
+    text-decoration: none;
+}
+
+.anime-detail-news-card
+{
+    background: #FBFBFB;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    border-radius: 4px;
+    display: inline-grid;
+    height: 265px;
+    min-width: 370px;
+    padding:20px;
+    margin-bottom: 4%;
+}
+
+.detail-news-image
+{
+    width: 140px;
+    height: 230px;
+}
+
+.detail-news-title
+{
+    color: #4B5961 !important;
+    font-family: oxyBold;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+
+.detail-news-des
+{
+    color: #4B5961 !important;
+    font-family: oxyLight;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.deatil-news-date
+{
+    color: #4B5961 !important;
+    font-family: oxyBold;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+
+.anime-detail-info-grid
+{
+    background: #FBFBFB;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin:6px;    
+}
+
+.anime-detail-info-grid-title
+{
+    color: #4B5961 !important;
+    font-family: oxyBold;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.anime-detail-info-grid-text
+{
+    color: #4B5961 !important;
+    font-family: oxyLight;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* search page */
+
+.searched-item-row
+{
+    background: #FBFBFB;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    border-radius: 10px;
+    padding: 2%;
+    text-align: center;
+    margin:3% 6px 6px 6px;
+}
+
+
+.searched-item-image img
+{
+    width: 70px;
+    height: 100px;
+
+}
+
+.searched-item-title
+{
+    color: #4B5961 !important;
+    font-family: oxyBold;
+    font-size: 16px;
+    text-decoration: none !important;
+    
+}
+
+.searched-item-rating
+{
+    color: #4B5961 !important;
+    font-family: oxyLight;
+    font-size: 12px;
+    text-decoration: none !important;
+    
+}
+
+.searched-item-score
+{
+    color: #4B5961 !important;
+    font-family: oxyBold;
+    font-size: 14px;
+    text-decoration: none !important;
+    
+}
+
+.searched-item-type
+{
+    color: #4B5961 !important;
+    font-family: oxyBold;
+    font-size: 14px;
+    text-decoration: none !important;
+    
+}
+
+.searched-item-status
+{
+    color: #4B5961 !important;
+    font-family: oxyBold;
+    font-size: 14px;
+    text-decoration: none !important;
+    
+}
+/* search page */
