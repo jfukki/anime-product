@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
-
+use App\Models\AnimeView;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -70,6 +71,22 @@ class HomeController extends Controller
 
     public function animeDetail($id)
     {
+
+        // views counter
+        DB::table('anime_views')->where('anime_id', $id)->increment('views');
+
+        
+        $AnimeView = AnimeView::updateOrCreate(
+            ['anime_id' =>  $id]
+            
+
+        );
+ 
+        $animeViews = DB::table('anime_views')->where('anime_id', $id)->first();
+ 
+
+        // views counter
+
 
         $curl = curl_init();
 
@@ -240,7 +257,7 @@ class HomeController extends Controller
 
 
 
-        return view('animeDetail')->with('data', $data)->with('characters', $characters)->with('staff', $staff)->with('pictures', $pictures)->with('recommendations', $recommendations)->with('episodes', $episodes);
+        return view('animeDetail')->with('data', $data)->with('characters', $characters)->with('staff', $staff)->with('pictures', $pictures)->with('recommendations', $recommendations)->with('episodes', $episodes)->with('animeViews', $animeViews);
     }
 
 
@@ -248,12 +265,13 @@ class HomeController extends Controller
 
     public function searchAnime(Request $req)
     {
-       
+      $searchItem = $req->searchAnimeTitle;
         
+      
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-        CURLOPT_URL => 'https://api.jikan.moe/v4/top/anime?filter=bypopularity',
+        CURLOPT_URL => 'https://api.jikan.moe/v4/anime/?q='.$searchItem.'&limit=20',
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => '',
         CURLOPT_MAXREDIRS => 10,
@@ -274,7 +292,7 @@ class HomeController extends Controller
             $search =  $search['data'];
         }
 
-        return view('search')->with('search', $search);
+        return view('search')->with('search', $search)->with('searchItem', $searchItem);
 
     }
 

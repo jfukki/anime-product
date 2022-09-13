@@ -4,9 +4,12 @@
         <div class="col-md-3">
                 <div class="mb-3  ">
                     <label  class="form-label searchbar-label">Search</label>
-                    
+                   <form action="{{ route('search') }}" method="POST">
+                    @csrf
+                     
                     <input type="text" class="form-control" id="searchAnimeTitle" name="searchAnimeTitle"  placeholder="Search By Title">
                     
+                   </form>
                 </div>
                                 
                 <!-- <button type="submit" class="btn btn-primary">Submit</button> -->

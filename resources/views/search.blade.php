@@ -10,14 +10,16 @@
 
 <div class="container extra-padding-container ">
     <div class="row" >
-       <div class="col"> <h1>Searched For "Death Note"</h1>  </div>
+      @if(collect($searchItem)->isNotEmpty()) 
+      <div class="col"> <h1>Searched For "{{$searchItem}}"</h1>  </div>
+      @endif
     </div>
 
 </div>
 
  
 <div class="container ">
-
+@if(collect($search)->isNotEmpty())
 @foreach($search as $search)
     <div  class="row searched-item-row" >
         
@@ -43,6 +45,8 @@
     </div>
 
     @endforeach
+
+    @endif
 
 </div>
 

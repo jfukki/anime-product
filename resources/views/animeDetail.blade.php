@@ -14,11 +14,11 @@
                 </div>
 
                 <div>
-                    <h1 class="anime-detail-anime-title my-4">{{$data['titles'][0]['title']}}</h1>
+                    <h1 class="anime-detail-anime-title my-4">{{$data['title_english']}}</h1>
                     <hr>
                 </div>
-
-
+                
+               
                 <div>
                    <p class="anime-detail-below-cover-genere"> <b>Genres:</b> Action, Drama, Ecchi, Mystery, Psychological, Supernatural</p>
                    <p class="anime-detail-below-cover-genere"> <b>Producers:</b> Pony Canyon, TBS, DAX Production, BS-TBS, Shogakukan, Lawson, RAY, U-NEXT, Nichion</p>
@@ -34,6 +34,8 @@
                 <p>
                     <small class="anime-detail-page-source-text">Source: <a href="https://myanimelist.net/" target="_blank">My Anime List</a></small>
                 </p>
+                <hr>
+                <p class="anime-detail-page-views">{{$animeViews->views}} views</p>
                 </div>
             </div>
 
@@ -51,7 +53,7 @@
                 </div>
 
                 <div>
-                    <h1 class="anime-detail-anime-trailer my-5">Trailer(s)</h1>
+                    <h1 class="anime-detail-anime-trailer my-5">Trailer</h1>
                     <hr>
                 </div>
                
@@ -101,7 +103,7 @@
 
 
                     
-                    <div class="col-md-2 anime-detail-info-grid">
+                    <div class="col-md-3 anime-detail-info-grid">
 
                         <span class="anime-detail-info-grid-title">Aired: </span> <span class="anime-detail-info-grid-text">{{$data['aired']['string']}}</span>
 
@@ -117,7 +119,7 @@
 
 
                     
-                    <div class="col-md-2 anime-detail-info-grid">
+                    <div class="col-md-3 anime-detail-info-grid">
 
                         <span class="anime-detail-info-grid-title">Broadcast: </span> <span class="anime-detail-info-grid-text">{{$data['broadcast']['string']}}</span>
 
@@ -125,7 +127,7 @@
 
 
                     
-                    <div class="col-md-2 anime-detail-info-grid">
+                    <div class="col-md-3 anime-detail-info-grid">
 
                         <span class="anime-detail-info-grid-title">Rating: </span> <span class="anime-detail-info-grid-text">{{$data['rating']}}</span>
 
@@ -172,28 +174,31 @@
 
                        @if(collect($episodes)->isNotEmpty())
 
-                            @foreach($episodes as $episodes)
+                           @if(is_array($episodes) || is_object($episodes))
+                                @foreach($episodes as $episode)
 
                                     <div class="col-md-2 anime-grid-list">
 
-                                        <a href="{{$episodes['url']}}" target="_blank">
-                                        <img src="{{$episodes['images']['jpg']['image_url']}}"
+                                        <a href="{{$episode['url']}}" target="_blank">
+                                        <img src="{{$episode['images']['jpg']['image_url']}}"
                                         alt="" class="anime-grid-list-image">
                                         </a>
 
-                                        <a href="{{$episodes['url']}}" class="text-decor" target="_blank">
-                                            <p class="anime-title-list-grid">{{$episodes['episode']}}: {{$episodes['title']}}</p>
+                                        <a href="{{$episode['url']}}" class="text-decor" target="_blank">
+                                            <p class="anime-title-list-grid">{{$episode['episode']}}: {{$episode['title']}}</p>
                                             <br>
                                         </a>
                                         
 
                                     </div>
 
-                            @endforeach
+                                @endforeach
+
+                           @endif
 
                         @else
 
-                        <h2>Episodes not found</h2>
+                        <h2>Videos not found</h2>
 
 
                        @endif
@@ -273,7 +278,7 @@
 
 
  
- <div class="conatiner extra-padding-container-anime-detail">
+ <div class="conatiner extra-padding-container-anime-detail mb-5">
     <div class="row">
                         <div class="col-md-12">
                         <hr class="mt-5">

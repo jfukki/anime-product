@@ -25,6 +25,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/detail/{id}', [HomeController::class, 'animeDetail'])->name('animeDetail');
 
 Route::get('/search', [HomeController::class, 'searchAnime'])->name('search');
+Route::post('/search', [HomeController::class, 'searchAnime'])->name('search');
+
 Route::get('/browse', [BrowseController::class, 'index'])->name('browse');
 Route::get('/images', [BrowseController::class, 'randomImages'])->name('randomImages');
 
