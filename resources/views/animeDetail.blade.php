@@ -69,7 +69,7 @@
 
 
 
- <div class="conatiner extra-padding-container mt-5">
+ <div class="conatiner extra-padding-container-anime-detail mt-5">
     <div class="row ">
                     <div class="col-md-12 mt-5">
                       
@@ -161,7 +161,7 @@
 
 
 
- <div class="conatiner extra-padding-container">
+ <div class="conatiner extra-padding-container-anime-detail">
     <div class="row">
                         <div class="col-md-12">
                         <hr class="mt-5">
@@ -210,7 +210,7 @@
 
 
 
- <div class="conatiner extra-padding-container">
+ <div class="conatiner extra-padding-container-anime-detail">
     <div class="row">
                         <div class="col-md-12">
                         <hr class="mt-5">
@@ -247,7 +247,7 @@
 
 
 
- <div class="conatiner extra-padding-container">
+ <div class="conatiner extra-padding-container-anime-detail">
     <div class="row">
                         <div class="col-md-12">
                         <hr class="mt-5">
@@ -273,7 +273,7 @@
 
 
  
- <div class="conatiner extra-padding-container">
+ <div class="conatiner extra-padding-container-anime-detail">
     <div class="row">
                         <div class="col-md-12">
                         <hr class="mt-5">

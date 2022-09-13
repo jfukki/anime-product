@@ -278,8 +278,5 @@ class HomeController extends Controller
 
     }
 
-    public function browse()
-    {
-        return view ('browse');
-    }
+     
 }

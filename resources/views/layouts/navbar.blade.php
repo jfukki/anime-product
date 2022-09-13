@@ -11,6 +11,7 @@
             <li class="nav-item">
               <a class="nav-link my-navbar-color-item" href="{{ route('search')}}"  >Search</a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link my-navbar-color-item" href="{{route('browse')}}">Browse</a>
             </li>
@@ -19,6 +20,10 @@
               <a class="nav-link my-navbar-color-item" href="#">Anime List</a>
             </li>
              
+            <li class="nav-item">
+              <a class="nav-link my-navbar-color-item" href="{{route('randomImages')}}"> Anime Images</a>
+            </li>
+
           </ul>
           <!-- <form role="search">
             <input class="form-control" type="search" placeholder="Search" aria-label="Search">
