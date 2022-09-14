@@ -390,3 +390,124 @@ h4
     
 }
 /* search page */
+
+
+/* review module */
+
+.anime-review-list-card
+{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    margin-bottom: 14%;
+}
+
+.review-card-title
+{
+    color: #4B5961 !important;
+    font-family: oxyBold;
+    font-size: 16px !important;
+    text-decoration: none !important;
+}
+
+
+.review-card-description
+{
+    color: #1E1E1E !important;
+    font-family: oxyBold;
+    font-size: 14px !important;
+    text-decoration: none !important;
+}
+
+
+.review-card-username
+{
+    color: #1E1E1E !important;
+    font-family: oxyBold;
+    font-size: 14px !important;
+    text-decoration: none !important;
+}
+
+.review-card-like-thumbsup
+{
+    font-size: 16px;
+    color: #000;
+    font-family: oxyRegular;
+}
+
+.review-card-like-thumbsdown
+{
+    font-size: 16px;
+    padding-left: 10px;
+    color: #54229E;
+    font-family: oxyRegular;
+}
+
+.review-detail-page-featured-banner
+{
+    padding: 0%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+        
+}
+
+.review-detail-page-cards
+{
+    padding:2%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    text-align: center;
+    margin: 9px 16px 9px 16px;
+}
+
+.review-detail-card-value
+{
+    font-size: 24px;
+    color: #54229E;
+    font-family: oxyBold;
+}
+
+.review-detail-card-title
+{
+    font-size: 16px;
+    color: #1E1E1E ;
+    font-family: oxyRegular;
+}
+
+.review-section
+{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding:50px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+
+}
+
+
+.review-section-title
+{
+    color: #1E1E1E ;
+    font-family: oxyBold;
+}
+
+.review-section-username
+{
+    color: #1E1E1E ;
+    font-family: oxyRegular;
+    margin-bottom: 4%;
+    text-transform: capitalize;
+}
+
+
+
+.review-detail-likes-section
+{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+
+}
+/* review module */

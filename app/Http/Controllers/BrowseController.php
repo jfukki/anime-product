@@ -101,7 +101,7 @@ class BrowseController extends Controller
     public function randomImages()
     {
 
-        $randomId       =   rand(2,10000);
+        $randomId       =   rand(2,20000);
         
         $curl = curl_init();
 

@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BrowseController;
+use App\Http\Controllers\ReviewsController;
+
 
 
 /*
@@ -29,6 +31,10 @@ Route::post('/search', [HomeController::class, 'searchAnime'])->name('search');
 
 Route::get('/browse', [BrowseController::class, 'index'])->name('browse');
 Route::get('/images', [BrowseController::class, 'randomImages'])->name('randomImages');
+
+Route::get('/reviews', [ReviewsController::class, 'index'])->name('reviews');
+Route::get('/review-detail', [ReviewsController::class, 'reviewDetail'])->name('reviewDeail');
+
 
 
 

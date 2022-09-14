@@ -19,6 +19,7 @@
 
     
 @foreach($popularAnime as $d)
+@if(isset($popularAnime))    
     <div class="col anime-grid-list d-none d-md-block">
 
         <a href="{{ route('animeDetail' , $d['mal_id'])  }}">
@@ -30,6 +31,7 @@
         </a>
         
     </div>
+   @endif 
 @endforeach
 </div>
 
@@ -44,6 +46,8 @@
 
     
 @foreach($popularAnime as $d)
+@if(isset($popularAnime))    
+
     <div class="col anime-grid-list d-md-none ">
 
         <a href="{{ route('animeDetail' , $d['mal_id'])  }}">
@@ -55,6 +59,7 @@
         </a>
         
     </div>
+    @endif
 @endforeach
 </div>
 

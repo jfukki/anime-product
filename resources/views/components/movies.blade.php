@@ -19,6 +19,8 @@
 
     
 @foreach($movies as $d)
+@if(isset($movies))    
+
     <div class="col anime-grid-list d-none d-md-block mt-5">
 
         <a href="{{ route('animeDetail' , $d['mal_id'])  }}">
@@ -30,6 +32,7 @@
         </a>
         
     </div>
+    @endif
 @endforeach
 </div>
 
@@ -44,6 +47,8 @@
 
     
 @foreach($movies as $d)
+@if(isset($movies))    
+
     <div class="col anime-grid-list d-md-none ">
 
         <a href="{{ route('animeDetail' , $d['mal_id'])  }}">
@@ -55,6 +60,7 @@
         </a>
         
     </div>
+    @endif
 @endforeach
 </div>
 

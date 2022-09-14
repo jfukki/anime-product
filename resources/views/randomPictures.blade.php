@@ -21,6 +21,7 @@
 
     
 @foreach($randomAnime as $d)
+ @if(isset($d))
     <div class="col anime-grid-list d-none d-md-block">
 
         <a  >
@@ -30,6 +31,10 @@
         
         
     </div>
+    @else
+    <h2>Please Reload Again!</h2>
+    @endif
+
 @endforeach
 </div>
 

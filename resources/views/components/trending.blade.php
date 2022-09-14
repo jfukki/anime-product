@@ -19,17 +19,19 @@
 
     
 @foreach($data as $d)
-    <div class="col anime-grid-list d-none d-md-block">
+    @if(isset($data))    
+        <div class="col anime-grid-list d-none d-md-block">
 
-        <a href="{{ route('animeDetail' , $d['mal_id'])  }}">
-        <img src="{{$d['images']['jpg']['large_image_url']}}"
-        alt="" class="anime-grid-list-image">
-        </a>
-        <a href="{{ route('animeDetail' , $d['mal_id']) }}" class="text-decor">
-            <p class="anime-title-list-grid">{{$d['titles'][0]['title']}}</p>
-        </a>
-        
-    </div>
+            <a href="{{ route('animeDetail' , $d['mal_id'])  }}">
+            <img src="{{$d['images']['jpg']['large_image_url']}}"
+            alt="" class="anime-grid-list-image">
+            </a>
+            <a href="{{ route('animeDetail' , $d['mal_id']) }}" class="text-decor">
+                <p class="anime-title-list-grid">{{$d['titles'][0]['title']}}</p>
+            </a>
+            
+        </div>
+     @endif
 @endforeach
 </div>
 

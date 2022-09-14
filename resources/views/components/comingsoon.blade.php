@@ -18,20 +18,25 @@
 
         <div class="row row-cols-4">   
 
+   
         @foreach($upcomingSeason as $upcomingSeason)
 
-        <div class="col anime-grid-list d-none d-md-block">
+            @if(isset($upcomingSeason))    
 
-            <a href="{{ route('animeDetail' , $upcomingSeason['mal_id'])  }}">
-            <img src="{{$upcomingSeason['images']['jpg']['large_image_url']}}"
-             alt="" class="anime-grid-list-image">
-            </a>
+            <div class="col anime-grid-list d-none d-md-block">
 
-            <a href="" class="text-decor">
-                <p class="anime-title-list-grid">{{$upcomingSeason['titles'][0]['title']}}</p>
-            </a>
-            
-        </div>
+                <a href="{{ route('animeDetail' , $upcomingSeason['mal_id'])  }}">
+                <img src="{{$upcomingSeason['images']['jpg']['large_image_url']}}"
+                alt="" class="anime-grid-list-image">
+                </a>
+
+                <a href="" class="text-decor">
+                    <p class="anime-title-list-grid">{{$upcomingSeason['titles'][0]['title']}}</p>
+                </a>
+
+                </div>
+
+            @endif
 
         @endforeach
   
