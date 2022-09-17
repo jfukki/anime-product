@@ -2,15 +2,33 @@
 
 @section('content')
 
+
+<!-- Main Banner -->
+
+<div class="container">
+    <div class="row"><div class="col">
+        <img src="" alt="">
+    </div></div>
+</div>
+
+<!-- Main Banner -->
+
+
 <!-- search bar -->
 
-@include('components.searchBar')
 
 <!-- search bar -->
 
-     @include('components.trending')
+     
+    @include('components.seasonListing')
+    <div class="container mt-5" >
+        <hr>
+    </div>
 
-    <div class="container " >
+    @include('components.trending')
+
+
+    <div class="container mt-5" >
         <hr>
     </div>
 

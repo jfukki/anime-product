@@ -20,14 +20,52 @@
                 
                
                 <div>
-                   <p class="anime-detail-below-cover-genere"> <b>Genres:</b> Action, Drama, Ecchi, Mystery, Psychological, Supernatural</p>
-                   <p class="anime-detail-below-cover-genere"> <b>Producers:</b> Pony Canyon, TBS, DAX Production, BS-TBS, Shogakukan, Lawson, RAY, U-NEXT, Nichion</p>
+                   <p class="anime-detail-below-cover-genere"> <b>Genres:<br><br></b> 
+                   
+
+                   @if(collect($data['genres'])->isNotEmpty())
+                        @if(is_array($data['genres']) || is_object($data['genres']))
+                        @foreach($data['genres'] as $genres)
+
+
+                       
+                            
+                               <span class="genres-detail-page"> {{$genres['name']}} </span>
+                           
+
+            
+                        @endforeach
+                        @endif
+                        @endif
+
+
+                   </p>
+                   <p class="anime-detail-below-cover-genere"> <b>Producers:</b> 
+                
+                
+                   @if(collect($data['producers'])->isNotEmpty())
+                        @if(is_array($data['producers']) || is_object($data['producers']))
+                        @foreach($data['producers'] as $producers)
+
+
+                       
+                            
+                                {{$producers['name']}} |
+                           
+
+            
+                        @endforeach
+                        @endif
+                        @endif
+                
+                
+                </p>
 
                 <p class="anime-detail-below-cover-genere">
                     
-                    <span><b>Ranked: #499 | </b></span>
-                    <span><b>Popularity: #621 | </b></span>
-                    <span><b>Members: 317,685 <br></b></span> 
+                    <span><b>Ranked: #{{$data['rank']}} | </b></span>
+                    <span><b>Popularity: #{{$data['popularity']}} | </b></span>
+                    <span><b>Members: {{$data['members']}} <br></b></span> 
 
 
                 </p>
@@ -186,7 +224,7 @@
 
                                         <a href="{{$episode['url']}}" class="text-decor" target="_blank">
                                             <p class="anime-title-list-grid">{{$episode['episode']}}: {{$episode['title']}}</p>
-                                            <br>
+                                               <br>
                                         </a>
                                         
 
@@ -198,7 +236,7 @@
 
                         @else
 
-                        <h2>Videos not found</h2>
+                        <h4>Videos not found</h4>
 
 
                        @endif
@@ -230,7 +268,7 @@
 
                             <a href="">
                             <img src="{{$character['character']['images']['jpg']['image_url']}}"
-                            alt="" class="anime-grid-list-image">
+                            alt="" class="anime-grid-list-characters-image">
                             </a>
 
                             <a href="" class="text-decor">
@@ -260,23 +298,32 @@
                             
                         </div>
 
+
+                        @if(collect($pictures)->isNotEmpty())
+                        @if(is_array($pictures) || is_object($pictures))
                         @foreach($pictures as $pictures)
                         <div class="col-md-2 anime-grid-list">
 
-                            <a href="">
+                           <a href="">
                             <img src="{{$pictures['jpg']['large_image_url']}}"
                             alt="" class="anime-grid-list-image">
                             </a>
                          </div>
                         @endforeach
 
- 
-                                
+                        @endif
+
+                        @else
+
+                        <h4>not found</h4>
+
+
+                        @endif
+                                                        
     </div>
  </div>
 
-
-
+ 
  
  <div class="conatiner extra-padding-container-anime-detail mb-5">
     <div class="row">
@@ -285,7 +332,11 @@
                              <h2>Recommendations </h2>
                             
                         </div>
+                        @if(collect($recommendations)->isNotEmpty())
+                        @if(is_array($recommendations) || is_object($recommendations))
                         @foreach($recommendations as $recommendations)
+
+
                         <div class="col-md-2 anime-grid-list">
 
                             <a href="{{ route('animeDetail' , $recommendations['entry']['mal_id'])  }}">
@@ -299,8 +350,15 @@
 
                         </div>
                         @endforeach
+                        @endif
 
-                          
+                        @else
+
+                        <h4>not found</h4>
+
+
+                        @endif
+                                                
     </div>
  </div>
 

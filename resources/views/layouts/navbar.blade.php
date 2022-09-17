@@ -28,6 +28,10 @@
               <a class="nav-link my-navbar-color-item" href="{{route('reviews')}}"> Anime Reviews</a>
             </li>
 
+            <li class="nav-item">
+              <a class="nav-link my-navbar-color-item" href="{{route('site-stats')}}"> Site Stats</a>
+            </li>
+
           </ul>
           <!-- <form role="search">
             <input class="form-control" type="search" placeholder="Search" aria-label="Search">

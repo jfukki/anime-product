@@ -16,7 +16,7 @@
 
 <div class="container d-none d-md-block">
 
-        <div class="row row-cols-4">   
+        <div class="row row-cols-6">   
 
    
         @foreach($upcomingSeason as $upcomingSeason)

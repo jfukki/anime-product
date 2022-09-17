@@ -88,6 +88,17 @@ h4
 
 }
 
+.anime-grid-list-characters-image
+{
+    border-radius: 4
+    0px;
+    width: 100px;
+    height: 100px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+
+}
+
+
 .anime-grid-list
 {
     margin-top: 40px;
@@ -125,6 +136,21 @@ h4
 
 }
 
+
+.genres-detail-page
+{
+    background-color: #54229E;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    padding:10px;
+    margin-top: 14px !important;
+    margin-left: 3px;
+    border-radius: 15px;
+    font-size: 11px !important;
+    font-family: oxyRegular;
+    color: white;
+
+
+}
 .anime-detail-page-views
 {
     color: #4B5961!important;
@@ -511,3 +537,42 @@ h4
 
 }
 /* review module */
+
+
+/* Site Stats */
+
+
+
+.site-stats-card
+{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.site-stats-counter
+{
+
+    padding: 20px;
+    color: #54229E;
+    font-family: oxyBold;
+    
+
+}
+.site-stats-icon
+{
+    font-size: 20px !important;
+}
+
+
+.site-stats-title
+{
+    padding: 20px;
+    color: #1E1E1E;
+    font-size: 14px;
+    font-family: oxyRegular;
+}
+
+/* Site Stats */
