@@ -15,7 +15,7 @@ class CreateAnimeSeachesTable extends Migration
     {
         Schema::create('anime_seaches', function (Blueprint $table) {
             $table->id();
-            $table->string('anime_name');
+            $table->string('anime_name')->nullable();
             $table->timestamps();
         });
     }

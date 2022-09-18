@@ -103,7 +103,7 @@ class HomeController extends Controller
     public function animeDetailV2($id)
     {
 
-             // views counter
+                   // views counter
         DB::table('anime_views')->where('anime_id', $id)->increment('views');
 
         
@@ -119,26 +119,36 @@ class HomeController extends Controller
         // views counter
 
 
-         $anime_basic = DB::table('animes')->where('anime_id', $id)->first();
+             $anime_basic = DB::table('animes')->where('anime_id', $id)->first();
 
             if(isset($anime_basic) )
             {
 
+
                 $anime_genres = DB::table('anime_details')->where('anime_id', $id)->get();
                 $anime_producers = DB::table('anime_producers')->where('anime_id', $id)->get();
-
+                $anime_character = DB::table('anime_characters')->where('anime_id', $id)->paginate(12);
+                $anime_pictures = DB::table('anime_picutres')->where('anime_id', $id)->paginate(12);
+                $anime_recommendations = DB::table('anime_recommendations')->where('anime_id', $id)->inRandomOrder()->limit(12)->get();
 
                 
                 return view('detail',['anime_basic' => $anime_basic, 
                                       'anime_genres' => $anime_genres, 
                                       'anime_producers' => $anime_producers,
-                                      'animeViews' => $animeViews
+                                      'animeViews' => $animeViews,
+                                      'anime_character' => $anime_character,
+                                      'anime_pictures' => $anime_pictures,
+                                      'anime_recommendations' => $anime_recommendations
                                         
                                     ]);
             }
             else
             {
                 $this->createAnimeBasicData($id);
+                $this->createAnimeCharacters($id);
+                $this->createAnimePictures($id);
+                $this->createAnimeRecommendations($id);
+
 
                 $anime_basic = DB::table('animes')->where('anime_id', $id)->first();
                 return view('detail',['anime_basic' => $anime_basic]);
@@ -287,91 +297,184 @@ class HomeController extends Controller
           }
           // producers
 
-
       
+    }
 
-
-
-        }
-
-        public function createAnimeCharacters($id)
-        {
-
-          // characters
-
+    public function createAnimeCharacters($id)
+    {
+        
           
 
-          $curl = curl_init();
+        $curl = curl_init();
 
-          curl_setopt_array($curl, array(
-          CURLOPT_URL => 'https://api.jikan.moe/v4/anime/'.$id.'/characters',
-          CURLOPT_RETURNTRANSFER => true,
-          CURLOPT_ENCODING => '',
-          CURLOPT_MAXREDIRS => 10,
-          CURLOPT_TIMEOUT => 0,
-          CURLOPT_FOLLOWLOCATION => true,
-          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-          CURLOPT_CUSTOMREQUEST => 'GET',
-          ));
-  
-          $characters = [];
-  
-          $response = curl_exec($curl);
-  
-          curl_close($curl);
-  
-          $characters = json_decode($response, true);
-           
-          if(isset($characters['data'])){
-              $characters =  $characters['data'];
-          }
-  
-   
-  
+        curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://api.jikan.moe/v4/anime/'.$id.'/characters',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'GET',
+        ));
+
+        $characters = [];
+
+        $response = curl_exec($curl);
+
+        curl_close($curl);
+
+        $characters = json_decode($response, true);
+        
+        if(isset($characters['data'])){
+            $characters =  $characters['data'];
+        }
+
+
             $anime_characters_check = DB::table('anime_characters')->where('anime_id', $id)->get();
             
             if(count($anime_characters_check) > 0 ){
                                 
-  
+
             }
             else
             {
-                 
-              $anime_characters  = $characters;
-                 
+                $anime_characters  = $characters;
+                    
                 foreach($anime_characters as $key => $anime_character)
                 {
-                   
-  
-                    
-                  $anime_character_insert_check =  DB::table('anime_characters')->insert(
+                    $anime_character_insert_check =  DB::table('anime_characters')->insert(
                         [
                             'anime_id' => $id,
                             'character_name' => $anime_characters[$key]['character']['name'],
                             'character_image' => $anime_characters[$key]['character']['images']['jpg']['image_url'],
-                            'character_role' => $anime_characters[$key]['role'],
-  
+                            'character_role' => $anime_characters[$key]['role']
+
                         ]
-                    );
-  
-                    if(isset($anime_character_insert_check ))
-                    {
-                      return "insert ho gya";
-                    }
-                    else
-                    {
-                      return "insert NAI HUA";
-  
-                    }
-  
-                    
+                    );                    
                 }
-  
+
             }
+
+
+    }
+
+    public function createAnimePictures($id)
+    {
   
-            // characters
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://api.jikan.moe/v4/anime/'.$id.'/pictures',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'GET',
+        ));
+
+        $pictures = [];
+
+        $response = curl_exec($curl);
+
+        curl_close($curl);
+        $pictures = json_decode($response, true);
+          
+      
+        if(isset($pictures['data'])){
+
+            $pictures =  $pictures['data'];
         }
 
+
+            $anime_pictures_check = DB::table('anime_picutres')->where('anime_id', $id)->get();
+            
+            if(count($anime_pictures_check) > 0 ){
+                                
+
+            }
+            else
+            {
+                $anime_pictures  = $pictures;
+                    
+                foreach($anime_pictures as $key => $anime_pictures)
+                {
+                    $anime_picture_insert_check =  DB::table('anime_picutres')->insert(
+                        [
+                            'anime_id' => $id,
+                            'anime_picture_url' => $anime_pictures['jpg']['large_image_url']
+                        ]
+                    );                    
+                }
+
+            }
+
+    }
+
+
+    public function createAnimeRecommendations($id)
+    {
+  
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://api.jikan.moe/v4/anime/'.$id.'/recommendations',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'GET',
+        ));
+
+        $recommendations = [];
+
+        $response = curl_exec($curl);
+
+        curl_close($curl);
+        $recommendations = json_decode($response, true);
+          
+      
+
+        if(isset($recommendations['data'])){
+
+            $recommendations =  $recommendations['data'];
+        }
+
+
+      
+
+
+            $anime_recommendation_check = DB::table('anime_recommendations')->where('anime_id', $id)->get();
+            
+            if(count($anime_recommendation_check) > 0 ){
+                                
+
+            }
+            else
+            {
+                $anime_recommendation  = $recommendations;
+                    
+                foreach($anime_recommendation as $key => $anime_recommendation)
+                {
+                    $anime_recommendation_insert_check =  DB::table('anime_recommendations')->insert(
+                        [
+                            'anime_id' => $id,
+                            'anime_mal_id' => $anime_recommendation['entry']['mal_id'],
+                            'anime_picture' => $anime_recommendation['entry']['images']['jpg']['large_image_url'],
+                            'anime_title' => $anime_recommendation['entry']['title']   
+                        ]
+                    );                    
+                }
+
+            }
+
+    }
 
 
     public function animeDetail($id)
@@ -760,6 +863,14 @@ class HomeController extends Controller
 
 
 
+public function animeSearch()
+{
+
+    $search_list = DB::table('animes')->inRandomOrder()->limit(12)->get();
+    
+    return view('anime-search', ['search_list' => $search_list]);
+}
+
 
     public function searchAnime(Request $req)
     {
@@ -768,6 +879,8 @@ class HomeController extends Controller
     //   insert data into database
     $AnimeSeach = new AnimeSeach;
     $AnimeSeach->anime_name = $req->searchAnimeTitle; 
+     
+
 
     if($searchItem !="")
     {

@@ -15,8 +15,8 @@ class CreateAnimeViewsTable extends Migration
     {
         Schema::create('anime_views', function (Blueprint $table) {
             $table->id();
-            $table->integer('anime_id');
-            $table->integer('views');
+            $table->integer('anime_id')->nullable();
+            $table->integer('views')->default('1');
             $table->timestamps();
         });
     }

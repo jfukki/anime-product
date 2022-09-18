@@ -3,8 +3,8 @@
 @section('content')
 
 <div class="container mt-5 extra-padding-container">
-    <div class="row row-col-3">
-        <div class="col">
+    <div class="row ">
+        <div class="col-md-4">
             <div class="card-counter primary site-stats-card">
                 <i class="fa fa-search  site-stats-icon"></i>
                 <span class="count-name site-stats-title">Total Anime Searches |</span>
@@ -13,7 +13,7 @@
         </div>
 
         
-        <div class="col">
+        <div class="col-md-4">
             <div class="card-counter primary site-stats-card">
                 <i class="fa fa-search  site-stats-icon"></i>
                 <span class="count-name site-stats-title">Total Reviews |</span>
@@ -21,7 +21,7 @@
             </div>
         </div>
 
-        <div class="col">
+        <div class="col-md-4">
             <div class="card-counter primary site-stats-card">
                 <i class="fa fa-search  site-stats-icon"></i>
                 <span class="count-name site-stats-title">Total Anime |</span>

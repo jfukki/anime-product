@@ -2,7 +2,7 @@
 <div class="container extra-padding-container py-5 ">
     <div class="row ">
         <div class="col-md-3">
-                <div class="mb-3  ">
+                <div class="  ">
                     <label  class="form-label searchbar-label">Search</label>
                    <form action="{{ route('search') }}" method="POST">
                     @csrf
