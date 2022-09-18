@@ -26,6 +26,9 @@
 
 <!-- Main Banner -->
 
+<!-- Popular Anime -->
+
+
 
 <div class="container mt-5">
     <div class="row">
@@ -46,12 +49,37 @@
 
 </div>
 
+     
+  
+<!-- Popular Anime -->
+ 
+    
+
+<!-- Horror Anime -->
 
 
+
+<div class="container mt-5" style="margin-top:8% !important;">
+    <div class="row">
+        <div class="col-lg-10">
+            <h2>Horror Anime</h2>
+        </div>
+
+        <div class="col-lg-2 ">
+            <a href="" class="view-all-text">View All</a>
+        </div>
+
+
+    </div>
+
+    @include('components.horrorAnime')
+
+
+
+</div>
 
      
   
- 
-    
+<!-- Horror Anime -->
 
 @endsection

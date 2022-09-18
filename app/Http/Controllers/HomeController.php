@@ -19,9 +19,10 @@ class HomeController extends Controller
     {
 
         $popular_anime  = DB::table('popular_animes')->inRandomOrder()->limit(12)->get();
+        $horror_anime  = DB::table('horror_animes')->inRandomOrder()->limit(12)->get();
 
 
-        return view('home', ['popular_anime' => $popular_anime]);
+        return view('home', ['popular_anime' => $popular_anime, 'horror_anime' => $horror_anime ]);
     }
 
 
@@ -885,7 +886,8 @@ public function animeSearch()
 
     public function searchAnime(Request $req)
     {
-      $searchItem = $req->searchAnimeTitle;
+       $searchItem = $req->searchAnimeTitle;
+       $searchItem = str_replace(' ', '-', $searchItem); 
         
     //   insert data into database
     $AnimeSeach = new AnimeSeach;

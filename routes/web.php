@@ -45,6 +45,8 @@ Route::get('/site-stats', [SiteStatsController::class, 'index'])->name('site-sta
 
 
 Route::get('/insertPopularAnime', [AnimeController::class, 'popularAnimeInsert'])->name('insertPopularAnime');
+Route::get('/insertHorrorAnime', [AnimeController::class, 'horrorAnimeInsert'])->name('insertHorrorAnime');
+
 
 
 
