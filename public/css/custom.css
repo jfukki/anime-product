@@ -116,17 +116,17 @@ h4
 }
 .anime-grid-list
 {
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .anime-title-list-grid
 {
     margin-top: 6%;
     margin-bottom: 10%;
-
-    color: #404e5c;
+    text-align: center;
+    color: #54229E;
     font-size: 12px;
-    line-height: 16px;
+    line-height: 20px;
     font-family: oxyBold;
     text-transform: capitalize;  
 }
@@ -593,3 +593,43 @@ h4
 }
 
 /* Site Stats */
+
+
+/* home */
+
+.home-main-section
+{
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    background-color: #683BAB;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.home-main-section h1
+{
+    color: white;
+}
+
+
+.home-main-section h2
+{
+    color: white;
+}
+
+
+.home-main-section-text
+{
+    color: whitesmoke;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    padding-top: 20px;
+    font-family: oxyRegular;
+
+}
+/* home */

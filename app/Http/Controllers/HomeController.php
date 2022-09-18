@@ -14,6 +14,17 @@ use App\Models\AnimeDetail;
 
 class HomeController extends Controller
 {
+
+    public function home()
+    {
+
+        $popular_anime  = DB::table('popular_animes')->inRandomOrder()->limit(12)->get();
+
+
+        return view('home', ['popular_anime' => $popular_anime]);
+    }
+
+
     public function index()
     {
         $curl = curl_init();

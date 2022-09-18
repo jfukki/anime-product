@@ -4,8 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BrowseController;
 use App\Http\Controllers\ReviewsController;
-use App\Http\Controllers\SiteStatsController
-;
+use App\Http\Controllers\SiteStatsController;
+use App\Http\Controllers\AnimeController;
 
 
 
@@ -26,7 +26,7 @@ use App\Http\Controllers\SiteStatsController
 // });
 
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/detail/{id}', [HomeController::class, 'animeDetailV2'])->name('animeDetail');
 
 Route::get('/search', [HomeController::class, 'animeSearch'])->name('search');
@@ -40,6 +40,11 @@ Route::get('/review-detail', [ReviewsController::class, 'reviewDetail'])->name('
 
 Route::get('/site-stats', [SiteStatsController::class, 'index'])->name('site-stats');
 
+
+// ==========================================
+
+
+Route::get('/insertPopularAnime', [AnimeController::class, 'popularAnimeInsert'])->name('insertPopularAnime');
 
 
 

@@ -213,7 +213,7 @@
 
                    
                                      
-                    <div class="col-md-2  col-4 anime-detail-info-grid">
+                    <div class="col-md-3  col-6 anime-detail-info-grid">
 
                         <span class="anime-detail-info-grid-title">Source: </span> <span class="anime-detail-info-grid-text">{{$anime_basic->source}}</span>
 
@@ -247,7 +247,7 @@
                   @if(isset($anime_character))
 
                     @foreach($anime_character as $anime_character)
-                                <div class="col-lg-2 col-4 anime-grid-list">
+                                <div class="col-lg-2 col-4 anime-grid-list text-center">
 
                                     <a href="">
                                     <img src="{{$anime_character->character_image}}"

@@ -32,7 +32,8 @@
                             <a href="{{ route('animeDetail' , $search_list->anime_id)  }}"> <img src="{{$search_list->anime_image}}" alt=""> </a>
                     </div>
                     <div class="col-md-4 mt-3">
-                        <a href="" class="searched-item-title">   <br> </a>
+                        <a href="" class="searched-item-title"> {{$search_list->english_title}}   <br> 
+                    </a>
                         <span class="searched-item-rating">Rating: {{$search_list->rating}}</span>
                     </div>
                     <div class="col-md-2 mt-3">

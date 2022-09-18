@@ -1,31 +1,18 @@
+  @include('components.seasonListing')
+    <div class="container mt-5" >
+        <hr>
+    </div>
 
-                    
-                    <div class="col-md-2 anime-detail-info-grid">
-
-                        <span class="anime-detail-info-grid-title">Licensors: </span> <span class="anime-detail-info-grid-text">{{$data['licensors'][0]['name']}}</span>
-
-                    </div>
-
-
-                    
-                    <div class="col-md-2 anime-detail-info-grid">
-
-                        <span class="anime-detail-info-grid-title">Studios: </span> <span class="anime-detail-info-grid-text">{{$data['studios'][0]['name']}}</span>
-
-                    </div>
+    @include('components.trending')
 
 
-                    
-                    <div class="col-md-2 anime-detail-info-grid">
+    <div class="container mt-5" >
+        <hr>
+    </div>
 
-                        <span class="anime-detail-info-grid-title">Source: </span> <span class="anime-detail-info-grid-text">{{$data['source']}}</span>
-
-                    </div>
+     @include('components.comingsoon')
 
 
-                    
-                 
-                    
-  
-
-                   
+     <div class="container mt-5 d-none d-md-block" >
+        <hr>
+    </div>
