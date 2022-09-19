@@ -1,6 +1,7 @@
 <div class="row mb-5">   
 
     
+
 @foreach($ranked_anime as $d)
 @if(isset($ranked_anime))    
     <div class="col-lg-2 col-6 anime-grid-list zoom mb-4">
