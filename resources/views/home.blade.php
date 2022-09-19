@@ -62,7 +62,7 @@
 
     </div>
 
-    @include('components.RankedAnime')
+    @include('components.RankAnime')
 
 
 <br>
