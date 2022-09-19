@@ -653,6 +653,8 @@ h4
     -ms-transform: scale(1.1); /* IE 9 */
     -webkit-transform: scale(1.1); /* Safari 3-8 */
     transform: scale(1.1); 
+
+    border:solid 1px rgb(84, 34, 158);
   }
 /* zoom effect */
 
@@ -677,3 +679,29 @@ h4
 }
 
 /* search bar */
+
+
+/* ribbon tag */
+
+.ribbon-tag 
+{ 
+    font-size: 14px;
+    font-family: oxyBold;
+    text-align: center;
+    -webkit-transform: rotate(311deg);
+    -moz-transform: rotate(311deg);
+    -ms-transform: rotate(311deg);
+    -o-transform: rotate(311deg);
+    position: relative;
+    padding: 6px 0;
+    left: -13px;
+    top: 26px;
+    opacity: 0.9;
+    width: 71px;
+    color: #ffffff;
+    -webkit-box-shadow: 0px 0px 3px rgb(0 0 0 / 30%);
+    -moz-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 3px rgb(0 0 0 / 30%);
+    text-shadow: rgb(255 255 255 / 50%) 0px 1px 0px;
+    background: #54229E;
+}

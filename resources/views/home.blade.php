@@ -11,7 +11,7 @@
 <!-- Main Banner -->
 
 
-<div class="container">
+<div class="container ">
     <div class="row home-main-section">
 
             <div class="col-lg-7">
@@ -41,13 +41,45 @@
 
 </div>
 
+
 <!-- Main Banner -->
+
+
+<!-- Top Ranked Anime -->
+
+
+
+<div class="container mt-5 extra-padding-container">
+    <div class="row">
+        <div class="col-lg-10">
+            <h2>All Time Ranked Anime</h2>
+        </div>
+
+        <div class="col-lg-2 ">
+            <a href="" class="view-all-text">View All</a>
+        </div>
+
+
+    </div>
+
+    @include('components.RankedAnime')
+
+
+<br>
+</div>
+
+     
+  
+<!-- Top Ranked Anime -->
+ 
+
+
 
 <!-- Popular Anime -->
 
 
 
-<div class="container mt-5">
+<div class="container mt-5 extra-padding-container">
     <div class="row">
         <div class="col-lg-10">
             <h2>Popular Anime</h2>
@@ -76,7 +108,7 @@
 
 
 
-<div class="container mt-5" style="margin-top:8% !important;">
+<div class="container mt-5 extra-padding-container" style="margin-top:8% !important;">
     <div class="row">
         <div class="col-lg-10">
             <h2>Horror Anime</h2>

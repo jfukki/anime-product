@@ -20,10 +20,12 @@ class HomeController extends Controller
 
         $popular_anime  = DB::table('popular_animes')->inRandomOrder()->limit(12)->get();
         $horror_anime  = DB::table('horror_animes')->inRandomOrder()->limit(12)->get();
+        $ranked_anime  = DB::table('ranked_animes')->inRandomOrder()->limit(12)->get();
 
 
 
-        return view('home', ['popular_anime' => $popular_anime, 'horror_anime' => $horror_anime ]);
+
+        return view('home', ['popular_anime' => $popular_anime, 'horror_anime' => $horror_anime , 'ranked_anime' => $ranked_anime ]);
     }
 
 

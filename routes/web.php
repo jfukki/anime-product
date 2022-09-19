@@ -44,8 +44,10 @@ Route::get('/site-stats', [SiteStatsController::class, 'index'])->name('site-sta
 // ==========================================
 
 
-Route::get('/insertPopularAnime', [AnimeController::class, 'popularAnimeInsert'])->name('insertPopularAnime');
-Route::get('/insertHorrorAnime', [AnimeController::class, 'horrorAnimeInsert'])->name('insertHorrorAnime');
+Route::get('/insertPopularAnime/{id}', [AnimeController::class, 'popularAnimeInsert'])->name('insertPopularAnime');
+Route::get('/insertHorrorAnime/{id}', [AnimeController::class, 'horrorAnimeInsert'])->name('insertHorrorAnime');
+Route::get('/insertRankedAnime/{id}', [AnimeController::class, 'rankedAnimeInsert'])->name('insertRankedAnime');
+
 
 
 
