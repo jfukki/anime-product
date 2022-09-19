@@ -17,5 +17,5 @@ jobs:
         ftp-server: ${{ secrets.FTP_SERVER }}
         ftp-username: ${{ secrets.FTP_USERNAME }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: /http://discoveranime.petsaaltech.com/
+        server-dir: /http://discover.petsaaltech.com/
 
