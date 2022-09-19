@@ -22,7 +22,7 @@ class AnimeController extends Controller
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-        CURLOPT_URL => 'https://api.jikan.moe/v4/anime?genres=1&order_by=popularity&page=63&limit=10',
+        CURLOPT_URL => 'https://api.jikan.moe/v4/anime?genres=1&order_by=popularity&page=80&limit=10',
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => '',
         CURLOPT_MAXREDIRS => 10,
@@ -79,7 +79,7 @@ class AnimeController extends Controller
     public function horrorAnimeInsert()
     {
 
-        // NOTE: page change kre - to get popular aime list | initial page is {1} | and page {22}
+        // NOTE: page change kre - to get popular aime list | initial page is {1} | and last page {22}
         
 
         $curl = curl_init();

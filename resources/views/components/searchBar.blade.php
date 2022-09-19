@@ -7,7 +7,7 @@
                    <form action="{{ route('search') }}" method="POST">
                     @csrf
                      
-                    <input type="text" class="form-control" id="searchAnimeTitle" name="searchAnimeTitle"  placeholder="Search By Title">
+                    <input type="text" class="form-control " id="searchAnimeTitle" name="searchAnimeTitle"  placeholder="Search By Title">
                     
                    </form>
                 </div>

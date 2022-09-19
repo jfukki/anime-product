@@ -1,4 +1,8 @@
 @extends('main')
+@section('meta-description', "We recommend $anime_basic->english_title, type: $anime_basic->type, duration: $anime_basic->duration. Watch now $anime_basic->english_title or add in in your wishlish")
+@section('meta-keywords', "$anime_basic->english_title anime, $anime_basic->english_title recommendations, anime record, anime track, $anime_basic->english_title characters, upcoming anime, popular anime")
+
+@section('title', "Watch $anime_basic->english_title | $anime_basic->type | $anime_basic->status")
 
 @section('content')
  
@@ -88,7 +92,7 @@
 
             <div class="col-md-8 ">
                 <div>
-                    <h1 class="anime-detail-anime-synopsis">Synopsis</h1>
+                    <h2 class="anime-detail-anime-synopsis">{{$anime_basic->english_title}} Synopsis</h2>
                     <hr>
                 </div>
                 <div>
@@ -101,7 +105,7 @@
                 @if(isset($anime_basic->youtube_trailer))
 
                 <div>
-                    <h1 class="anime-detail-anime-trailer my-5">Trailer</h1>
+                    <h2 class="anime-detail-anime-trailer my-5">{{$anime_basic->english_title}}  Trailer</h2>
                     <hr>
                 </div>
                
@@ -223,7 +227,54 @@
  </div>
 
 
+ <!-- streaming links -->
 
+ <div class="conatiner extra-padding-container-anime-detail">
+    <div class="row">
+        <hr class="mt-5">
+
+                        <div class="col-md-10">
+
+                                    <h2>Watch {{$anime_basic->english_title}} </h2>
+                            
+                        </div>
+
+
+                        <div class="col-md-2">
+
+                              <p class="view-all-text"><a href="">View all</a></p>
+                            
+                        </div>
+  
+    </div>
+
+    <div class="row">
+        
+        @if(isset($anime_streaming))
+
+          @foreach($anime_streaming as $anime_streaming)
+          <div class="col-lg-2 col-6 anime-detail-info-grid mt-3">
+
+            <a href="{{$anime_streaming->streaming_url}}" target="_blank">{{$anime_streaming->streaming_title}}</a>
+            
+            
+
+          </div> 
+
+          @endforeach
+
+        @else
+        
+        <p>No Streaming Links Found!</p>
+      
+
+        @endif    
+       
+    </div>
+ </div>
+
+
+ <!-- streaming links -->
 
 
  <div class="conatiner extra-padding-container-anime-detail">
@@ -232,7 +283,7 @@
 
                         <div class="col-md-10">
 
-                                    <h2>Characters </h2>
+                                    <h2>{{$anime_basic->english_title}} Characters </h2>
                             
                         </div>
 
@@ -282,12 +333,15 @@
 
  
 
+
+
+
  <div class="conatiner extra-padding-container-anime-detail">
     <div class="row">
               <hr class="mt-5">
                         <div class="col-md-10">
                        
-                             <h2>Pictures </h2>
+                             <h2>{{$anime_basic->english_title}} Pictures </h2>
                             
                         </div>
 
@@ -331,7 +385,7 @@
     <hr class="mt-5">
                         <div class="col-md-10 ">
                         
-                             <h2>Recommendations </h2>
+                             <h2>{{$anime_basic->english_title}} Recommendations </h2>
                             
                         </div>
 

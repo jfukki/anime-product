@@ -1,14 +1,42 @@
 @extends('main')
 
+@section('title', 'Search Your Favorite Anime')
+
 @section('content')
 
 <!-- search bar -->
 
-@include('components.searchBar')
+<div class="container">
+      <div class="row home-main-section">
+
+      <div class="col-lg-7">
+          <h1>Discover Anime.</h1>
+          <h2>For Fans, By Fans</h2>
+
+          
+          <form action="{{ route('search') }}" method="POST">
+              @csrf
+              
+              <input type="text" class="form-control searchbar-custom" id="searchAnimeTitle" name="searchAnimeTitle"  placeholder="Search By Title">
+              
+          </form>   
+
+      </div>
+
+
+
+      <div class="col-lg-5 mt-5   ">
+      <br>
+      <p class="home-main-section-text mt-2">Anime Recommendations, Wishlist, Anime Track, Reviews, Forum & Much More!</p>
+      </div>
+
+      </div>
+</div>
+
 
 <!-- search bar -->
 
-<div class="container extra-padding-container ">
+<div class="container extra-padding-container mt-5 ">
     <div class="row" >
      <div class="col-lg-12">
         <h2>People Also Searched for</h2>

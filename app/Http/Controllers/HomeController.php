@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\AnimeSeach;
 use App\Models\Anime;
 use App\Models\AnimeDetail;
-
+use App\Models\AnimeStreaming;
 
 
 class HomeController extends Controller
@@ -20,6 +20,7 @@ class HomeController extends Controller
 
         $popular_anime  = DB::table('popular_animes')->inRandomOrder()->limit(12)->get();
         $horror_anime  = DB::table('horror_animes')->inRandomOrder()->limit(12)->get();
+
 
 
         return view('home', ['popular_anime' => $popular_anime, 'horror_anime' => $horror_anime ]);
@@ -132,7 +133,7 @@ class HomeController extends Controller
 
 
              $anime_basic = DB::table('animes')->where('anime_id', $id)->first();
-
+             
             if(isset($anime_basic) )
             {
 
@@ -142,6 +143,7 @@ class HomeController extends Controller
                 $anime_character = DB::table('anime_characters')->where('anime_id', $id)->paginate(12);
                 $anime_pictures = DB::table('anime_picutres')->where('anime_id', $id)->paginate(12);
                 $anime_recommendations = DB::table('anime_recommendations')->where('anime_id', $id)->inRandomOrder()->limit(12)->get();
+                $anime_streaming = DB::table('anime_streamings')->where('anime_id', $id)->get();
 
                 
                 return view('detail',['anime_basic' => $anime_basic, 
@@ -150,7 +152,11 @@ class HomeController extends Controller
                                       'animeViews' => $animeViews,
                                       'anime_character' => $anime_character,
                                       'anime_pictures' => $anime_pictures,
-                                      'anime_recommendations' => $anime_recommendations
+                                      'anime_recommendations' => $anime_recommendations,
+                                      'anime_streaming' =>  $anime_streaming,
+
+                                      
+
                                         
                                     ]);
             }
@@ -308,6 +314,40 @@ class HomeController extends Controller
 
           }
           // producers
+
+
+
+
+          
+// streaming links
+$anime_streaming_check = DB::table('anime_streamings')->where('anime_id', $id)->get();
+                
+if(count($anime_streaming_check) > 0 ){
+    
+
+}
+else
+{
+    $anime_streaming  = $pagi['data']['streaming'];
+
+     
+    foreach($anime_streaming as $key => $streaming)
+    {
+               
+        DB::table('anime_streamings')->insert(
+            [
+                'anime_id' => $id,
+                'streaming_title' => $anime_streaming[$key]['name'],
+                'streaming_url' => $anime_streaming[$key]['url'],
+            ]
+        );
+
+        
+    }
+
+}
+
+// streaming links
 
       
     }
@@ -880,7 +920,8 @@ public function animeSearch()
 
     $search_list = DB::table('animes')->inRandomOrder()->limit(12)->get();
     
-    return view('anime-search', ['search_list' => $search_list]);
+    return view('
+    ', ['search_list' => $search_list]);
 }
 
 
@@ -907,7 +948,7 @@ public function animeSearch()
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-        CURLOPT_URL => 'https://api.jikan.moe/v4/anime/?q='.$searchItem.'&limit=20',
+        CURLOPT_URL => 'https://api.jikan.moe/v4/anime/?q='.$searchItem.'&limit=25',
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_ENCODING => '',
         CURLOPT_MAXREDIRS => 10,

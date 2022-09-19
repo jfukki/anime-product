@@ -100,8 +100,8 @@ h4
 .anime-grid-list-characters-image
 {
     border-radius: 50px;
-    width: 100px;
-    height: 120px;
+    width: 54%;
+    height: 44%;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
 
 }
@@ -146,8 +146,8 @@ h4
 
 .extra-padding-container-anime-detail
 {
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: 10%;
+    padding-right: 10%;
 
 }
 
@@ -213,6 +213,7 @@ h4
 .anime-detail-anime-cover-image
 {
     border-radius: 10px;
+    border: solid 6px #54229E;
     width: 70%;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 
@@ -340,6 +341,10 @@ h4
     text-decoration: none;
 }
 
+.anime-detail-info-grid a
+{
+    text-decoration: none;
+}
 
 .anime-detail-info-grid
 {
@@ -600,12 +605,12 @@ h4
 .home-main-section
 {
     margin-top: 30px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
 
     background-color: #683BAB;
     border-radius: 10px;
-    padding: 20px;
+    padding: 46px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 }
@@ -632,4 +637,43 @@ h4
     font-family: oxyRegular;
 
 }
+
+
 /* home */
+
+/* zoom effect */
+
+.zoom {
+    
+    transition: transform .6s;
+    
+  }
+  
+  .zoom:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+  }
+/* zoom effect */
+
+
+
+
+/* search bar */
+
+.searchbar-custom
+{
+    padding: 4%;
+    color: #683BAB !important;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: oxyBold;
+
+}
+
+.searchbar-custom:focus
+{
+    border: solid 1px white !important;
+}
+
+/* search bar */
