@@ -306,6 +306,7 @@
                                     </a>
 
 
+                                    
                                     <a href="" class="text-decor">
                                         <p class="anime-title-list-grid">{{$anime_character->character_name}} 
                                             <br>
