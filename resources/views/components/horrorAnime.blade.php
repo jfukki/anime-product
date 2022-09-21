@@ -8,8 +8,6 @@
 @foreach($horror_anime as $d)
 @if(isset($horror_anime))    
     <div class="col-lg-2 col-6 anime-grid-list zoom  mb-4">
-         <div class="ribbon-tag">#{{$d->popularity}}</div>
-
         <a href="{{ route('animeDetail' , $d->anime_id)  }}">
         <img src="{{$d->anime_picture}}"
         alt="" class="anime-grid-list-image">
