@@ -2,7 +2,7 @@
 
 
 
-<div class="row mb-5">   
+<div class="row ">   
 
     
 @foreach($popular_anime as $d)
