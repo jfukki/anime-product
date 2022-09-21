@@ -100,9 +100,9 @@ h4
 .anime-grid-list-characters-image
 {
     border-radius: 50px;
-    width: 54%;
-    height: 44%;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    width: 100%;
+    height: 80%;
+    box-shadow: rgb(104, 59, 171) 0px 60px 40px -7px;
 
 }
 
