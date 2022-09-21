@@ -10,6 +10,6 @@ class LogoutController extends Controller
     {
         auth()->logout();
 
-        return view('home');
+        return view('signup');
     }
 }

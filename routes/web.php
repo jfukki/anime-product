@@ -8,6 +8,7 @@ use App\Http\Controllers\SiteStatsController;
 use App\Http\Controllers\AnimeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\LoginController;
 
 
 
@@ -34,6 +35,9 @@ use App\Http\Controllers\LogoutController;
 
 Route::get('/singup', [AuthController::class, 'signup'])->name('signup');
 Route::post('/register', [AuthController::class, 'userRegister'])->name('userregister');
+
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
 
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 

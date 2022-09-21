@@ -55,7 +55,7 @@
 
         @else
            <li class="nav-item ">
-              <a class="nav-link my-navbar-color-item" href="{{route('site-stats')}}"> Login</a>
+              <a class="nav-link my-navbar-color-item" href="{{route('login')}}"> Login</a>
             </li>
 
            <li class="nav-item ">
