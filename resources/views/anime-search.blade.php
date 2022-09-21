@@ -60,8 +60,21 @@
                             <a href="{{ route('animeDetail' , $search_list->anime_id)  }}"> <img src="{{$search_list->anime_image}}" alt=""> </a>
                     </div>
                     <div class="col-md-4 mt-3">
-                        <a href="" class="searched-item-title"> {{$search_list->english_title}}   <br> 
+                        <a href="" class="searched-item-title">  
+
+                                 @if($search_list->english_title == '')
+
+                                           {{$search_list->japanese_title}} 
+
+                                        @else
+
+                                           $search_list->english_title
+                                @endif  
+
+                                <br> 
                     </a>
+
+
                         <span class="searched-item-rating">Rating: {{$search_list->rating}}</span>
                     </div>
                     <div class="col-md-2 mt-3">

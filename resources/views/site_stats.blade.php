@@ -1,5 +1,7 @@
 @extends('main')
 
+@section('title', 'Our Website Stats')
+
 @section('content')
 
 <div class="container mt-5 extra-padding-container">

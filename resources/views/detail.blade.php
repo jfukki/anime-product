@@ -18,7 +18,13 @@
                 </div>
 
                 <div class="text-center">
+                @if($anime_basic->english_title == '')
+
+                <h1 class="anime-detail-anime-title my-2">{{$anime_basic->japanese_title}}</h1>
+
+                @else
                     <h1 class="anime-detail-anime-title my-2">{{$anime_basic->english_title}}</h1>
+                @endif    
                     <hr>
                 </div>
                 

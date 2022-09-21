@@ -64,7 +64,15 @@
                   @endif
                 </div>
                 <div class="col-md-4 mt-3">
-                     <a href="{{ route('animeDetail' , $searchItem['mal_id'])  }}" class="searched-item-title">  {{$searchItem['titles'][0]['title']}} <br> </a>
+            @if($searchItem['title_english'] == '')
+
+              <a href="{{ route('animeDetail' , $searchItem['mal_id'])  }}" class="searched-item-title">  {{$searchItem['title_japanese']}} <br> </a>
+       
+              @else
+           
+                     <a href="{{ route('animeDetail' , $searchItem['mal_id'])  }}" class="searched-item-title">  {{$searchItem['title_english']}} <br> </a>
+
+            @endif  
                      <span class="searched-item-rating">Rating: {{$searchItem['rating']}}</span>
                 </div>
                 <div class="col-md-2 mt-3">
