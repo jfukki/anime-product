@@ -16,7 +16,9 @@
         alt="" class="anime-grid-list-image">
         </a>
         <a href="{{ route('animeDetail' , $d->anime_id) }}" class="text-decor">
-            <p class="anime-title-list-grid">{{$d->anime_title}}</p>
+            <p class="anime-title-list-grid">
+                {{ Str::limit($d->anime_title, 50) }}
+            </p>
             
         </a>
         
