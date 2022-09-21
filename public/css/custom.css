@@ -717,6 +717,45 @@ h4
     line-height: 20px;
     font-family: oxyRegular;
     background-color: black;
+    width: 120px !important;
+    margin-left: 10px;
+    margin-bottom: 2%;
+    
+
+
+
+}
+
+.my-navbar
+{
+    padding:20px;
+}
+
+.custom-btn-singup:hover
+{
+    background: #fff !important;
+    color: #683BAB !important;
+
+}
+
+.custom-btn-login
+{
+    color: whitesmoke;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-family: oxyRegular;
+    background-color: black;
+    width: 120px !important;
+    margin-bottom: 2%;
+
+
+}
+
+.custom-btn-login:hover
+{
+    background: #fff !important;
+    color: #683BAB !important;
 
 }
 

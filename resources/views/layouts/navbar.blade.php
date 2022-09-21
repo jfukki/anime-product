@@ -36,7 +36,7 @@
 
           </ul>
 
-          <ul  class="navbar-nav me-auto mb-2 mb-lg-0 nav-right">
+          <ul  class="nav navbar-nav navbar-right">
 
           @if(auth()->user())
         
@@ -55,7 +55,7 @@
 
         @else
            <li class="nav-item ">
-              <a class="nav-link my-navbar-color-item" href="{{route('login')}}"> Login</a>
+              <a class="nav-link my-navbar-color-item custom-btn-singup btn" href="{{route('login')}}"> Login</a>
             </li>
 
            <li class="nav-item ">
@@ -70,11 +70,19 @@
           <!-- <form role="search">
             <input class="form-control" type="search" placeholder="Search" aria-label="Search">
           </form> -->
+
+
+          
         </div>
+        
+
         
         
   </div>
 
       </div>
+
+
+
     </nav>
 </div>
