@@ -140,11 +140,12 @@ class HomeController extends Controller
             {
 
 
+
                 $anime_genres = DB::table('anime_details')->where('anime_id', $id)->get();
                 $anime_producers = DB::table('anime_producers')->where('anime_id', $id)->get();
-                $anime_character = DB::table('anime_characters')->where('anime_id', $id)->paginate(12);
-                $anime_pictures = DB::table('anime_picutres')->where('anime_id', $id)->paginate(12);
-                $anime_recommendations = DB::table('anime_recommendations')->where('anime_id', $id)->inRandomOrder()->limit(12)->get();
+                $anime_character = DB::table('anime_characters')->select('character_name', 'character_image' , 'character_role')->where('anime_id', $id)->paginate(12);
+                $anime_pictures = DB::table('anime_picutres')->select('anime_picture_url')->where('anime_id', $id)->paginate(12);
+                $anime_recommendations = DB::table('anime_recommendations')->select('anime_mal_id', 'anime_picture' , 'anime_title')->where('anime_id', $id)->inRandomOrder()->limit(12)->get();
                 $anime_streaming = DB::table('anime_streamings')->where('anime_id', $id)->get();
 
                 
@@ -173,9 +174,9 @@ class HomeController extends Controller
                 $anime_basic = DB::table('animes')->where('anime_id', $id)->first();
                 $anime_genres = DB::table('anime_details')->where('anime_id', $id)->get();
                 $anime_producers = DB::table('anime_producers')->where('anime_id', $id)->get();
-                $anime_character = DB::table('anime_characters')->where('anime_id', $id)->paginate(12);
-                $anime_pictures = DB::table('anime_picutres')->where('anime_id', $id)->paginate(12);
-                $anime_recommendations = DB::table('anime_recommendations')->where('anime_id', $id)->inRandomOrder()->limit(12)->get();
+                $anime_character = DB::table('anime_characters')->select('character_name', 'character_image' , 'character_role')->where('anime_id', $id)->paginate(12);
+                $anime_pictures = DB::table('anime_picutres')->select('anime_picture_url')->where('anime_id', $id)->paginate(12);
+                $anime_recommendations = DB::table('anime_recommendations')->select('anime_mal_id', 'anime_picture' , 'anime_title')->where('anime_id', $id)->inRandomOrder()->limit(12)->get();
                 $anime_streaming = DB::table('anime_streamings')->where('anime_id', $id)->get();
 
                 
