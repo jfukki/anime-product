@@ -20,9 +20,9 @@
               <a class="nav-link my-navbar-color-item" href="#">Anime List</a>
             </li> -->
              
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link my-navbar-color-item" href="{{route('randomImages')}}"> Anime Images</a>
-            </li>
+            </li> -->
 <!-- 
             <li class="nav-item">
               <a class="nav-link my-navbar-color-item" href="{{route('reviews')}}"> Anime Reviews</a>
