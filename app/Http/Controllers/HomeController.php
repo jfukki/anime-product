@@ -10,6 +10,7 @@ use App\Models\AnimeSeach;
 use App\Models\Anime;
 use App\Models\AnimeDetail;
 use App\Models\AnimeStreaming;
+use Auth;
 
 
 class HomeController extends Controller
@@ -133,7 +134,8 @@ class HomeController extends Controller
 
         // views counter
 
-             $user_id = auth()->user()->id;
+
+           
              $anime_basic = DB::table('animes')->where('anime_id', $id)->first();
              
             if(isset($anime_basic) )
@@ -147,23 +149,47 @@ class HomeController extends Controller
                 $anime_pictures = DB::table('anime_picutres')->select('anime_picture_url')->where('anime_id', $id)->paginate(12);
                 $anime_recommendations = DB::table('anime_recommendations')->select('anime_mal_id', 'anime_picture' , 'anime_title')->where('anime_id', $id)->inRandomOrder()->limit(12)->get();
                 $anime_streaming = DB::table('anime_streamings')->where('anime_id', $id)->get();
-                $user_fav_anime = DB::table('user_favourite_lists')
-                ->where('anime_id', $id)
-                ->where('user_id', $user_id)
-                ->get();
+                
 
+             
                
-                return view('detail',['anime_basic' => $anime_basic, 
-                                      'anime_genres' => $anime_genres, 
-                                      'anime_producers' => $anime_producers,
-                                      'animeViews' => $animeViews,
-                                      'anime_character' => $anime_character,
-                                      'anime_pictures' => $anime_pictures,
-                                      'anime_recommendations' => $anime_recommendations,
-                                      'anime_streaming' =>  $anime_streaming,
-                                      'user_fav_anime' =>  $user_fav_anime,                                  
-                                       
-                                    ]);
+                
+                if(Auth::check()){
+
+                    $user_id = auth()->user()->id;
+                    $user_fav_anime = DB::table('user_favourite_lists')
+                    ->where('anime_id', $id)
+                    ->where('user_id', $user_id)
+                    ->get();
+
+                    return view('detail',['anime_basic' => $anime_basic, 
+                    'anime_genres' => $anime_genres, 
+                    'anime_producers' => $anime_producers,
+                    'animeViews' => $animeViews,
+                    'anime_character' => $anime_character,
+                    'anime_pictures' => $anime_pictures,
+                    'anime_recommendations' => $anime_recommendations,
+                    'anime_streaming' =>  $anime_streaming,
+                    'user_fav_anime' =>  $user_fav_anime,
+                        
+                  ]);
+    
+                 }else
+                 {
+                    return view('detail',['anime_basic' => $anime_basic, 
+                    'anime_genres' => $anime_genres, 
+                    'anime_producers' => $anime_producers,
+                    'animeViews' => $animeViews,
+                    'anime_character' => $anime_character,
+                    'anime_pictures' => $anime_pictures,
+                    'anime_recommendations' => $anime_recommendations,
+                    'anime_streaming' =>  $anime_streaming,
+                        
+                  ]);
+                 }
+
+                
+                 
             }
             else
             {
@@ -180,23 +206,43 @@ class HomeController extends Controller
                 $anime_pictures = DB::table('anime_picutres')->select('anime_picture_url')->where('anime_id', $id)->paginate(12);
                 $anime_recommendations = DB::table('anime_recommendations')->select('anime_mal_id', 'anime_picture' , 'anime_title')->where('anime_id', $id)->inRandomOrder()->limit(12)->get();
                 $anime_streaming = DB::table('anime_streamings')->where('anime_id', $id)->get();
-                $user_fav_anime = DB::table('user_favourite_lists')
-                ->where('anime_id', $id)
-                ->where('user_id', $user_id)
-                ->get();
+             
+                if(Auth::check()){
+
+                    $user_id = auth()->user()->id;
+                    $user_fav_anime = DB::table('user_favourite_lists')
+                    ->where('anime_id', $id)
+                    ->where('user_id', $user_id)
+                    ->get();
+
+                    return view('detail',['anime_basic' => $anime_basic, 
+                    'anime_genres' => $anime_genres, 
+                    'anime_producers' => $anime_producers,
+                    'animeViews' => $animeViews,
+                    'anime_character' => $anime_character,
+                    'anime_pictures' => $anime_pictures,
+                    'anime_recommendations' => $anime_recommendations,
+                    'anime_streaming' =>  $anime_streaming,
+                    'user_fav_anime' =>  $user_fav_anime,
+                        
+                  ]);
+    
+                 }else
+                 {
+                    return view('detail',['anime_basic' => $anime_basic, 
+                    'anime_genres' => $anime_genres, 
+                    'anime_producers' => $anime_producers,
+                    'animeViews' => $animeViews,
+                    'anime_character' => $anime_character,
+                    'anime_pictures' => $anime_pictures,
+                    'anime_recommendations' => $anime_recommendations,
+                    'anime_streaming' =>  $anime_streaming,
+                        
+                  ]);
+                 }
 
                 
-                return view('detail',['anime_basic' => $anime_basic, 
-                                      'anime_genres' => $anime_genres, 
-                                      'anime_producers' => $anime_producers,
-                                      'animeViews' => $animeViews,
-                                      'anime_character' => $anime_character,
-                                      'anime_pictures' => $anime_pictures,
-                                      'anime_recommendations' => $anime_recommendations,
-                                      'anime_streaming' =>  $anime_streaming,
-                                      'user_fav_anime' =>  $user_fav_anime,
-                                          
-                                    ]);
+           
 
                                     
                 return view('detail',['anime_basic' => $anime_basic]);
