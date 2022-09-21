@@ -97,29 +97,55 @@
                  
 
                 <div>
-                                     
+         
+
+                @if(auth()->user())
                    <div class="container p-0 mb-5">
-                    <div class="row">
+                        <div class="row">
+                        
+                                <div class="col-lg-12 col-6">
+
+                                    <!-- Review -->
+                                    <a  href="#"class="write-review-btn-detail-page btn"> <i class="fa fa-pencil" style="font-size:12px;"></i> Write A Review</a>
+                                    <!-- Review -->
+                                </div>
                     
-                    <div class="col-lg-12 col-6">
+                                @if(count($user_fav_anime) > 0)
 
-                        <!-- Review -->
-                          <a  href="#"class="write-review-btn-detail-page btn"> <i class="fa fa-pencil" style="font-size:12px;"></i> Write A Review</a>
-                         <!-- Review -->
-                    </div>
-                 
-                    <div class="col-lg-12 col-6">
+                                <div class="col-lg-12 col-6">
 
-                    <!-- Fav -->
-                    <a  href="#"class="add-to-favourite-btn-detail-page btn"> <i class="fa fa-heart" style="font-size:12px;"></i> Add to favourite</a>
-                    <!-- Fav -->
+                                <!-- Fav -->
+                                <a  href="{{ route('removefromfavlist', 
+                                    [
+                                        'anime_id' => $anime_basic->anime_id, 
+                                        'user_id' => auth()->user()->id 
+                                    ]
+                                    
+                                    )}}"class="add-to-favourite-btn-detail-page btn"> <i class="fa fa-heart" style="font-size:12px;"></i> Remove From Favourite</a>
+                                <!-- Fav -->
 
-                    </div>
+                                </div>
+                                @else
+                                <div class="col-lg-12 col-6">
 
-                   
-                       
-                    </div>
+                                <!-- Fav -->
+                                <a  href="{{ route('addtofavlist', 
+                                    [
+                                        'anime_id' => $anime_basic->anime_id, 
+                                        'user_id' => auth()->user()->id 
+                                    ]
+                                    
+                                     )}}"class="add-to-favourite-btn-detail-page btn"> <i class="fa fa-heart" style="font-size:12px;"></i> Add To Favourite</a>
+                                <!-- Fav -->
+
+                                </div>
+
+                                @endif
+
+                        
+                        </div>
                    </div>
+                @endif   
 </div>
             </div>
 

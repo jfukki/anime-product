@@ -1,8 +1,13 @@
 @extends('main')
+@section('meta-description', 'Anime Recommendations, Anime Episodes, Anime wishlist, Anime track, Anime wallpapers, Famous Anime Characters & Much More')
+@section('meta-keywords', 'anime, anime recommendations, anime record, anime track, anime characters, upcoming anime, popular anime')
 
-@section('title', 'Search Your Favorite Anime')
+@section('title', 'Register For More Anime Recommendations & Much More')
+
+
 
 @section('content')
+
 
 <!-- search bar -->
 
@@ -36,10 +41,12 @@
 
 <!-- search bar -->
 
+
+
 <div class="container extra-padding-container mt-5 ">
     <div class="row" >
      <div class="col-lg-12">
-        <h2>People Also Searched for</h2>
+        <h2>{{auth()->user()->name}} Favourite Anime List</h2>
      </div>
      <hr>
     </div>
@@ -47,44 +54,44 @@
 
     <div class="row mb-5">
 
-        @if(isset($search_list))
+        @if(isset($user_fav_anime_list))
 
 
-            @foreach($search_list as $search_list)
+            @foreach($user_fav_anime_list as $list)
 
                 <div  class="row searched-item-row" >
                 
                 
 
                     <div class="col-md-2 searched-item-image">
-                            <a href="{{ route('animeDetail' , $search_list->anime_id)  }}"> <img src="{{$search_list->anime_image}}" alt=""> </a>
+                            <a href="{{ route('animeDetail' , $list->anime_id)  }}"> <img src="{{$list->anime_image}}" alt=""> </a>
                     </div>
                     <div class="col-md-4 mt-3">
-                        <a href="" class="searched-item-title">  
+                        <a href="{{ route('animeDetail' , $list->anime_id)  }}" class="searched-item-title">  
 
-                                 @if($search_list->english_title == '')
+                                 @if($list->english_title == '')
 
-                                           {{$search_list->japanese_title}} 
+                                           {{$list->japanese_title}} 
 
                                         @else
 
-                                           {{$search_list->english_title}}
+                                           {{$list->english_title}}
                                 @endif  
 
                                 <br> 
                     </a>
 
 
-                        <span class="searched-item-rating">Rating: {{$search_list->rating}}</span>
+                        <span class="searched-item-rating">Rating: {{$list->rating}}</span>
                     </div>
                     <div class="col-md-2 mt-3">
-                    <span class="searched-item-score">Score:  <br>Popularity:  {{$search_list->popularity}}</span>
+                    <span class="searched-item-score">Score:  <br>Popularity:  {{$list->popularity}}</span>
                     </div>
                     <div class="col-md-2 mt-3">
-                    <span class="searched-item-type">Type:<br>{{$search_list->type}}</span>
+                    <span class="searched-item-type">Type:<br>{{$list->type}}</span>
                     </div>
                     <div class="col-md-2 mt-3">
-                    <span class="searched-item-status">Status:<br> {{$search_list->status}} </span>
+                    <span class="searched-item-status">Status:<br> {{$list->status}} </span>
                     </div>
 
             
@@ -93,16 +100,12 @@
             @endforeach
 
         @else
-        <p>Please Refresh!</p>
+        <p>Please Add To Your List!</p>
         @endif
 
 
 
-    </div>
 
 
-
-  
-     
 
 @endsection

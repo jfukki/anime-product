@@ -32,7 +32,11 @@
               <a class="nav-link my-navbar-color-item" href="{{route('site-stats')}}"> Site Stats</a>
             </li>
 
- 
+            @if(auth()->user())
+            <li class="nav-item">
+              <a class="nav-link my-navbar-color-item" href="{{route('my-list')}}"> My List</a>
+            </li>
+            @endif
 
           </ul>
 

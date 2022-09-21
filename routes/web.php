@@ -9,6 +9,9 @@ use App\Http\Controllers\AnimeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserFavouriteListController;
+use App\Http\Controllers\MyListController;
+
 
 
 
@@ -43,6 +46,12 @@ Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 
 Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
+
+
+Route::get('/addtofavlist/{anime_id}/{user_id}', [UserFavouriteListController::class, 'store'])->name('addtofavlist');
+Route::get('/removefromfavlist/{anime_id}/{user_id}', [UserFavouriteListController::class, 'removefromfavlist'])->name('removefromfavlist');
+
+Route::get('/my-list', [MyListController::class, 'index'])->name('my-list');
 
 
 // ==========================================
