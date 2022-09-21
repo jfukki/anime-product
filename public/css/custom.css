@@ -648,14 +648,7 @@ h4
     transition: transform .6s;
     
   }
-  
-  .zoom:hover {
-    -ms-transform: scale(1.1); /* IE 9 */
-    -webkit-transform: scale(1.1); /* Safari 3-8 */
-    transform: scale(1.1); 
 
-    border:solid 1px rgb(84, 34, 158);
-  }
 /* zoom effect */
 
 
