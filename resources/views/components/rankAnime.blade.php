@@ -15,9 +15,9 @@
                 {{ Str::limit($d->anime_title, 50) }}
             </p>
             
-        </a>
+        </a> 
         
-        
+    
     </div>
      
    @endif 

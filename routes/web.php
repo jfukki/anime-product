@@ -6,6 +6,10 @@ use App\Http\Controllers\BrowseController;
 use App\Http\Controllers\ReviewsController;
 use App\Http\Controllers\SiteStatsController;
 use App\Http\Controllers\AnimeController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\LogoutController;
+
+
 
 
 
@@ -24,6 +28,20 @@ use App\Http\Controllers\AnimeController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+
+// ==========================================
+
+Route::get('/singup', [AuthController::class, 'signup'])->name('signup');
+Route::post('/register', [AuthController::class, 'userRegister'])->name('userregister');
+
+Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
+
+
+Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
+
+
+// ==========================================
 
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
@@ -47,6 +65,8 @@ Route::get('/site-stats', [SiteStatsController::class, 'index'])->name('site-sta
 Route::get('/insertPopularAnime/{id}', [AnimeController::class, 'popularAnimeInsert'])->name('insertPopularAnime');
 Route::get('/insertHorrorAnime/{id}', [AnimeController::class, 'horrorAnimeInsert'])->name('insertHorrorAnime');
 Route::get('/insertRankedAnime/{id}', [AnimeController::class, 'rankedAnimeInsert'])->name('insertRankedAnime');
+
+// ==========================================
 
 
 

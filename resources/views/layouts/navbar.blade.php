@@ -32,11 +32,49 @@
               <a class="nav-link my-navbar-color-item" href="{{route('site-stats')}}"> Site Stats</a>
             </li>
 
+ 
+
+          </ul>
+
+          <ul  class="navbar-nav me-auto mb-2 mb-lg-0 nav-right">
+
+          @if(auth()->user())
+        
+        <li class="nav-item">
+          <a class="nav-link active auth-user-navbar"  href="{{route('dashboard')}}">{{auth()->user()->name}}</a>
+        </li>
+
+        
+        <li class="nav-item">
+          
+          <form action="{{route('logout')}}" method="POST">
+            @csrf
+            <button type="submit" class="btn btn-sm btn-danger logout-btn" href="">Logout</button>
+          </form>
+        </li>
+
+        @else
+           <li class="nav-item ">
+              <a class="nav-link my-navbar-color-item" href="{{route('site-stats')}}"> Login</a>
+            </li>
+
+           <li class="nav-item ">
+              <a class="nav-link my-navbar-color-item btn custom-btn-singup" href="{{route('signup')}}"> Sign Up</a>
+            </li>
+         
+        @endif
+          
+
+
           </ul>
           <!-- <form role="search">
             <input class="form-control" type="search" placeholder="Search" aria-label="Search">
           </form> -->
         </div>
+        
+        
+  </div>
+
       </div>
     </nav>
 </div>
