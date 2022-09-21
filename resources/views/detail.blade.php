@@ -308,7 +308,9 @@
 
                                     
                                     <a href="" class="text-decor">
-                                        <p class="anime-title-list-grid">{{$anime_character->character_name}} 
+                                        <p class="anime-title-list-grid">
+                                        {{ Str::limit($anime_character->character_name, 50) }}
+                                             
                                             <br>
                                             <small class="anime-detail-characters-role">{{$anime_character->character_role}}</small>
                                         </p>
