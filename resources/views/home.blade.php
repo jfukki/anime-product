@@ -53,6 +53,7 @@
     <div class="row">
         <div class="col-lg-10">
             <h2 class="title-bg-homepage">All Time Ranked Anime</h2>
+            <hr>
         </div>
 
         <div class="col-lg-2 ">
@@ -83,6 +84,7 @@
     <div class="row">
         <div class="col-lg-10">
             <h2 class="title-bg-homepage">Popular Anime</h2>
+            <hr>
         </div>
 
         <div class="col-lg-2 ">
@@ -113,6 +115,7 @@
     <div class="row">
         <div class="col-lg-10">
             <h2 class="title-bg-homepage">Horror Anime</h2>
+            <hr>
         </div>
 
         <div class="col-lg-2 ">
