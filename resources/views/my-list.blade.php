@@ -112,6 +112,14 @@
 
                     </div>
 
+                    <div class="col-md-2 mt-3">
+
+                        <!-- Review -->
+                        <a  href="#"class="write-review-btn-detail-page btn"> <i class="fa fa-pencil" style="font-size:12px;"></i> Write A Review</a>
+                        <!-- Review -->
+                        
+                    </div>
+
             
                     </div>
 
