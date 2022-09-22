@@ -63,17 +63,9 @@
                 
                 
 
-                    <div class="col-md-2 searched-item-image">
+                    <div class="col-md-3 searched-item-image">
                             <a href="{{ route('animeDetail' , $list->anime_id)  }}"> <img src="{{$list->anime_image}}" alt=""> </a>
-                            <!-- Fav -->
-                            <a  href="{{ route('removefromfavlist', 
-                                    [
-                                        'anime_id' => $list->anime_id, 
-                                        'user_id' => auth()->user()->id 
-                                    ]
-                                    
-                                    )}}"class="add-to-favourite-btn-detail-page btn"> Remove !<i class="fa fa-heart" style="font-size:12px;"></i> </a>
-                                <!-- Fav -->                    
+                   
                         </div>
                     <div class="col-md-4 mt-3">
                         <a href="{{ route('animeDetail' , $list->anime_id)  }}" class="searched-item-title">  
@@ -96,11 +88,24 @@
                     <div class="col-md-2 mt-3">
                     <span class="searched-item-score">Score:  <br>Popularity:  {{$list->popularity}}</span>
                     </div>
-                    <div class="col-md-2 mt-3">
+                    <div class="col-md-1 mt-3">
                     <span class="searched-item-type">Type:<br>{{$list->type}}</span>
                     </div>
+ 
+
                     <div class="col-md-2 mt-3">
-                    <span class="searched-item-status">Status:<br> {{$list->status}} </span>
+                   
+                                <!-- Fav -->
+                                <a  href="{{ route('removefromfavlist', 
+                                [
+                                'anime_id' => $list->anime_id, 
+                                'user_id' => auth()->user()->id 
+                            ]
+                            
+                            )}}"class="add-to-favourite-btn-detail-page btn" style="margin-top:16px !important;width:90px;"> Remove !<i class="fa fa-heart" style="font-size:12px;"></i> </a>
+                        <!-- Fav --> 
+                    
+
                     </div>
 
             
