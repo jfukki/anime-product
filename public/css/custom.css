@@ -833,4 +833,17 @@ h4
 /* Login Signup */
 
 
+.title-bg-homepage
+{
+    background-color: #683BAB !important;
+    width: 34% !important;
+    padding: 10px;
+    border-radius: 20px;
+
+}
+
+.title-bg-homepage
+{
+    color:whitesmoke !important;
+}
 

@@ -52,7 +52,7 @@
 <div class="container mt-5 extra-padding-container">
     <div class="row">
         <div class="col-lg-10">
-            <h2>All Time Ranked Anime</h2>
+            <h2 class="title-bg-homepage">All Time Ranked Anime</h2>
         </div>
 
         <div class="col-lg-2 ">
