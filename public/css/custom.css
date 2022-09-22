@@ -836,14 +836,14 @@ h4
 .title-bg-homepage
 {
     background-color: #683BAB !important;
-    width: 34% !important;
-    padding: 10px;
+    width: 32% !important;
+    padding: 6px;
     border-radius: 20px;
-
-}
-
-.title-bg-homepage
-{
+    font-size: 16px !important;
+    text-align: center;
     color:whitesmoke !important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }
+
 

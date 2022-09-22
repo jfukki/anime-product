@@ -82,7 +82,7 @@
 <div class="container mt-5 extra-padding-container">
     <div class="row">
         <div class="col-lg-10">
-            <h2>Popular Anime</h2>
+            <h2 class="title-bg-homepage">Popular Anime</h2>
         </div>
 
         <div class="col-lg-2 ">
@@ -112,7 +112,7 @@
 <div class="container mt-5 extra-padding-container" style="margin-top:8% !important;">
     <div class="row">
         <div class="col-lg-10">
-            <h2>Horror Anime</h2>
+            <h2 class="title-bg-homepage">Horror Anime</h2>
         </div>
 
         <div class="col-lg-2 ">
