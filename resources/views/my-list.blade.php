@@ -65,8 +65,15 @@
 
                     <div class="col-md-2 searched-item-image">
                             <a href="{{ route('animeDetail' , $list->anime_id)  }}"> <img src="{{$list->anime_image}}" alt=""> </a>
-                            <a href="{{ route('animeDetail' , $list->anime_id)  }}"> <img src="{{$list->anime_image}}" alt=""> </a>
-                    
+                            <!-- Fav -->
+                            <a  href="{{ route('removefromfavlist', 
+                                    [
+                                        'anime_id' => $list->anime_id, 
+                                        'user_id' => auth()->user()->id 
+                                    ]
+                                    
+                                    )}}"class="add-to-favourite-btn-detail-page btn"> !<i class="fa fa-heart" style="font-size:12px;"></i> </a>
+                                <!-- Fav -->                    
                         </div>
                     <div class="col-md-4 mt-3">
                         <a href="{{ route('animeDetail' , $list->anime_id)  }}" class="searched-item-title">  
