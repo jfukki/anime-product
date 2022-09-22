@@ -51,22 +51,24 @@
 
 <div class="container mt-5 extra-padding-container">
     <div class="row">
-        <div class="col-lg-10">
+        <div class="col-lg-10 col-8">
             <h2 class="title-bg-homepage">All Time Ranked Anime</h2>
-            <hr>
+           
         </div>
 
-        <div class="col-lg-2 ">
+        <div class="col-lg-2 col-2">
             <a href="" class="view-all-text">View All</a>
         </div>
 
 
     </div>
 
-    
+    <div class="col-lg-12">
+        <hr>
+        </div>
 
 
-<br>
+
 </div>
 
      
@@ -82,15 +84,18 @@
 
 <div class="container  extra-padding-container">
     <div class="row">
-        <div class="col-lg-10">
+        <div class="col-lg-10 col-8">
             <h2 class="title-bg-homepage">Popular Anime</h2>
-            <hr>
+         
         </div>
 
-        <div class="col-lg-2 ">
+        <div class="col-lg-2  col-2">
             <a href="" class="view-all-text">View All</a>
         </div>
 
+        <div class="col-lg-12">
+        <hr>
+        </div>
 
     </div>
 
@@ -111,17 +116,19 @@
 
 
 
-<div class="container mt-5 extra-padding-container" >
+<div class="container extra-padding-container" >
     <div class="row">
-        <div class="col-lg-10">
+        <div class="col-lg-10 col-8">
             <h2 class="title-bg-homepage">Horror Anime</h2>
-            <hr>
+           
         </div>
 
-        <div class="col-lg-2 ">
+        <div class="col-lg-2  col-2">
             <a href="" class="view-all-text">View All</a>
         </div>
-
+        <div class="col-lg-12">
+        <hr>
+        </div>
 
     </div>
 
