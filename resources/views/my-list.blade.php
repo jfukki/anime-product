@@ -67,7 +67,7 @@
                             <a href="{{ route('animeDetail' , $list->anime_id)  }}"> <img src="{{$list->anime_image}}" alt=""> </a>
                    
                         </div>
-                    <div class="col-md-4 mt-3">
+                    <div class="col-md-3 mt-3">
                         <a href="{{ route('animeDetail' , $list->anime_id)  }}" class="searched-item-title">  
 
                                  @if($list->english_title == '')
@@ -92,7 +92,7 @@
                     <span class="searched-item-type">Type:<br>{{$list->type}}</span>
                     </div>
 
-                    <div class="col-md-1 mt-3">
+                    <div class="col-md-2 mt-3">
                     <span class="searched-item-type">Status:<br>{{$list->status}}</span>
                     </div>
  
