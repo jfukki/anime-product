@@ -72,7 +72,7 @@
                                         'user_id' => auth()->user()->id 
                                     ]
                                     
-                                    )}}"class="add-to-favourite-btn-detail-page btn"> !<i class="fa fa-heart" style="font-size:12px;"></i> </a>
+                                    )}}"class="add-to-favourite-btn-detail-page btn"> Remove !<i class="fa fa-heart" style="font-size:12px;"></i> </a>
                                 <!-- Fav -->                    
                         </div>
                     <div class="col-md-4 mt-3">
