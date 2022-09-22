@@ -49,7 +49,7 @@
 
 
 
-<div class="container mt-5 extra-padding-container">
+<div class="container extra-padding-container">
     <div class="row">
         <div class="col-lg-10">
             <h2 class="title-bg-homepage">All Time Ranked Anime</h2>
@@ -79,7 +79,7 @@
 
 
 
-<div class="container mt-5 extra-padding-container">
+<div class="container  extra-padding-container">
     <div class="row">
         <div class="col-lg-10">
             <h2 class="title-bg-homepage">Popular Anime</h2>
@@ -109,7 +109,7 @@
 
 
 
-<div class="container mt-5 extra-padding-container" style="margin-top:8% !important;">
+<div class="container mt-5 extra-padding-container" >
     <div class="row">
         <div class="col-lg-10">
             <h2 class="title-bg-homepage">Horror Anime</h2>
