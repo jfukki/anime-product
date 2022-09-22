@@ -56,10 +56,10 @@
                 
                 
 
-                    <div class="col-md-2 searched-item-image">
+                    <div class="col-md-1 searched-item-image">
                             <a href="{{ route('animeDetail' , $search_list->anime_id)  }}"> <img src="{{$search_list->anime_image}}" alt=""> </a>
                     </div>
-                    <div class="col-md-4 mt-3">
+                    <div class="col-md-2 mt-3">
                         <a href="" class="searched-item-title">  
 
                                  @if($search_list->english_title == '')
@@ -80,12 +80,39 @@
                     <div class="col-md-2 mt-3">
                     <span class="searched-item-score">Score:  <br>Popularity:  {{$search_list->popularity}}</span>
                     </div>
-                    <div class="col-md-2 mt-3">
+                    <div class="col-md-1 mt-3">
                     <span class="searched-item-type">Type:<br>{{$search_list->type}}</span>
                     </div>
                     <div class="col-md-2 mt-3">
                     <span class="searched-item-status">Status:<br> {{$search_list->status}} </span>
                     </div>
+
+
+
+                    <div class="col-md-2 mt-3" style="padding-right:0% !important;">
+                   
+                   <!-- Fav -->
+                   <a  href="{{ route('removefromfavlist', 
+                   [
+                   'anime_id' => $search_list->anime_id, 
+                   'user_id' => auth()->user()->id 
+               ]
+               
+               )}}"class="add-to-favourite-btn-detail-page btn" style="margin-top:16px !important; "> Remove From List <i class="fa fa-heart" style="font-size:12px;"></i> </a>
+           <!-- Fav --> 
+       
+
+       </div>
+
+       <div class="col-md-2 mt-1">
+      <br>
+           <!-- Review -->
+               <a  href="#" class="write-review-btn-detail-page btn"> <i class="fa fa-pencil" style="font-size:12px; "></i> Write A Review</a>
+               <!-- Review -->
+
+        </div>
+
+
 
             
                     </div>

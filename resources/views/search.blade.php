@@ -54,7 +54,7 @@
     <div  class="row searched-item-row" >
         
                
-                <div class="col-md-2 searched-item-image">
+                <div class="col-md-1 searched-item-image">
                   @if(isset($searchItem['mal_id']))
 
                   <a href="{{ route('animeDetail' , $searchItem['mal_id'])  }}"> <img src="{{$searchItem['images']['jpg']['large_image_url']}}" alt=""> </a>
@@ -63,7 +63,7 @@
                    <img src="" alt="No Image Found">
                   @endif
                 </div>
-                <div class="col-md-4 mt-3">
+                <div class="col-md-2 mt-3">
             @if($searchItem['title_english'] == '')
 
               <a href="{{ route('animeDetail' , $searchItem['mal_id'])  }}" class="searched-item-title">  {{$searchItem['title_japanese']}} <br> </a>
@@ -78,12 +78,36 @@
                 <div class="col-md-2 mt-3">
                   <span class="searched-item-score">Score: {{$searchItem['score']}} <br>Popularity: {{$searchItem['popularity']}} </span>
                 </div>
-                <div class="col-md-2 mt-3">
+                <div class="col-md-1 mt-3">
                    <span class="searched-item-type">Type:<br>{{$searchItem['type']}}</span>
                 </div>
                 <div class="col-md-2 mt-3">
                    <span class="searched-item-status">Status:<br>  {{$searchItem['status']}}</span>
                 </div>
+
+                
+                <div class="col-md-2 mt-3" style="padding-right:0% !important;">
+                   
+                   <!-- Fav -->
+                   <a  href="{{ route('removefromfavlist', 
+                   [
+                   'anime_id' => $searchItem['mal_id'], 
+                   'user_id' => auth()->user()->id 
+               ]
+               
+               )}}"class="add-to-favourite-btn-detail-page btn" style="margin-top:16px !important; "> Remove From List <i class="fa fa-heart" style="font-size:12px;"></i> </a>
+           <!-- Fav --> 
+       
+
+       </div>
+
+       <div class="col-md-2 mt-1">
+      <br>
+           <!-- Review -->
+               <a  href="#" class="write-review-btn-detail-page btn"> <i class="fa fa-pencil" style="font-size:12px; "></i> Write A Review</a>
+               <!-- Review -->
+
+        </div>
  
          
     </div>
