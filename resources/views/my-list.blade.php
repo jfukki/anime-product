@@ -67,7 +67,7 @@
                             <a href="{{ route('animeDetail' , $list->anime_id)  }}"> <img src="{{$list->anime_image}}" alt=""> </a>
                    
                         </div>
-                    <div class="col-md-3 mt-3">
+                    <div class="col-md-2 mt-3">
                         <a href="{{ route('animeDetail' , $list->anime_id)  }}" class="searched-item-title">  
 
                                  @if($list->english_title == '')
@@ -117,7 +117,7 @@
                         <!-- Review -->
                         <a  href="#"class="write-review-btn-detail-page btn"> <i class="fa fa-pencil" style="font-size:12px;"></i> Write A Review</a>
                         <!-- Review -->
-                        
+
                     </div>
 
             
