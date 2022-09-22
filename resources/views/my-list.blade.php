@@ -63,7 +63,7 @@
                 
                 
 
-                    <div class="col-md-3 searched-item-image">
+                    <div class="col-md-1 searched-item-image">
                             <a href="{{ route('animeDetail' , $list->anime_id)  }}"> <img src="{{$list->anime_image}}" alt=""> </a>
                    
                         </div>
@@ -90,6 +90,10 @@
                     </div>
                     <div class="col-md-1 mt-3">
                     <span class="searched-item-type">Type:<br>{{$list->type}}</span>
+                    </div>
+
+                    <div class="col-md-1 mt-3">
+                    <span class="searched-item-type">Status:<br>{{$list->status}}</span>
                     </div>
  
 
