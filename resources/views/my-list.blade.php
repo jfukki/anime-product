@@ -54,7 +54,7 @@
 
     <div class="row mb-5">
 
-        @if(isset($user_fav_anime_list))
+        @if(count($user_fav_anime_list) > 0)
 
 
             @foreach($user_fav_anime_list as $list)
@@ -114,7 +114,9 @@
             @endforeach
 
         @else
-        <p>Please Add To Your List!</p>
+            <div class="row">
+            <p>Please Add To Your List!</p>
+            </div>
         @endif
 
 
