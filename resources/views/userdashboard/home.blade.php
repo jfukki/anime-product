@@ -12,6 +12,7 @@
                     background-color: #242538;
                     background-position: 50% 35%;
                     background-repeat: no-repeat;
+                    background-attachment: fixed;
                     background-size: cover;
                     height: 330px;
                     position: relative;
@@ -30,13 +31,14 @@
         
         border-radius: 4px 4px 0 0;
         position: relative;
-        top: 7%;        
+        top: 34%;        
         z-index: 11;
         
      "
      >
         <div class="col-lg-4 text-center ">
-             <img src="https://s4.anilist.co/file/anilistcdn/user/avatar/large/b5654222-xIdAqCgaTGIV.png" alt="" >
+             <img src='{{ URL::asset("images/user_images/{$user->user_avatar}") }}
+' alt="" style="width: 220px; height:auto;" >
         </div>
 
         <div class="col-lg-4 " style="
@@ -76,7 +78,7 @@
         </div>
 
         <div class="col-lg-3 col-12 text-center">
-            <a href="{{ route('editBannerAavatar' , auth()->user()->id) }}" class="btn user-profile-tab-btn">  <i class="fa fa-image"></i>  Banner & Avatar</a>
+            <a href="{{ route('editBannerAavatar' , auth()->user()->id) }}" class="btn user-profile-tab-btn">  <i class="fa fa-image"></i>  Bio & Banner</a>
         </div>
     </div>
 </div>

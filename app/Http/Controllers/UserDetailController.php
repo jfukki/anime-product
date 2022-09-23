@@ -23,17 +23,57 @@ class UserDetailController extends Controller
         $user_id = auth()->user()->id;
         $user = UserDetail::where('user_id' , '=', $user_id)->first();
 
-        return view('userdashboard.home', ['user' => $user]);
+        $user_detail = User::find($user_id);
+
+        return view('userdashboard.home', ['user'=> $user , 'user_detail' => $user_detail]);
     }
 
     public function userEdit($user_id)
     {
-        $user = User::find($user_id);
-        return view ('userdashboard.userEdit',['user'=>$user]);
+        $user = UserDetail::where('user_id' , '=', $user_id)->first();
+
+        $user_detail = User::find($user_id);
+        
+        return view ('userdashboard.userEdit',['user'=> $user , 'user_detail' => $user_detail]);
     }
 
     public function userUpdate(Request $req, $id)
     {
+
+        if($req->file('avatar')){
+            $file= $req->file('avatar');
+            $filename= date('YmdHi').$file->getClientOriginalName();
+            $file-> move(public_path('images/user_images'), $filename);
+            $user_avatar['avatar']= $filename;
+            $user_avatar = $filename;  
+
+        }
+        else
+        {
+            $user_avatar= $req->avatar;
+         
+        }
+
+        $userBannerInfo = UserDetail::updateOrCreate(
+            ['user_id' =>  $id],
+            [
+                    'user_avatar' =>  $user_avatar,
+
+        ]
+       
+
+        );
+
+        if(isset($userBannerInfo))
+        {
+           
+    
+        }
+        else
+        {
+            return  "something went wrong...";
+        }
+
         $user = User::find($id);
 
         $user->name = $req->name;
@@ -42,7 +82,12 @@ class UserDetailController extends Controller
 
         $user->save();
 
-        return view('userdashboard.home'); 
+        $user_id = auth()->user()->id;
+        $user = UserDetail::where('user_id' , '=', $user_id)->first();
+
+        $user_detail = User::find($user_id);
+
+        return view('userdashboard.home', ['user'=> $user , 'user_detail' => $user_detail]);
     }
 
     public function editBannerAavatar($user_id)
@@ -68,13 +113,13 @@ class UserDetailController extends Controller
             $user_banner = $filename;  
 
             $user_about= $request->about;
-            $user_avatar= 'avatar';
+            
 
         }
         else
         {
             $user_about= $request->about;
-            $user_avatar= 'avatar';
+            
             $user_banner = $request->image;
         }
 
@@ -86,7 +131,6 @@ class UserDetailController extends Controller
             [
                 
             'about' =>  $user_about,
-            'user_avatar' =>  $user_avatar,
             'user_banner' =>  $user_banner,
 
         ]
@@ -96,7 +140,11 @@ class UserDetailController extends Controller
 
         if(isset($userBannerInfo))
         {
-            return view('userdashboard.home'); 
+           
+            $user_id = auth()->user()->id;
+            $user = UserDetail::where('user_id' , '=', $user_id)->first();
+    
+            return view('userdashboard.home', ['user' => $user]);
 
         }
         else

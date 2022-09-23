@@ -23,14 +23,7 @@
                 </div>
 
  
-                <div class="mb-3">
-                    <label for="bannerImage" class="form-label">Update Avatar</label>
-                    <input type="file" class="form-control"  name="avatar" value="{{$user->user_avatar}}">
-                    <small>Allowed Formats: JPEG, PNG. Max size: 6mb. Optimal dimensions: 1700x330</small>
-   
-
-                </div>
-
+                
 
 
                 <button type="submit" class="btn btn-outline-dark genres-detail-page">Update</button>
