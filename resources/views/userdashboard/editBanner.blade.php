@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-8 offset-md-2 registeration-card my-3 ">
                 <h2 class="text-center mb-5 mt-3">About - Banner - Avatar</h2>
-            <form action="{{route('bannerUpdate',  auth()->user()->id)}}" method="POST">
+            <form action="{{route('bannerUpdate',  auth()->user()->id)}}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 
@@ -15,7 +15,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="bannerImage" class="form-label">Update Banner</label>
+                    <label for="image" class="form-label">Update Banner</label>
                     <input type="file" class="form-control"  name="image" value="{{$user->user_banner}}">
                     <small>Allowed Formats: JPEG, PNG. Max size: 6mb. Optimal dimensions: 1700x330</small>
    

@@ -46,24 +46,35 @@ class UserDetailController extends Controller
     {
  
       $user = DB::table('user_details')->where('user_id', $user_id)->get();
+      $user = UserDetail::where('user_id' , '=', $user_id)->first();
 
         return view ('userdashboard.editBanner',['user'=> $user]);
+        // return view ('userdashboard.editBanner');
 
     }
 
     public function updateBannerAvatar(Request $request, $user_id)
     {
 
+        
         if($request->file('image')){
             $file= $request->file('image');
             $filename= date('YmdHi').$file->getClientOriginalName();
             $file-> move(public_path('images/'), $filename);
             $user_banner['image']= $filename;
+            $user_banner = $filename;  
+            $user_about= $request->about;
+            $user_avatar= 'avatar';
+
+        }
+        else
+        {
+            $user_about= $request->about;
+            $user_avatar= 'avatar';
+            $user_banner = $request->image;
         }
 
-        $user_about= $request->about;
-        $user_avatar= 'avatar';
-        $user_banner= $request->file('image');
+         
         
         
         $userBannerInfo = UserDetail::updateOrCreate(
