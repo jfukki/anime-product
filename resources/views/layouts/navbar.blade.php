@@ -45,7 +45,7 @@
           @if(auth()->user())
         
         <li class="nav-item">
-          <a class="nav-link active auth-user-navbar"  href="{{route('dashboard')}}">{{auth()->user()->name}}</a>
+          <a class="nav-link active auth-user-navbar"  href="{{route('my-profile')}}">{{auth()->user()->name}}</a>
         </li>
 
         

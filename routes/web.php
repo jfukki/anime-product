@@ -11,6 +11,8 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserFavouriteListController;
 use App\Http\Controllers\MyListController;
+use App\Http\Controllers\UserDetailController;
+
 
 
 
@@ -55,6 +57,14 @@ Route::get('/addtofavlistsearchitem/{anime_id}/{user_id}', [UserFavouriteListCon
 
 
 Route::get('/my-list', [MyListController::class, 'index'])->name('my-list');
+Route::get('/my-profile', [UserDetailController::class, 'index'])->name('my-profile');
+Route::get('/user-edit/{user_id}', [UserDetailController::class, 'userEdit'])->name('user-edit');
+Route::post('/user-update/{user_id}', [UserDetailController::class, 'userUpdate'])->name('userUpdate');
+Route::get('/banner-edit/{user_id}', [UserDetailController::class, 'editBannerAavatar'])->name('editBannerAavatar');
+Route::post('/banner-update/{user_id}', [UserDetailController::class, 'updateBannerAvatar'])->name('bannerUpdate');
+
+
+
 
 
 // ==========================================

@@ -46,7 +46,7 @@
 <div class="container extra-padding-container mt-5 ">
     <div class="row" >
      <div class="col-lg-12">
-        <h2>{{auth()->user()->name}} Favourite Anime List</h2>
+        <h2>{{auth()->user()->name}} <small>Favourite Anime List</small></h2>
      </div>
      <hr>
     </div>

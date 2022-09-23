@@ -1,30 +1,43 @@
-public function store($anime_id, $user_id)
-    {
+@extends('userdashboard.home')
+@section('user-dashboard-content')
 
-        $user_fav_anime = DB::table('user_favourite_lists')
-        ->where('anime_id', $anime_id)
-        ->where('user_id', $user_id)
-        ->get();
+<div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 registeration-card my-3 ">
+                <h2 class="text-center mb-5 mt-3">Signup To Discover More Anime</h2>
+            <form action="{{route('userregister')}}" method="POST">
+                @csrf
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Full Name</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Name" value="{{old('name')}}" >  
+                    <small class="form-alert">@error('name')  {{$message}} @enderror</small>                   
+                </div>
+
+               
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" name="email" id="exampleInputEmail1" value="{{old('email')}}" placeholder="Enter Your Email" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    <small class="form-alert">@error('email')  {{$message}} @enderror</small>   
+                </div>
 
 
-        if(count($user_fav_anime) > 0)
-        {
-            return redirect()->route('animeDetail', [$anime_id]);
-            
-        }else
-        {
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter Your Name">
+                    <small class="form-alert">@error('password')  {{$message}} @enderror</small>   
+                </div>
+                <div class="mb-3">
+                    <label for="password_confirmation" class="form-label">Repeat Your Password</label>
+                    <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Please Repeat Your Password">
+                      
+                </div>
+                
+                <button type="submit" class="btn btn-outline-secondary register-btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
-            DB::table('user_favourite_lists')->insert(
-                [
-                    'anime_id' => $anime_id,
-                    'user_id' => $user_id
-                ]
-            );
 
-            return redirect()->back();
-
-        }
-
-           
-       
-    }
+@endsection
