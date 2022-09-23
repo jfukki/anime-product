@@ -7,7 +7,10 @@
 
 <!-- user dashboard sidebar -->
 
-<div class="container-fluid" style='
+@if(isset($user->user_banner))
+
+<div class="container-fluid" 
+style='
                     margin-top:20px;
                     background-color: #242538;
                     background-position: 50% 35%;
@@ -16,13 +19,33 @@
                     background-size: cover;
                     height: 330px;
                     position: relative;
-                    
+                  
                     background-image: 
                     url("http://127.0.0.1:8000/images/user_images/{{$user->user_banner}}") ;
 
                     '
                     
                     >
+
+@else
+
+<div class="container-fluid" 
+style='
+                    margin-top:20px;
+                    background-color: #242538;
+                    background-position: 50% 35%;
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    background-size: cover;
+                    height: 330px;
+                    position: relative;
+                  
+                  '
+                    
+                    >
+
+@endif
+
                     
   
                     
@@ -37,8 +60,17 @@
      "
      >
         <div class="col-lg-4 text-center ">
+
+        @if(isset($user->user_avatar))
+
              <img src='{{ URL::asset("images/user_images/{$user->user_avatar}") }}
 ' alt="" style="width: 220px; height:auto;" >
+
+@else
+
+<img src='' alt="" style="width: 220px; height:auto;" >
+
+@endif
         </div>
 
         <div class="col-lg-4 " style="

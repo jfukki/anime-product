@@ -11,12 +11,28 @@
                 
                 <div class="mb-3">
                     <label for="password" class="form-label">About</label>
-                    <textarea name="about" class="form-control" rows="4" placeholder="Please Your Bio Here.">{{$user->about}}</textarea>
+                    @if(isset($user->about))
+
+                        <textarea name="about" class="form-control" rows="4" placeholder="Please Your Bio Here.">{{$user->about}}</textarea>
+
+                    @else
+                    
+                    <textarea name="about" class="form-control" rows="4" placeholder="Please Your Bio Here."></textarea>
+                         @endif    
+
                 </div>
 
                 <div class="mb-3">
                     <label for="image" class="form-label">Update Banner</label>
+                    @if(isset($user->user_banner))
+
                     <input type="file" class="form-control"  name="image" value="{{$user->user_banner}}">
+
+                         @else
+                    
+                         <input type="file" class="form-control"  name="image">
+                    
+                    @endif
                     <small>Allowed Formats: JPEG, PNG. Max size: 6mb. Optimal dimensions: 1700x330</small>
    
    

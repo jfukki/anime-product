@@ -105,6 +105,8 @@ class UserDetailController extends Controller
     {
 
         
+        $user_about= $request->about;
+        
         if($request->file('image')){
             $file= $request->file('image');
             $filename= date('YmdHi').$file->getClientOriginalName();
@@ -112,14 +114,9 @@ class UserDetailController extends Controller
             $user_banner['image']= $filename;
             $user_banner = $filename;  
 
-            $user_about= $request->about;
-            
-
         }
         else
-        {
-            $user_about= $request->about;
-            
+        {            
             $user_banner = $request->image;
         }
 
