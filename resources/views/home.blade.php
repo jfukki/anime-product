@@ -51,14 +51,14 @@
 
 <div class="container mt-5 extra-padding-container">
     <div class="row">
-        <div class="col-lg-10 col-7">
+        <div class="col-lg-10 col-8">
             <h2 class="title-bg-homepage">All Time Ranked Anime</h2>
            
         </div>
 
-        <div class="col-lg-2 col-2">
+        <!-- <div class="col-lg-2 col-4">
             <a href="" class="view-all-text">View All</a>
-        </div>
+        </div> -->
 
 
     </div>
@@ -90,9 +90,9 @@
          
         </div>
 
-        <div class="col-lg-2  col-2">
+        <!-- <div class="col-lg-2  col-2">
             <a href="" class="view-all-text">View All</a>
-        </div>
+        </div> -->
 
         <div class="col-lg-12">
         <hr>
@@ -124,9 +124,9 @@
            
         </div>
 
-        <div class="col-lg-2  col-2">
+        <!-- <div class="col-lg-2  col-2">
             <a href="" class="view-all-text">View All</a>
-        </div>
+        </div> -->
         <div class="col-lg-12">
         <hr>
         </div>
