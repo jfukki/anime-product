@@ -38,7 +38,7 @@
                   
 
                   @foreach($anime_genres as $anime_genres)
-                    <div class="col-lg-6 col-6">
+                    <div class="col-lg-5 col-5">
 
                         <p class="genres-detail-page">{{$anime_genres->genres}}</p>
 
@@ -135,7 +135,7 @@
                                         'user_id' => auth()->user()->id 
                                     ]
                                     
-                                     )}}"class="add-to-favourite-btn-detail-page btn"> <i class="fa fa-heart" style="font-size:12px;"></i> Add To Favourite</a>
+                                     )}}"class="add-to-favourite-btn-detail-page btn"> <i class="fa fa-heart" style="font-size:12px;"></i> Add To Fav</a>
                                 <!-- Fav -->
 
                                 </div>
@@ -238,7 +238,7 @@
                             
                     </div>
 
-                    <div class="col-md-2 col-4 anime-detail-info-grid">
+                    <div class="col-md-2 col-5 anime-detail-info-grid">
 
                             <span class="anime-detail-info-grid-title">Type: </span> <span class="anime-detail-info-grid-text">{{$anime_basic->type}}</span>
 
@@ -246,7 +246,7 @@
 
 
 
-                    <div class="col-md-2 col-4 anime-detail-info-grid">
+                    <div class="col-md-2 col-5 anime-detail-info-grid">
 
                         <span class="anime-detail-info-grid-title">Episodes: </span> <span class="anime-detail-info-grid-text">{{$anime_basic->no_of_episodes}}</span>
 
@@ -337,7 +337,7 @@
 
     <div class="row">
         
-        @if(isset($anime_streaming))
+        @if(count($anime_streaming) > 0 )
 
           @foreach($anime_streaming as $anime_streaming)
           <div class="col-lg-2 col-6 anime-detail-info-grid mt-3">
@@ -382,7 +382,7 @@
                         </div>
 
 
-                  @if(isset($anime_character))
+                  @if(count($anime_character) > 0)
 
                     @foreach($anime_character as $anime_character)
                                 <div class="col-lg-2 col-6 anime-grid-list text-center">
@@ -442,15 +442,16 @@
 
                         </div>
             
-                       @if(isset($anime_pictures))
-
+                       @if(count($anime_pictures)  > 0)
+                                        <br><br>
+                                        <br>
                                 @foreach($anime_pictures as $anime_pictures)
 
-                                <div class="col-lg-2 col-6 anime-grid-list">
+                                <div class="col-lg-2 col-6 ">
 
                                     <a href="">
                                     <img src="{{$anime_pictures->anime_picture_url}}"
-                                    alt="" class="anime-grid-list-image">
+                                    alt="" class="anime-detail-pictures-list-image">
                                     </a>
                                 </div>
 
@@ -487,7 +488,7 @@
                         </div>
 
 
-                       @if(isset($anime_recommendations))
+                       @if(count($anime_recommendations))
                                 @foreach($anime_recommendations  as $anime_recommendations)
 
                                 <div class="col-lg-2 col-6 anime-grid-list">
