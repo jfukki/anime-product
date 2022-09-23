@@ -85,29 +85,58 @@
                    <span class="searched-item-status">Status:<br>  {{$searchItem['status']}}</span>
                 </div>
 
-                
-                <div class="col-md-2 mt-3" style="padding-right:0% !important;">
-                   
-                   <!-- Fav -->
-                   <a  href="{{ route('removefromfavlist', 
-                   [
-                   'anime_id' => $searchItem['mal_id'], 
-                   'user_id' => auth()->user()->id 
-               ]
-               
-               )}}"class="add-to-favourite-btn-detail-page btn" style="margin-top:16px !important; "> Remove From List <i class="fa fa-heart" style="font-size:12px;"></i> </a>
-           <!-- Fav --> 
-       
+                @if(auth()->user())
 
-       </div>
 
-       <div class="col-md-2 mt-1">
-      <br>
-           <!-- Review -->
-               <a  href="#" class="write-review-btn-detail-page btn"> <i class="fa fa-pencil" style="font-size:12px; "></i> Write A Review</a>
-               <!-- Review -->
+                    <div class="col-md-2 mt-3" style="padding-right:0% !important;">
 
-        </div>
+                            <!-- Fav -->
+                            <a  href="{{ route('removefromfavlist', 
+                            [
+                            'anime_id' => $search_list->anime_id, 
+                            'user_id' => auth()->user()->id 
+                        ]
+                        
+                        )}}"class="add-to-favourite-btn-detail-page btn" style="margin-top:16px !important; "> Remove From List <i class="fa fa-heart" style="font-size:12px;"></i> </a>
+                        <!-- Fav --> 
+
+
+                    </div>
+
+                    <div class="col-md-2 mt-1">
+                      <br>
+                        <!-- Review -->
+                            <a  href="#" class="write-review-btn-detail-page btn"> <i class="fa fa-pencil" style="font-size:12px; "></i> Write A Review</a>
+                            <!-- Review -->
+
+                    </div>
+
+
+
+                    @else
+
+
+                    <div class="col-md-2 mt-3" style="padding-right:0% !important;">
+
+                    <a  href="{{ route('signup')}}"class="add-to-favourite-btn-detail-page btn"> 
+                      <i class="fa fa-heart" style="font-size:12px;"></i>
+                      Signup To Add Fav 
+                    </a>
+
+
+                    </div>
+
+                    <div class="col-md-2 mt-3">
+
+                    <a href="{{ route('signup')}}" class="write-review-btn-detail-page btn"> 
+                      <i class="fa fa-pencil" style="font-size:12px;"></i> 
+                      Signup to Write 
+                    </a>
+
+                    </div>
+
+
+@endif
  
          
     </div>

@@ -54,13 +54,11 @@
 
                 <div  class="row searched-item-row" >
                 
-                
-
                     <div class="col-md-1 searched-item-image">
                             <a href="{{ route('animeDetail' , $search_list->anime_id)  }}"> <img src="{{$search_list->anime_image}}" alt=""> </a>
                     </div>
                     <div class="col-md-2 mt-3">
-                        <a href="" class="searched-item-title">  
+                        <a href="{{ route('animeDetail' , $search_list->anime_id)  }}" class="searched-item-title">  
 
                                  @if($search_list->english_title == '')
 
@@ -113,26 +111,33 @@
 
                     </div>
 
+
+
+                @else
+                
+                
+                <div class="col-md-2 mt-3" style="padding-right:0% !important;">
+                   
+                   <a  href="{{ route('signup')}}"class="add-to-favourite-btn-detail-page btn"> 
+                       <i class="fa fa-heart" style="font-size:12px;"></i>
+                       Signup To Add Fav 
+                   </a>
+  
+
+                </div>
+
+               <div class="col-md-2 mt-3">
+                 
+                  <a href="{{ route('signup')}}" class="write-review-btn-detail-page btn"> 
+                       <i class="fa fa-pencil" style="font-size:12px;"></i> 
+                       Signup to Write 
+                   </a>
+
+               </div>
+
+
                 @endif
 
-                    <div class="col-md-2 mt-3" style="padding-right:0% !important;">
-                   
-                        <a  href="{{ route('signup')}}"class="add-to-favourite-btn-detail-page btn"> 
-                            <i class="fa fa-heart" style="font-size:12px;"></i>
-                            Signup To Add Fav 
-                        </a>
-       
-
-                     </div>
-
-                    <div class="col-md-2 mt-3">
-                      
-                       <a href="{{ route('signup')}}" class="write-review-btn-detail-page btn"> 
-                            <i class="fa fa-pencil" style="font-size:12px;"></i> 
-                            Signup to Write 
-                        </a>
-
-                    </div>
 
             
                     </div>
