@@ -67,6 +67,7 @@
         <hr>
         </div>
 
+        @include('components.rankAnime')
 
 
 </div>

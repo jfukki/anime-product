@@ -146,6 +146,17 @@
                         </div>
                    </div>
                 @endif   
+
+                  <!-- Please Login -->
+                  <a  href="{{ route('signup')}}"class="add-to-favourite-btn-detail-page btn"> 
+                        <i class="fa fa-heart" style="font-size:12px;"></i>
+                        Signup To Add Fav 
+                        </a>
+                    <!-- Please Login -->
+
+
+
+                
 </div>
             </div>
 
