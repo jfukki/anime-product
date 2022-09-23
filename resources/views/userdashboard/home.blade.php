@@ -7,7 +7,7 @@
 
 <!-- user dashboard sidebar -->
 
-<div class="container-fluid" style=" 
+<div class="container-fluid" style='
                     margin-top:20px;
                     background-color: #242538;
                     background-position: 50% 35%;
@@ -16,11 +16,15 @@
                     height: 330px;
                     position: relative;
                     
-                    background-image: url(https://s4.anilist.co/file/anilistcdn/user/banner/b5654222-1AztRIbw5fG3.jpg);
-                    "
+                    background-image: 
+                    url("http://127.0.0.1:8000/images/user_images/{{$user->user_banner}}") ;
+
+                    '
                     
                     >
-   
+                    
+  
+                    
 
     <div class="row" style="
         

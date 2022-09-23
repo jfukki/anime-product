@@ -20,7 +20,10 @@ class UserDetailController extends Controller
 
     public function index()
     {
-        return view('userdashboard.home');
+        $user_id = auth()->user()->id;
+        $user = UserDetail::where('user_id' , '=', $user_id)->first();
+
+        return view('userdashboard.home', ['user' => $user]);
     }
 
     public function userEdit($user_id)
@@ -45,7 +48,7 @@ class UserDetailController extends Controller
     public function editBannerAavatar($user_id)
     {
  
-      $user = DB::table('user_details')->where('user_id', $user_id)->get();
+    //   $user = DB::table('user_details')->where('user_id', $user_id)->get();
       $user = UserDetail::where('user_id' , '=', $user_id)->first();
 
         return view ('userdashboard.editBanner',['user'=> $user]);
@@ -60,9 +63,10 @@ class UserDetailController extends Controller
         if($request->file('image')){
             $file= $request->file('image');
             $filename= date('YmdHi').$file->getClientOriginalName();
-            $file-> move(public_path('images/'), $filename);
+            $file-> move(public_path('images/user_images'), $filename);
             $user_banner['image']= $filename;
             $user_banner = $filename;  
+
             $user_about= $request->about;
             $user_avatar= 'avatar';
 
