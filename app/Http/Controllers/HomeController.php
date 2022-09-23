@@ -131,6 +131,12 @@ class HomeController extends Controller
  
         $animeViews = DB::table('anime_views')->where('anime_id', $id)->first();
  
+        $anime_fav_count = DB::table('user_favourite_lists')
+        ->select('anime_id')
+        ->where('anime_id', $id)
+        ->get();   
+        
+        $count_anime_fav =  $anime_fav_count -> count();
 
         // views counter
 
@@ -171,6 +177,7 @@ class HomeController extends Controller
                     'anime_recommendations' => $anime_recommendations,
                     'anime_streaming' =>  $anime_streaming,
                     'user_fav_anime' =>  $user_fav_anime,
+                    'count_anime_fav' => $count_anime_fav,
                         
                   ]);
     

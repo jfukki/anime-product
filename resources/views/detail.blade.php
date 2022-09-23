@@ -86,17 +86,58 @@
                     <small class="anime-detail-page-source-text">Source: <a href="https://myanimelist.net/" target="_blank">My Anime List</a></small>
                 </p>
                 <hr>
-                <p class="anime-detail-page-views"> <i class="fa fa-eye"></i> 
 
-                @if(isset($animeViews))
-                    {{$animeViews->views}} 
-                @endif
-                    views</p>
+
+                
                 </div>
 
                  
-
                 <div>
+
+                <p class="anime-detail-below-cover-genere"> 
+                   
+                   <div class="container p-0">
+                    <div class="row">
+                    
+
+                   
+                    <div class="col-lg-5 col-5">
+
+                    <p class="anime-views-count"> <i class="fa fa-eye"></i> 
+
+                        @if(isset($animeViews))
+                            {{$animeViews->views}} 
+                        @endif
+                            views</p>
+
+                    </div>
+                  
+
+                    <div class="col-lg-5 col-5">
+
+                        <p class="anime-fav-count">
+                                <i class="fa fa-heart"></i> 
+                                @if(isset($count_anime_fav) > 0)
+                               
+                                {{$count_anime_fav}}
+
+                                @else
+
+                                    0
+
+                                 @endif   
+
+                        </p>
+
+                    </div>
+                  
+                   
+                 
+                    </div>
+                   </div>
+
+                  
+                   </p>
          
 
                 @if(auth()->user())
@@ -121,7 +162,8 @@
                                         'user_id' => auth()->user()->id 
                                     ]
                                     
-                                    )}}"class="add-to-favourite-btn-detail-page btn"> <i class="fa fa-heart" style="font-size:12px;"></i> Remove From Favourite</a>
+                                    )}}"class="add-to-favourite-btn-detail-page btn"> 
+                                    <i class="fa fa-heart" style="font-size:12px;"></i> Remove </a>
                                 <!-- Fav -->
 
                                 </div>

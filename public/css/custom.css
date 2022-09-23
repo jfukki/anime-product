@@ -213,6 +213,38 @@ h4
 
 
 
+.anime-views-count
+{
+    background-color: #d66012d2;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    padding:6px;
+    width: 133px;
+    margin-top: 4px !important;
+    margin-left: 3px;
+    border-radius: 15px;
+    font-size: 14px !important;
+    font-family: oxyRegular;
+    text-align: center;
+    color: white;
+}
+
+.anime-fav-count
+{
+    background-color: #d66012d2;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    padding:6px;
+    width: 133px;
+    margin-top: 4px !important;
+    margin-left: 3px;
+    border-radius: 15px;
+    font-size: 14px !important;
+    font-family: oxyRegular;
+    text-align: center;
+    color: white;
+}
+
+
+
 .genres-detail-page
 {
     background-color: #54229E;
