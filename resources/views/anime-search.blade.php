@@ -54,11 +54,13 @@
 
                 <div  class="row searched-item-row" >
                 
+                
+
                     <div class="col-md-1 searched-item-image">
                             <a href="{{ route('animeDetail' , $search_list->anime_id)  }}"> <img src="{{$search_list->anime_image}}" alt=""> </a>
                     </div>
                     <div class="col-md-2 mt-3">
-                        <a href="{{ route('animeDetail' , $search_list->anime_id)  }}" class="searched-item-title">  
+                        <a href="" class="searched-item-title">  
 
                                  @if($search_list->english_title == '')
 
@@ -91,13 +93,14 @@
                     <div class="col-md-2 mt-3" style="padding-right:0% !important;">
                    
                             <!-- Fav -->
-                            <a  href="{{ route('removefromfavlist', 
+                            <a  href="{{ route('addtofavlistsearchitem', 
                             [
                             'anime_id' => $search_list->anime_id, 
                             'user_id' => auth()->user()->id 
                         ]
                         
-                        )}}"class="add-to-favourite-btn-detail-page btn" style="margin-top:16px !important; "> Remove From List <i class="fa fa-heart" style="font-size:12px;"></i> </a>
+                        )}}"class="add-to-favourite-btn-detail-page btn" 
+                        style="margin-top:16px !important; "> Add To Fav <i class="fa fa-heart" style="font-size:12px;"></i> </a>
                          <!-- Fav --> 
        
 
@@ -116,24 +119,24 @@
                 @else
                 
                 
-                <div class="col-md-2 mt-3" style="padding-right:0% !important;">
+                    <div class="col-md-2 mt-3" style="padding-right:0% !important;">
                    
-                   <a  href="{{ route('signup')}}"class="add-to-favourite-btn-detail-page btn"> 
-                       <i class="fa fa-heart" style="font-size:12px;"></i>
-                       Signup To Add Fav 
-                   </a>
-  
+                        <a  href="{{ route('signup')}}"class="add-to-favourite-btn-detail-page btn"> 
+                            <i class="fa fa-heart" style="font-size:12px;"></i>
+                            Signup To Add Fav 
+                        </a>
+       
 
-                </div>
+                     </div>
 
-               <div class="col-md-2 mt-3">
-                 
-                  <a href="{{ route('signup')}}" class="write-review-btn-detail-page btn"> 
-                       <i class="fa fa-pencil" style="font-size:12px;"></i> 
-                       Signup to Write 
-                   </a>
+                    <div class="col-md-2 mt-3">
+                      
+                       <a href="{{ route('signup')}}" class="write-review-btn-detail-page btn"> 
+                            <i class="fa fa-pencil" style="font-size:12px;"></i> 
+                            Signup to Write 
+                        </a>
 
-               </div>
+                    </div>
 
 
                 @endif

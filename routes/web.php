@@ -51,6 +51,9 @@ Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard'
 Route::get('/addtofavlist/{anime_id}/{user_id}', [UserFavouriteListController::class, 'store'])->name('addtofavlist');
 Route::get('/removefromfavlist/{anime_id}/{user_id}', [UserFavouriteListController::class, 'removefromfavlist'])->name('removefromfavlist');
 
+Route::get('/addtofavlistsearchitem/{anime_id}/{user_id}', [UserFavouriteListController::class, 'searchItemFav'])->name('addtofavlistsearchitem');
+
+
 Route::get('/my-list', [MyListController::class, 'index'])->name('my-list');
 
 

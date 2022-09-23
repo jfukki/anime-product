@@ -91,13 +91,14 @@
                     <div class="col-md-2 mt-3" style="padding-right:0% !important;">
 
                             <!-- Fav -->
-                            <a  href="{{ route('removefromfavlist', 
+                            <a  href="{{ route('addtofavlistsearchitem', 
                             [
-                            'anime_id' => $search_list->anime_id, 
+                            'anime_id' => $searchItem['mal_id'], 
                             'user_id' => auth()->user()->id 
                         ]
                         
-                        )}}"class="add-to-favourite-btn-detail-page btn" style="margin-top:16px !important; "> Remove From List <i class="fa fa-heart" style="font-size:12px;"></i> </a>
+                        )}}"class="add-to-favourite-btn-detail-page btn" 
+                        style="margin-top:16px !important; "> Add To Fav <i class="fa fa-heart" style="font-size:12px;"></i> </a>
                         <!-- Fav --> 
 
 

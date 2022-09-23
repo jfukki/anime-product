@@ -1,37 +1,30 @@
-if(isset($anime_basic) )
-{
+public function store($anime_id, $user_id)
+    {
 
-    $anime_genres = DB::table('anime_details')->where('anime_id', $id)->get();
-    $anime_producers = DB::table('anime_producers')->where('anime_id', $id)->get();
-    $anime_character = DB::table('anime_characters')->where('anime_id', $id)->paginate(12);
-    $anime_pictures = DB::table('anime_picutres')->where('anime_id', $id)->paginate(12);
-    $anime_recommendations = DB::table('anime_recommendations')->where('anime_id', $id)->inRandomOrder()->limit(12)->get();
-    $anime_streaming = DB::table('anime_streamings')->where('anime_id', $id)->get();
-
-    
-    return view('detail',['anime_basic' => $anime_basic, 
-                          'anime_genres' => $anime_genres, 
-                          'anime_producers' => $anime_producers,
-                          'animeViews' => $animeViews,
-                          'anime_character' => $anime_character,
-                          'anime_pictures' => $anime_pictures,
-                          'anime_recommendations' => $anime_recommendations,
-                          'anime_streaming' =>  $anime_streaming,
-
-                          
-
-                            
-                        ]);
-}
-else
-{
-    $this->createAnimeBasicData($id);
-    $this->createAnimePictures($id);
-    $this->createAnimeRecommendations($id);
+        $user_fav_anime = DB::table('user_favourite_lists')
+        ->where('anime_id', $anime_id)
+        ->where('user_id', $user_id)
+        ->get();
 
 
-    $anime_basic = DB::table('animes')->where('anime_id', $id)->first();
-    return view('detail',['anime_basic' => $anime_basic]);
-    
-    
-}
+        if(count($user_fav_anime) > 0)
+        {
+            return redirect()->route('animeDetail', [$anime_id]);
+            
+        }else
+        {
+
+            DB::table('user_favourite_lists')->insert(
+                [
+                    'anime_id' => $anime_id,
+                    'user_id' => $user_id
+                ]
+            );
+
+            return redirect()->back();
+
+        }
+
+           
+       
+    }

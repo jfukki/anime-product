@@ -135,7 +135,8 @@
                                         'user_id' => auth()->user()->id 
                                     ]
                                     
-                                     )}}"class="add-to-favourite-btn-detail-page btn"> <i class="fa fa-heart" style="font-size:12px;"></i> Add To Fav</a>
+                                     )}}"class="add-to-favourite-btn-detail-page btn"> 
+                                     <i class="fa fa-heart" style="font-size:12px;"></i> Add To Fav</a>
                                 <!-- Fav -->
 
                                 </div>
