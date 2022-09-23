@@ -145,16 +145,29 @@
                         
                         </div>
                    </div>
-                @endif   
+
+                @else
 
                   <!-- Please Login -->
+
+                  <a href="{{ route('signup')}}" class="write-review-btn-detail-page btn"> 
+                            <i class="fa fa-pencil" style="font-size:12px;"></i> 
+                            Signup to Write A Review
+                        </a>
+
                   <a  href="{{ route('signup')}}"class="add-to-favourite-btn-detail-page btn"> 
                         <i class="fa fa-heart" style="font-size:12px;"></i>
                         Signup To Add Fav 
                         </a>
+
+                        
                     <!-- Please Login -->
 
 
+
+                @endif   
+
+                
 
                 
 </div>
