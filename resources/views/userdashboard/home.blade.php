@@ -21,7 +21,7 @@ style='
                     position: relative;
                   
                     background-image: 
-                    url("http://127.0.0.1:8000/images/user_images/{{$user->user_banner}}") ;
+                    url("https://discover.petsaaltech.com/images/user_images/{{$user->user_banner}}") ;
 
                     '
                     
