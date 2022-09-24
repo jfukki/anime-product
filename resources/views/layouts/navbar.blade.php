@@ -1,3 +1,5 @@
+
+
 <div class="container">
 <nav class="navbar navbar-expand-lg  rounded my-navbar" aria-label="Eleventh navbar example">
       <div class="container-fluid">
@@ -35,6 +37,11 @@
             @if(auth()->user())
             <li class="nav-item">
               <a class="nav-link my-navbar-color-item" href="{{route('my-list')}}"> My List</a>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link my-navbar-color-item" href="{{route('my-profile')}}"> My Profile</a>
             </li>
             @endif
 

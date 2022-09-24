@@ -105,6 +105,17 @@
         </a>
 
         
+        <a href="" class="col-md-2 user-profile-card">
+            <span class="review-detail-card-value">
+
+                <i class="fa fa-globe"></i>
+
+            </span>
+            <br>
+            <span class="review-detail-card-title">Recent History</span>
+        </a>
+
+        
 
     </div>
 </div>
