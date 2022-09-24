@@ -27,7 +27,7 @@
                     @if(isset($user->user_banner))
 
                     <input type="file" class="form-control"  name="image" value="{{$user->user_banner}}">
-                    {{$user->user_banner}}
+
                          @else
                     
                          <input type="file" class="form-control"  name="image">
