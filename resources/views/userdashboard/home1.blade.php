@@ -8,6 +8,8 @@
 <div class="container  ">
     <div class="row">
       <div class="col-lg-12 d-none d-md-block mt-5 ">
+      @if(isset($user->user_avatar))
+
         <img  class="user-detail-page-featured-banner" 
             src='{{ URL::asset("images/user_images/{$user->user_banner}") }}' 
             alt=""  class="img-fluid" style="
@@ -19,6 +21,12 @@
                         
             
             ">
+
+           @else
+            <h2>Pleaes upload banner!!</h2> 
+            <img src='https://media.giphy.com/avatars/Kawaiichxuu/xc3QyjNBbopp.gif' style="width: 120px; height:auto;"  alt=""  >
+
+           @endif 
       </div>
 
         <div class="col-md-2 mt-4">
