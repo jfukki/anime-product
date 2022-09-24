@@ -95,11 +95,11 @@ class UserDetailController extends Controller
     public function editBannerAavatar($user_id)
     {
  
-        $user = DB::table('user_details')->select('user_banner', 'about')
-                         ->where('user_id', $user_id)->get();
+        // $user = DB::table('user_details')->select('user_banner', 'about')
+        //                  ->where('user_id', $user_id)->get();
 
     //   $user = DB::table('user_details')->where('user_id', $user_id)->get();
-    //   $user = UserDetail::where('user_id' , '=', $user_id)->first();
+      $user = UserDetail::where('user_id' , '=', $user_id)->first();
       
 
         return view ('userdashboard.editBanner',['user'=> $user]);
@@ -110,8 +110,7 @@ class UserDetailController extends Controller
     public function updateBannerAvatar(Request $request, $user_id)
     {
 
-      echo  $user_banner = $request->image;
-        $user_about= $request->about;
+         
         
         
         if($request->hasFile('image')){
@@ -120,10 +119,13 @@ class UserDetailController extends Controller
             $file-> move(public_path('images/user_images'), $filename);
             $user_banner = $filename;  
 
+            $user_about= $request->about;
+
+
         }
         else
         {            
-            $user_banner = $request->image;
+            $user_banner = $request->old_image;
             $user_about= $request->about;
 
         }
