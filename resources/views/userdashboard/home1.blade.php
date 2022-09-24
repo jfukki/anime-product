@@ -49,8 +49,11 @@
            <div class="user-tite-container">
 
                 <h2>{{auth()->user()->name}}</h2>
-                 <p> {{$user->about}}</p>
+                @if($user->about)
+            
+                <p> {{$user->about}}</p>
 
+                @endif
             </div>
         </div>
     </div>
