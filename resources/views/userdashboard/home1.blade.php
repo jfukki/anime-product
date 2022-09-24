@@ -118,7 +118,9 @@
 
         </div>
 
+            @if(isset($user_fav_anime_list))
 
+           
             @if(count($user_fav_anime_list) > 0)
 
 
@@ -177,6 +179,9 @@
                 <p>Please Add To Your List!</p>
                 </div>
             @endif
+
+            @endif
+
 
 
 
