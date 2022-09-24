@@ -180,6 +180,12 @@
                 </div>
             @endif
 
+            @else
+            
+            
+          <img src="https://media2.giphy.com/media/8L0Pky6C83SzkzU55a/200w.gif?cid=82a1493bjun4l3r163mjwpt0s25mx355kt4j51mlaqdxi9ri&rid=200w.gif&ct=g"
+           alt="">
+
             @endif
 
 
