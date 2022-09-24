@@ -29,7 +29,7 @@
                     <input type="file" class="form-control"  name="image" >
                     <input type="text" class="form-control"  name="old_image" 
                      hidden   value="{{$user->user_banner}}">
-                     {{$user->user_banner}}
+                      
 
 
                          @else

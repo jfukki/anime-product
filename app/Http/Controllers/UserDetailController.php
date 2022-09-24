@@ -39,6 +39,28 @@ class UserDetailController extends Controller
 
     public function userUpdate(Request $req, $id)
     {
+        $user = User::find($id);
+
+        if($req->password== null)
+        {
+          
+            $user->name = $req->name;
+            $user->email = $req->email; 
+            $user->save();
+
+        }
+        else{
+
+            $user->name = $req->name;
+            $user->email = $req->email;     
+            $user->password = bcrypt($req->password);
+     
+            $user->save();
+    
+        }
+  
+       
+
 
         if($req->file('avatar')){
             $file= $req->file('avatar');
@@ -51,7 +73,7 @@ class UserDetailController extends Controller
         }
         else
         {
-            $user_avatar= $req->avatar; 
+            $user_avatar= $req->old_image; 
 
          
         }
@@ -76,20 +98,13 @@ class UserDetailController extends Controller
             return  "something went wrong...";
         }
 
-        $user = User::find($id);
-
-        $user->name = $req->name;
-        $user->email = $req->email; 
-        $user ->password = Hash::make($req->password);
-
-        $user->save();
-
         $user_id = auth()->user()->id;
         $user = UserDetail::where('user_id' , '=', $user_id)->first();
 
         $user_detail = User::find($user_id);
 
         return view('userdashboard.home', ['user'=> $user , 'user_detail' => $user_detail]);
+        
     }
 
     public function editBannerAavatar($user_id)
