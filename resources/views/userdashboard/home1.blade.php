@@ -8,7 +8,7 @@
 <div class="container  ">
     <div class="row">
       <div class="col-lg-12 d-none d-md-block mt-5 ">
-      @if(isset($user->user_avatar))
+      @if(isset($user->user_banner))
 
         <img  class="user-detail-page-featured-banner" 
             src='{{ URL::asset("images/user_images/{$user->user_banner}") }}' 
@@ -49,7 +49,8 @@
            <div class="user-tite-container">
 
                 <h2>{{auth()->user()->name}}</h2>
-                @if($user->about)
+
+                @if(isset($user->about))
             
                 <p> {{$user->about}}</p>
 
