@@ -21,10 +21,9 @@ style='
                     position: relative;
                   
                     background-image: 
-                    url("https://discover.petsaaltech.com/images/user_images/{{$user->user_banner}}") ;
+                    url("http://127.0.0.1:8000/images/user_images/{{$user->user_banner}}") ;
 
                     '
-                    
                     
                     >
 
@@ -83,7 +82,8 @@ style='
         width: 50%;  
         z-index: 11;
      " >
-            <h2 style="color: whitesmoke !important; font-weight:bold;font-size:32px !important;">{{auth()->user()->name}}</h2>
+            <h2 style="color: whitesmoke !important; font-weight:bold;font-size:32px !important;">{
+                    </h2>
         </div>
 
     </div>

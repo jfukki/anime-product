@@ -1,10 +1,30 @@
-@extends('userdashboard.home')
-@section('user-dashboard-content')
+@extends('main')
 
-<div class="container">
-        <div class="row">
-            <div class="col-md-6 offset-md-3 registeration-card my-3 ">
-                    <h2 class="text-center mb-5 mt-3">Update Your Information</h2>
+@section('content')
+
+
+<div class="container user-edit-section">
+    <div class="row">
+        <div class="col-lg-6">
+            <span class="user-edit-section-title" >Update Your Personal Settings</span>
+            <hr>
+
+            @if(isset($user->user_avatar))
+
+            <img src='{{ URL::asset("images/user_images/{$user->user_avatar}") }}'  
+                                                        style="width:160px; height:auto;" alt=""  >
+
+            @else
+
+             <small>Welcome!! Please upload your Avatar [ size: 160px - 160px ]</small> <br>
+            <img src='https://media2.giphy.com/media/fJ1xbyUH5BV5u/200w.gif' alt=""  >
+
+
+            @endif
+        </div>
+
+        <div class="col-lg-6 mt-2">
+            
             <form action="{{route('userUpdate',  auth()->user()->id)}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
@@ -41,7 +61,7 @@
                      <input type="file" class="form-control"  name="avatar" >
 
                      @endif
-                    <small>Allowed Formats: JPEG, PNG. Max size: 6mb. Optimal dimensions: 1700x330</small>
+                    <small>Allowed Formats: JPEG, PNG. Max size: 6mb. Optimal dimensions: 160px-160px</small>
                 </div>
 
                 <button type="submit" class="btn btn-outline-dark genres-detail-page">Update My Info</button>
@@ -49,6 +69,12 @@
             </div>
         </div>
     </div>
+
+        </div>
+
+
+    </div>
+</div>
 
 
 @endsection

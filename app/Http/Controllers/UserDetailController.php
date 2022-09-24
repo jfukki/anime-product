@@ -25,7 +25,26 @@ class UserDetailController extends Controller
 
         $user_detail = User::find($user_id);
 
-        return view('userdashboard.home', ['user'=> $user , 'user_detail' => $user_detail]);
+
+        // heart list
+
+       
+        $user_fav_anime_list= DB::table('user_favourite_lists')
+    //    ->select('anime_id', 'english_title' , 'japanese_title', 'synopsis', 'popularity', 'anime_views.view')
+
+       ->join('animes', 'user_favourite_lists.anime_id', '=', 'animes.anime_id')    
+       ->join('anime_views', 'animes.anime_id', '=', 'anime_views.anime_id')        
+
+       ->where('user_favourite_lists.user_id', $user_id)
+       ->orderBy('user_favourite_lists.id', 'desc')
+
+       ->get();
+
+       
+
+        // heart list
+
+        return view('userdashboard.home1', ['user'=> $user , 'user_detail' => $user_detail, 'user_fav_anime_list' => $user_fav_anime_list]);
     }
 
     public function userEdit($user_id)
@@ -34,7 +53,7 @@ class UserDetailController extends Controller
 
         $user_detail = User::find($user_id);
         
-        return view ('userdashboard.userEdit',['user'=> $user , 'user_detail' => $user_detail]);
+        return view ('userdashboard.profileEdit',['user'=> $user , 'user_detail' => $user_detail]);
     }
 
     public function userUpdate(Request $req, $id)
@@ -103,7 +122,7 @@ class UserDetailController extends Controller
 
         $user_detail = User::find($user_id);
 
-        return view('userdashboard.home', ['user'=> $user , 'user_detail' => $user_detail]);
+        return view('userdashboard.home1', ['user'=> $user , 'user_detail' => $user_detail]);
         
     }
 
@@ -117,7 +136,7 @@ class UserDetailController extends Controller
       $user = UserDetail::where('user_id' , '=', $user_id)->first();
       
 
-        return view ('userdashboard.editBanner',['user'=> $user]);
+        return view ('userdashboard.editBio',['user'=> $user]);
         // return view ('userdashboard.editBanner');
 
     }
@@ -166,7 +185,7 @@ class UserDetailController extends Controller
             $user_id = auth()->user()->id;
             $user = UserDetail::where('user_id' , '=', $user_id)->first();
     
-            return view('userdashboard.home', ['user' => $user]);
+            return view('userdashboard.home1', ['user' => $user]);
 
         }
         else

@@ -558,7 +558,7 @@ h4
 .anime-review-list-card
 {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
-    margin-bottom: 14%;
+    /* margin-bottom: 2%; */
 }
 
 .review-card-title
@@ -952,4 +952,132 @@ h4
 
 
 }
+
+
+.avatar-container
+{
+    /* margin-top:10%; */
+    border: solid 1px #54229E;
+    border-radius: 15px;
+    max-height: 180px;
+    max-width: 180px;
+    padding: 10%;
+    /* position: relative;
+    top: -100px; */
+    box-shadow: rgba(247, 247, 247, 0.2) 0px 60px 40px -7px;
+    background-color: #54229e27;
+}
+
+.avatar-container img
+{
+    max-height: 160px !important;
+    max-width: 130px !important;
+    
+
+}
+
+
+.user-tite-container
+{
+    padding-left:2%;
+    padding-top:6%;
+
+    /* position: relative;
+    top: 30px;
+    right: 30px; */
+    border-radius: 15px;
+    /* background-color: #0b080ca1; */
+    text-align: justify;
+}
+
+.user-tite-container h2
+{
+    color: #54229E;
+    font-size: 26px !important;
+    letter-spacing: 1px;
+    line-height: 33px !important;
+    font-family: oxyBold;
+}
+
+.user-tite-container p
+{
+    color: black;
+    font-size: 18px !important;
+    line-height: 25px !important;
+    font-family: oxyLight;
+
+}
+
+.user-detail-page-featured-banner
+{
+    padding: 0%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    width: 1280px !important;    
+    height: 269px !important;
+}
+
+.user-profile-card
+{
+    padding:2%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0% 1% 5% 1%;
+    transition: transform .6s;
+    text-decoration: none !important;
+
+}
+
+.user-profile-card-s
+{
+    padding:2%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #54229E;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0% 1% 5% 1%;
+    transition: transform .6s;
+    text-decoration: none !important;
+}
+
+.user-profile-card-s:hover
+{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+    background-color: #000 !important;
+}
+
+.user-profile-card:hover
+{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+    color: whitesmoke !important;
+    
+}
+
+
+.user-edit-section
+{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding:50px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+
+}
+
+
+.user-edit-section-title
+{
+    color: #1E1E1E ;
+    font-family: oxyBold;
+    font-size: 22px;
+}
+
+
 /* user profile */
