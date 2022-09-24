@@ -41,6 +41,6 @@ class AuthController extends Controller
         $user->save();
         
         auth()->attempt($req->only('email', 'password'));
-        return redirect()->route('home1');
+        return redirect()->route('my-profile');
     }
 }
