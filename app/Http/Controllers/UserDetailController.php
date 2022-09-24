@@ -45,12 +45,14 @@ class UserDetailController extends Controller
             $filename= date('YmdHi').$file->getClientOriginalName();
             $file-> move(public_path('images/user_images'), $filename);
             $user_avatar['avatar']= $filename;
+            
             $user_avatar = $filename;  
 
         }
         else
         {
-            $user_avatar= $req->avatar;
+            $user_avatar= $req->avatar; 
+
          
         }
 
@@ -104,10 +106,11 @@ class UserDetailController extends Controller
     public function updateBannerAvatar(Request $request, $user_id)
     {
 
-        
+      echo  $user_banner = $request->image;
         $user_about= $request->about;
         
-        if($request->file('image')){
+        
+        if($request->hasFile('image')){
             $file= $request->file('image');
             $filename= date('YmdHi').$file->getClientOriginalName();
             $file-> move(public_path('images/user_images'), $filename);
@@ -118,6 +121,8 @@ class UserDetailController extends Controller
         else
         {            
             $user_banner = $request->image;
+            $user_about= $request->about;
+
         }
 
          
