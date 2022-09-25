@@ -9,7 +9,7 @@
  <div class="container-fluid">
    
 
-    <div class="container p-5 my-5 anime-detail-anime-title-des-section">
+    <div class="container p-3 mt-5 anime-detail-anime-title-des-section">
         <div class="row">
             <div class="col-md-4 ">
                 <div class="text-center">
@@ -272,7 +272,7 @@
 
 
 
- <div class="container p-3 mt-3">
+ <div class="container p-4 mt-2">
     <div class="row ">
                     <div class="col-md-12 mt-5">
                       
