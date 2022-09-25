@@ -272,7 +272,7 @@
 
 
 
- <div class="conatiner extra-padding-container-anime-detail mt-5">
+ <div class="container extra-padding-container-anime-detail mt-5">
     <div class="row ">
                     <div class="col-md-12 mt-5">
                       
@@ -359,7 +359,7 @@
 
  <!-- streaming links -->
 
- <div class="conatiner p-3">
+ <div class="container p-3">
     <div class="row">
         <hr class="mt-5">
 
@@ -369,12 +369,12 @@
                             
                         </div>
 
-<!-- 
+
                         <div class="col-md-2">
 
-                              <p class="view-all-text"><a href="">View all</a></p>
+                              <!-- <p class="view-all-text"><a href="">View all</a></p> -->
                             
-                        </div> -->
+                        </div>
   
     </div>
 
@@ -407,7 +407,7 @@
  <!-- streaming links -->
 
 
- <div class="conatiner  p-3">
+ <div class="container  p-3">
     <div class="row">
     <hr class="mt-5">
 
@@ -418,11 +418,11 @@
                         </div>
 
 
-                        <!-- <div class="col-md-2">
+                        <div class="col-md-2">
 
-                              <p class="view-all-text"><a href="">View all</a></p>
+                              <!-- <p class="view-all-text"><a href="">View all</a></p> -->
                             
-                        </div> -->
+                        </div>
 
 
                   @if(count($anime_character) > 0)
@@ -470,7 +470,7 @@
 
 
 
- <div class="conatiner  p-3">
+ <div class="container  p-3">
     <div class="row">
               <hr class="mt-5">
                         <div class="col-md-10">
@@ -479,11 +479,11 @@
                             
                         </div>
 
-                        <!-- <div class="col-md-2">
+                        <div class="col-md-2">
 
-                             <p class="view-all-text"><a href="">View all</a></p>
+                             <!-- <p class="view-all-text"><a href="">View all</a></p> -->
 
-                        </div> -->
+                        </div>
             
                        @if(count($anime_pictures)  > 0)
                                         <br><br>
@@ -515,7 +515,7 @@
  
 
  
- <div class="conatiner p-3 mb-5">
+ <div class="container p-3 mb-5">
     <div class="row">
     <hr class="mt-5">
                         <div class="col-md-10 ">
@@ -523,12 +523,12 @@
                              <h2>{{$anime_basic->english_title}} Recommendations </h2>
                             
                         </div>
-<!-- 
+
                         <div class="col-md-2 ">
                         
-                            <p class="view-all-text"><a href="">View all</a></p>
+                            <!-- <p class="view-all-text"><a href="">View all</a></p> -->
                        
-                        </div> -->
+                        </div>
 
 
                        @if(count($anime_recommendations))
