@@ -46,7 +46,7 @@
                                 
 
                                     <!-- Review -->
-                                    <a  href="#"class="write-review-btn-detail-page btn"> <i class="fa fa-pencil" style="font-size:12px;"></i> 
+                                    <a  href="#"class="write-review-btn-detail-page-1 btn"> <i class="fa fa-pencil" style="font-size:12px;"></i> 
                                     <!-- Write A Review -->
                                     </a>
                                     <!-- Review -->
@@ -63,7 +63,7 @@
                                         'user_id' => auth()->user()->id 
                                     ]
                                     
-                                    )}}"class="add-to-favourite-btn-detail-page btn"> 
+                                    )}}"class="add-to-favourite-btn-detail-page-1 btn"> 
                                     <i class="fa fa-minus-circle " style="font-size:12px;"></i> 
                                     <!-- Remove -->
                                  </a>
@@ -80,7 +80,7 @@
                                         'user_id' => auth()->user()->id 
                                     ]
                                     
-                                     )}}"class="add-to-favourite-btn-detail-page btn"> 
+                                     )}}"class="add-to-favourite-btn-detail-page-1 btn"> 
                                      <i class="fa fa-heart" style="font-size:12px;"></i> 
                                      <!-- Add To Fav -->
                                     </a>
@@ -97,12 +97,12 @@
 
                   <!-- Please Login -->
 
-                  <a href="{{ route('signup')}}" class="write-review-btn-detail-page btn"> 
+                  <a href="{{ route('signup')}}" class="write-review-btn-detail-page-1 btn"> 
                             <i class="fa fa-pencil" style="font-size:12px;"></i> 
                              <!-- Write A Review -->
                         </a>
 
-                  <a  href="{{ route('signup')}}"class="add-to-favourite-btn-detail-page btn"> 
+                  <a  href="{{ route('signup')}}"class="add-to-favourite-btn-detail-page-1 btn"> 
                         <i class="fa fa-heart" style="font-size:12px;"></i>
                           <!-- Add To Fav  -->
                         </a>

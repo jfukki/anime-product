@@ -159,14 +159,39 @@ h4
 
 }
 
-
-.write-review-btn-detail-page
+.write-review-btn-detail-page-1
 {
     background-color: #F9AC04;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
     padding:6px;
     width: 18%;
     height: 15%;
+    margin-top: 4% !important;
+    margin-left: 3px;
+    border-radius: 10px;
+    font-size: 12px !important;
+    font-family: oxyRegular;
+    text-align: center;
+    color: white;
+    text-decoration: none !important;
+}
+
+.write-review-btn-detail-page-1:hover
+{
+    background-color: #fff;
+    color: #54229E !important;
+    border:solid 1px rgba(10, 37, 64, 0.35) !important;
+
+    
+}
+
+.write-review-btn-detail-page
+{
+    background-color: #F9AC04;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    padding:6px;
+    width: 140px;
+    height: 30px;
     margin-top: 4% !important;
     margin-left: 3px;
     border-radius: 10px;
@@ -196,13 +221,41 @@ h4
     
 }
 
-.add-to-favourite-btn-detail-page
+
+.add-to-favourite-btn-detail-page-1
 {
     background-color: #EC294B;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
     padding:6px;
     width: 18%;
     height: 15%;
+    margin-top: 4% !important;
+    margin-left: 3px;
+    border-radius: 15px;
+    font-size: 12px !important;
+    font-family: oxyRegular;
+    text-align: center;
+    color: white;
+    text-decoration: none !important;
+}
+
+.add-to-favourite-btn-detail-page-1:hover
+{
+    
+    background-color: #fff;
+    color: #EC294B !important;
+    border:solid 1px #EC294B!important;
+
+}
+
+
+.add-to-favourite-btn-detail-page
+{
+    background-color: #EC294B;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    padding:6px;
+    width: 140px;
+    height: 30px;
     margin-top: 4% !important;
     margin-left: 3px;
     border-radius: 15px;
