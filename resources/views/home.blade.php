@@ -48,7 +48,7 @@
 <!-- Recent Reviews -->
 
 
-<div class="container mt-5 extra-padding-container">
+<div class="container mt-5 ">
     <div class="row">
         <div class="col-lg-10 col-8">
             <h2 class="title-bg-homepage">Recent Reviews</h2>
