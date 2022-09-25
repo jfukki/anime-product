@@ -479,18 +479,18 @@
                             
                         </div>
 
-                        <div class="col-md-2">
+                        <!-- <div class="col-md-2">
 
                              <p class="view-all-text"><a href="">View all</a></p>
 
-                        </div>
+                        </div> -->
             
                        @if(count($anime_pictures)  > 0)
                                         <br><br>
                                         <br>
                                 @foreach($anime_pictures as $anime_pictures)
 
-                                <div class="col-lg-2 col-6 ">
+                                <div class="col-lg-2 col-4 ">
 
                                     <a href="">
                                     <img src="{{$anime_pictures->anime_picture_url}}"
@@ -523,18 +523,18 @@
                              <h2>{{$anime_basic->english_title}} Recommendations </h2>
                             
                         </div>
-
+<!-- 
                         <div class="col-md-2 ">
                         
                             <p class="view-all-text"><a href="">View all</a></p>
                        
-                        </div>
+                        </div> -->
 
 
                        @if(count($anime_recommendations))
                                 @foreach($anime_recommendations  as $anime_recommendations)
 
-                                <div class="col-lg-2 col-6 anime-grid-list">
+                                <div class="col-lg-2 col-4 anime-grid-list">
 
                                         <a href="{{ route('animeDetail' , $anime_recommendations->anime_mal_id)  }}">
                                         <img src="{{$anime_recommendations->anime_picture}}"
