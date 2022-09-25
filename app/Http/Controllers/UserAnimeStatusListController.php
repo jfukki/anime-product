@@ -12,6 +12,11 @@ use Auth;
 
 class UserAnimeStatusListController extends Controller
 {
+    public function __construct()
+    {
+    $this->middleware(['auth']);
+    }
+
     public function addToList($anime_id, $user_id, $status)
     {
 
@@ -28,4 +33,5 @@ class UserAnimeStatusListController extends Controller
 
             return redirect()->back();
     }
+
 }

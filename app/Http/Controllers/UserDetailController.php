@@ -40,11 +40,22 @@ class UserDetailController extends Controller
 
        ->get();
 
+
+        $user_anime_watch_list = DB::table('user_anime_status_lists')
+       ->join('animes', 'user_anime_status_lists.anime_id', '=', 'animes.anime_id')    
+       ->where('user_anime_status_lists.status', 'watching')
+       ->where('user_anime_status_lists.user_id', $user_id)
+       ->orderBy('user_anime_status_lists.id', 'desc')
+       ->get();
+       
        
 
         // heart list
 
-        return view('userdashboard.home1', ['user'=> $user , 'user_detail' => $user_detail, 'user_fav_anime_list' => $user_fav_anime_list]);
+        return view('userdashboard.home1', ['user'=> $user , 
+                                            'user_detail' => $user_detail, 
+                                            'user_fav_anime_list' => $user_fav_anime_list,
+                                            'user_anime_watch_list' => $user_anime_watch_list    ]);
     }
 
     public function userEdit($user_id)

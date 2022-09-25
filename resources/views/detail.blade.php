@@ -37,6 +37,7 @@
             <img src="{{$anime_basic->anime_image}}"
              alt="" class="anime-detail-anime-cover-image">
             </div>
+
             <div class="text-center">
                 
             @if(auth()->user())
@@ -176,10 +177,21 @@
             @else
                 <h1 class="anime-detail-anime-title my-2">{{$anime_basic->english_title}}</h1>
             @endif    
+
+            @if(isset($user_anime_list))
+
+                <small style="text-transform: capitalize; background:#EEB730; padding:6px; 
+                border-radius:10px; font-size:12px; color:white;">
+                 {{$user_anime_list->status}} </small>
+            
+              @else
+
+            @endif
+
             
             </div>
             <div>
-                <h2 class="anime-detail-anime-synopsis">{{$anime_basic->english_title}} Synopsis</h2>
+                <h2 class="anime-detail-anime-synopsis mt-3">{{$anime_basic->english_title}} Synopsis</h2>
                     <p class="anime-detail-anime-des">
                     {{$anime_basic->synopsis}}
                     </p>

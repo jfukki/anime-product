@@ -119,6 +119,49 @@
 
     </div>
 </div>
+
+<!-- Watching List -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Your Watching Listing</h2>
+        </div>
+
+ 
+
+
+
+                        @if(count($user_anime_watch_list))
+                                @foreach($user_anime_watch_list  as $user_watch_list)
+
+                                <div class="col-lg-2 col-4 mb-3 mt-2">
+
+                                        <a href="{{ route('animeDetail' , $user_watch_list->anime_id)  }}">
+                                        <img src="{{$user_watch_list->anime_image}}"
+                                        alt="" class="anime-grid-list-image">
+                                        </a>
+
+                                        <a href="" class="text-decor">
+                                            <p class="anime-title-list-grid">{{$user_watch_list->english_title}}</p>
+                                        </a>
+
+                                </div>
+
+                                @endforeach
+
+                         @else
+
+                         <p>No Anime to List yet!</p>
+    
+                       @endif
+
+
+
+        </div>
+    </div>
+</div>
+<!-- Watching List -->
+
 <!-- review cards section -->
 <div class="container">
     <div class="row">

@@ -168,6 +168,12 @@ class HomeController extends Controller
                     ->where('user_id', $user_id)
                     ->get();
 
+                    $user_anime_list = DB::table('user_anime_status_lists')
+                    
+                    ->where('anime_id', $id)
+                    ->where('user_id', $user_id)
+                    ->first();
+
                     return view('detail',['anime_basic' => $anime_basic, 
                     'anime_genres' => $anime_genres, 
                     'anime_producers' => $anime_producers,
@@ -178,6 +184,7 @@ class HomeController extends Controller
                     'anime_streaming' =>  $anime_streaming,
                     'user_fav_anime' =>  $user_fav_anime,
                     'count_anime_fav' => $count_anime_fav,
+                    'user_anime_list' => $user_anime_list,
                         
                   ]);
     
@@ -222,6 +229,12 @@ class HomeController extends Controller
                     ->where('user_id', $user_id)
                     ->get();
 
+                    $user_anime_list = DB::table('user_anime_status_lists')
+                    
+                    ->where('anime_id', $id)
+                    ->where('user_id', $user_id)
+                    ->get();
+
                     return view('detail',['anime_basic' => $anime_basic, 
                     'anime_genres' => $anime_genres, 
                     'anime_producers' => $anime_producers,
@@ -231,6 +244,7 @@ class HomeController extends Controller
                     'anime_recommendations' => $anime_recommendations,
                     'anime_streaming' =>  $anime_streaming,
                     'user_fav_anime' =>  $user_fav_anime,
+                    'user_anime_list' => $user_anime_list,
                         
                   ]);
     
