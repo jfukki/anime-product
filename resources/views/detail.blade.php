@@ -286,7 +286,7 @@
                
 
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe style="width:100%; height:420px;" class="embed-responsive-item" src="{{$anime_basic->youtube_trailer}}" allowfullscreen></iframe>
+                    <iframe style="width:100%; height:380px;" class="embed-responsive-item" src="{{$anime_basic->youtube_trailer}}" allowfullscreen></iframe>
                 </div>
                 
 
