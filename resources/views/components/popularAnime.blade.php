@@ -7,7 +7,7 @@
     
 @foreach($popular_anime as $d)
 @if(isset($popular_anime))    
-    <div class="col-lg-2 col-6 anime-grid-list zoom ">
+    <div class="col-lg-2 col-4 anime-grid-list zoom ">
    
          <!-- <div class="ribbon-tag">#{{$d->popularity}}</div> -->
 

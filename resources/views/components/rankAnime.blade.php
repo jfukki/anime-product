@@ -4,7 +4,7 @@
 
 @foreach($ranked_anime as $d)
 @if(isset($ranked_anime))    
-    <div class="col-lg-2 col-6 anime-grid-list zoom ">
+    <div class="col-lg-2 col-4 anime-grid-list zoom ">
         <!-- <div class="ribbon-tag">Rank#{{$d->rank}}</div> -->
         <a href="{{ route('animeDetail' , $d->anime_id)  }}">
         <img src="{{$d->anime_picture}}"
