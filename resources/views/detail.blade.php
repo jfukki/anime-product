@@ -407,7 +407,7 @@
  <!-- streaming links -->
 
 
- <div class="conatiner extra-padding-container-anime-detail">
+ <div class="conatiner  p-3">
     <div class="row">
     <hr class="mt-5">
 
@@ -418,17 +418,17 @@
                         </div>
 
 
-                        <div class="col-md-2">
+                        <!-- <div class="col-md-2">
 
                               <p class="view-all-text"><a href="">View all</a></p>
                             
-                        </div>
+                        </div> -->
 
 
                   @if(count($anime_character) > 0)
 
                     @foreach($anime_character as $anime_character)
-                                <div class="col-lg-2 col-6 anime-grid-list text-center">
+                                <div class="col-lg-2 col-4 anime-grid-list text-center">
 
                                     <a href="">
                                     <img src="{{$anime_character->character_image}}"
@@ -470,7 +470,7 @@
 
 
 
- <div class="conatiner extra-padding-container-anime-detail">
+ <div class="conatiner  p-3">
     <div class="row">
               <hr class="mt-5">
                         <div class="col-md-10">
@@ -515,7 +515,7 @@
  
 
  
- <div class="conatiner extra-padding-container-anime-detail mb-5">
+ <div class="conatiner p-3 mb-5">
     <div class="row">
     <hr class="mt-5">
                         <div class="col-md-10 ">
