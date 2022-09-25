@@ -9,9 +9,9 @@
  <div class="container-fluid">
    
 
-    <div class="container extra-padding-container py-5 my-5 anime-detail-anime-title-des-section">
+    <div class="container p-5 my-5 anime-detail-anime-title-des-section">
         <div class="row">
-            <div class="col-md-4 ">
+            <div class="col-md-4 col-6 ">
                 <div class="text-center">
                 <img src="{{$anime_basic->anime_image}}"
              alt="" class="anime-detail-anime-cover-image">
