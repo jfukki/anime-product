@@ -64,7 +64,9 @@
                                     ]
                                     
                                     )}}"class="add-to-favourite-btn-detail-page btn"> 
-                                    <i class="fa fa-heart" style="font-size:12px;"></i> Remove </a>
+                                    <i class="fa fa-minus-circle " style="font-size:12px;"></i> 
+                                    <!-- Remove -->
+                                 </a>
                                 <!-- Fav -->
 
                                 
