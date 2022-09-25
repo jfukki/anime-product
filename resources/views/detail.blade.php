@@ -359,7 +359,7 @@
 
  <!-- streaming links -->
 
- <div class="conatiner extra-padding-container-anime-detail">
+ <div class="conatiner p-3">
     <div class="row">
         <hr class="mt-5">
 
@@ -369,12 +369,12 @@
                             
                         </div>
 
-
+<!-- 
                         <div class="col-md-2">
 
                               <p class="view-all-text"><a href="">View all</a></p>
                             
-                        </div>
+                        </div> -->
   
     </div>
 
@@ -383,7 +383,7 @@
         @if(count($anime_streaming) > 0 )
 
           @foreach($anime_streaming as $anime_streaming)
-          <div class="col-lg-2 col-6 anime-detail-info-grid mt-3">
+          <div class="col-lg-2 col-4 anime-detail-info-grid mt-3">
 
             <a href="{{$anime_streaming->streaming_url}}" target="_blank">{{$anime_streaming->streaming_title}}</a>
             
