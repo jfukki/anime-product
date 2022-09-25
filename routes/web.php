@@ -12,7 +12,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserFavouriteListController;
 use App\Http\Controllers\MyListController;
 use App\Http\Controllers\UserDetailController;
-
+use App\Http\Controllers\UserAnimeStatusListController;
 
 
 
@@ -48,6 +48,9 @@ Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 
 Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
+
+Route::get('/add-to-list/{anime_id}/{user_id}/{status}', [UserAnimeStatusListController::class, 'addToList'])->name('addToList');
+
 
 
 Route::get('/addtofavlist/{anime_id}/{user_id}', [UserFavouriteListController::class, 'store'])->name('addtofavlist');

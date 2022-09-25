@@ -40,10 +40,60 @@
             <div class="text-center">
                 
             @if(auth()->user())
-                   
-                          
+                                 
 
-                                
+                    <form action="" method="POST">
+
+                    @csrf
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle detail-page-add-list" 
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Add to List
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li ><a class="dropdown-item detail-page-add-list-item" 
+                            
+                            href="{{ route('addToList', 
+                                                [
+                                                    'anime_id' => $anime_basic->anime_id, 
+                                                    'user_id' => auth()->user()->id ,
+                                                    'status' => 'watched'
+                                                ]
+                                            ) 
+                                            
+                                    }}">
+                                Add in Watched List</a></li>
+
+                            <li><a class="dropdown-item detail-page-add-list-item" 
+                            href="{{ route('addToList', 
+                                                [
+                                                    'anime_id' => $anime_basic->anime_id, 
+                                                    'user_id' => auth()->user()->id ,
+                                                    'status' => 'watching'
+                                                ]
+                                            ) 
+                                            
+                                    }}"
+                            
+                            >Add in Watching List</a></li>
+                            <li><a class="dropdown-item detail-page-add-list-item" 
+                            href="{{ route('addToList', 
+                                                [
+                                                    'anime_id' => $anime_basic->anime_id, 
+                                                    'user_id' => auth()->user()->id ,
+                                                    'status' => 'planning to watch'
+                                                ]
+                                            ) 
+                                            
+                                    }}"
+                                    >Add in Planning List</a></li>
+                        </ul>
+                    </div>
+
+
+                    </form>
+
 
                                     <!-- Review -->
                                     <a  href="#"class="write-review-btn-detail-page-1 btn"> <i class="fa fa-pencil" style="font-size:12px;"></i> 

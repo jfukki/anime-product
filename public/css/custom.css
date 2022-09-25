@@ -1136,3 +1136,24 @@ h4
 
 
 /* user profile */
+
+.detail-page-add-list
+{
+    margin-top: 10px;
+    background-color: #683BAB !important;
+    color: whitesmoke ;
+    font-family: oxyLight;
+    font-size: 14px;
+    width:140px;
+
+}
+
+.detail-page-add-list-item
+{
+    background-color: #fff !important;
+    color: #683BAB;
+    font-family: oxyRegular;
+    font-size: 15px;
+}
+
+
