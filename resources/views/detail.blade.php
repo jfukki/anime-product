@@ -490,7 +490,7 @@
                                         <br>
                                 @foreach($anime_pictures as $anime_pictures)
 
-                                <div class="col-lg-2 col-4 ">
+                                <div class="col-lg-4 col-4 ">
 
                                     <a href="">
                                     <img src="{{$anime_pictures->anime_picture_url}}"
