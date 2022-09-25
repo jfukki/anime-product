@@ -428,7 +428,7 @@
                   @if(count($anime_character) > 0)
 
                     @foreach($anime_character as $anime_character)
-                                <div class="col-lg-3 col-4 anime-grid-list text-center">
+                                <div class="col-lg-2 col-4 anime-grid-list text-center">
  
                                     <a href="">
                                     <img src="{{$anime_character->character_image}}"
@@ -490,7 +490,7 @@
                                         <br>
                                 @foreach($anime_pictures as $anime_pictures)
 
-                                <div class="col-lg-4 col-4 ">
+                                <div class="col-lg-3 col-4 ">
 
                                     <a href="">
                                     <img src="{{$anime_pictures->anime_picture_url}}"
