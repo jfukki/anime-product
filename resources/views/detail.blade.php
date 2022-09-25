@@ -272,7 +272,7 @@
 
 
 
- <div class="container extra-padding-container-anime-detail mt-5">
+ <div class="conatiner p-3 mt-3">
     <div class="row ">
                     <div class="col-md-12 mt-5">
                       
@@ -359,7 +359,7 @@
 
  <!-- streaming links -->
 
- <div class="container p-3">
+ <div class="conatiner p-3">
     <div class="row">
         <hr class="mt-5">
 
@@ -407,7 +407,7 @@
  <!-- streaming links -->
 
 
- <div class="container  p-3">
+ <div class="conatiner  p-3">
     <div class="row">
     <hr class="mt-5">
 
@@ -470,7 +470,7 @@
 
 
 
- <div class="container  p-3">
+ <div class="conatiner  p-3">
     <div class="row">
               <hr class="mt-5">
                         <div class="col-md-10">
@@ -515,7 +515,7 @@
  
 
  
- <div class="container p-3 mb-5">
+ <div class="conatiner p-3 mb-5">
     <div class="row">
     <hr class="mt-5">
                         <div class="col-md-10 ">
