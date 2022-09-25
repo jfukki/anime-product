@@ -6,27 +6,153 @@
 
 @section('content')
  
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 d-none d-md-block mt-4 text-center">
+            <div class="anime-detail-banner">
+                <img src="" alt="">
+                <img  class="user-detail-page-featured-banner" 
+            src='https://s4.anilist.co/file/anilistcdn/media/anime/banner/143270-Ivjs2nVpARtS.jpg' 
+            alt=""  class="img-fluid" style="
+            
+                        background-color: #242538;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        max-width: 100%;
+                        
+            
+            ">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="text-center">
+            <img src="{{$anime_basic->anime_image}}"
+             alt="" class="anime-detail-anime-cover-image">
+            </div>
+            <div class="text-center">
+                
+            @if(auth()->user())
+                   
+                          
+
+                                
+
+                                    <!-- Review -->
+                                    <a  href="#"class="write-review-btn-detail-page btn"> <i class="fa fa-pencil" style="font-size:12px;"></i> 
+                                    <!-- Write A Review -->
+                                    </a>
+                                    <!-- Review -->
+                                 
+                    
+                                @if(count($user_fav_anime) > 0)
+
+                                 
+
+                                <!-- Fav -->
+                                <a  href="{{ route('removefromfavlist', 
+                                    [
+                                        'anime_id' => $anime_basic->anime_id, 
+                                        'user_id' => auth()->user()->id 
+                                    ]
+                                    
+                                    )}}"class="add-to-favourite-btn-detail-page btn"> 
+                                    <i class="fa fa-heart" style="font-size:12px;"></i> Remove </a>
+                                <!-- Fav -->
+
+                                
+                                @else
+                                 
+
+                                <!-- Fav -->
+                                <a  href="{{ route('addtofavlist', 
+                                    [
+                                        'anime_id' => $anime_basic->anime_id, 
+                                        'user_id' => auth()->user()->id 
+                                    ]
+                                    
+                                     )}}"class="add-to-favourite-btn-detail-page btn"> 
+                                     <i class="fa fa-heart" style="font-size:12px;"></i> 
+                                     <!-- Add To Fav -->
+                                    </a>
+                                <!-- Fav -->
+
+                                 
+
+                                @endif
+
+                        
+                
+
+                @else
+
+                  <!-- Please Login -->
+
+                  <a href="{{ route('signup')}}" class="write-review-btn-detail-page btn"> 
+                            <i class="fa fa-pencil" style="font-size:12px;"></i> 
+                             <!-- Write A Review -->
+                        </a>
+
+                  <a  href="{{ route('signup')}}"class="add-to-favourite-btn-detail-page btn"> 
+                        <i class="fa fa-heart" style="font-size:12px;"></i>
+                          <!-- Add To Fav  -->
+                        </a>
+
+                        
+                    <!-- Please Login -->
+
+
+
+                @endif   
+
+            </div>
+        </div>
+
+        <div class="col-lg-8">
+            <div>
+            @if($anime_basic->english_title == '')
+
+            <h1 class="anime-detail-anime-title my-2">{{$anime_basic->japanese_title}}</h1>
+
+            @else
+                <h1 class="anime-detail-anime-title my-2">{{$anime_basic->english_title}}</h1>
+            @endif    
+            
+            </div>
+            <div>
+                <h2 class="anime-detail-anime-synopsis">{{$anime_basic->english_title}} Synopsis</h2>
+                    <p class="anime-detail-anime-des">
+                    {{$anime_basic->synopsis}}
+                    </p>
+
+            </div>
+
+         
+
+                   
+
+        </div>
+    </div>
+</div>
+
+
+
  <div class="container-fluid">
    
 
     <div class="container p-3 mt-5 anime-detail-anime-title-des-section">
         <div class="row">
             <div class="col-md-4 ">
-                <div class="text-center">
-                <img src="{{$anime_basic->anime_image}}"
-             alt="" class="anime-detail-anime-cover-image">
-                </div>
+                 
 
-                <div class="text-center">
-                @if($anime_basic->english_title == '')
-
-                <h1 class="anime-detail-anime-title my-2">{{$anime_basic->japanese_title}}</h1>
-
-                @else
-                    <h1 class="anime-detail-anime-title my-2">{{$anime_basic->english_title}}</h1>
-                @endif    
-                    <hr>
-                </div>
+                
                 
                
                 <div>
@@ -139,79 +265,6 @@
                   
                    </p>
          
-
-                @if(auth()->user())
-                   <div class="container p-0 mb-5">
-                        <div class="row">
-                        
-                                <div class="col-lg-12 col-6">
-
-                                    <!-- Review -->
-                                    <a  href="#"class="write-review-btn-detail-page btn"> <i class="fa fa-pencil" style="font-size:12px;"></i> Write A Review</a>
-                                    <!-- Review -->
-                                </div>
-                    
-                                @if(count($user_fav_anime) > 0)
-
-                                <div class="col-lg-12 col-6">
-
-                                <!-- Fav -->
-                                <a  href="{{ route('removefromfavlist', 
-                                    [
-                                        'anime_id' => $anime_basic->anime_id, 
-                                        'user_id' => auth()->user()->id 
-                                    ]
-                                    
-                                    )}}"class="add-to-favourite-btn-detail-page btn"> 
-                                    <i class="fa fa-heart" style="font-size:12px;"></i> Remove </a>
-                                <!-- Fav -->
-
-                                </div>
-                                @else
-                                <div class="col-lg-12 col-6">
-
-                                <!-- Fav -->
-                                <a  href="{{ route('addtofavlist', 
-                                    [
-                                        'anime_id' => $anime_basic->anime_id, 
-                                        'user_id' => auth()->user()->id 
-                                    ]
-                                    
-                                     )}}"class="add-to-favourite-btn-detail-page btn"> 
-                                     <i class="fa fa-heart" style="font-size:12px;"></i> Add To Fav</a>
-                                <!-- Fav -->
-
-                                </div>
-
-                                @endif
-
-                        
-                        </div>
-                   </div>
-
-                @else
-
-                  <!-- Please Login -->
-
-                  <a href="{{ route('signup')}}" class="write-review-btn-detail-page btn"> 
-                            <i class="fa fa-pencil" style="font-size:12px;"></i> 
-                             Write A Review
-                        </a>
-
-                  <a  href="{{ route('signup')}}"class="add-to-favourite-btn-detail-page btn"> 
-                        <i class="fa fa-heart" style="font-size:12px;"></i>
-                          Add To Fav 
-                        </a>
-
-                        
-                    <!-- Please Login -->
-
-
-
-                @endif   
-
-                
-
                 
 </div>
             </div>
@@ -221,21 +274,13 @@
 
 
             <div class="col-md-8 ">
-                <div>
-                    <h2 class="anime-detail-anime-synopsis">{{$anime_basic->english_title}} Synopsis</h2>
-                    <hr>
-                </div>
-                <div>
-                    <p class="anime-detail-anime-des">
-                    
-                    {{$anime_basic->synopsis}}
-                    </p>
-                </div>
+                
+                
 
                 @if(isset($anime_basic->youtube_trailer))
 
                 <div>
-                    <h2 class="anime-detail-anime-trailer my-5">{{$anime_basic->english_title}}  Trailer</h2>
+                    <h2 class="anime-detail-anime-trailer">{{$anime_basic->english_title}}  Trailer</h2>
                     <hr>
                 </div>
                

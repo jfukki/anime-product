@@ -165,10 +165,11 @@ h4
     background-color: #F9AC04;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
     padding:6px;
-    width: 80%;
-    margin-top: 4px !important;
+    width: 18%;
+    height: 15%;
+    margin-top: 4% !important;
     margin-left: 3px;
-    border-radius: 15px;
+    border-radius: 10px;
     font-size: 12px !important;
     font-family: oxyRegular;
     text-align: center;
@@ -200,8 +201,9 @@ h4
     background-color: #EC294B;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
     padding:6px;
-    width: 80%;
-    margin-top: 4px !important;
+    width: 18%;
+    height: 15%;
+    margin-top: 4% !important;
     margin-left: 3px;
     border-radius: 15px;
     font-size: 12px !important;
