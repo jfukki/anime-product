@@ -54,6 +54,11 @@
             
                 <p> {{$user->about}}</p>
 
+                @else
+
+                <h2>Please Fill Your Bio.</h2>
+
+
                 @endif
             </div>
         </div>
