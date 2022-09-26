@@ -130,13 +130,14 @@
     <div class="row">
         <div class="col-lg-12">
             <h2>Your Watching Listing</h2>
+            <hr>
         </div>
 
  
 
 
 
-                        @if(isset($user_anime_watch_list) )
+                        @if(count($user_anime_watch_list) > 0 )
                                 @foreach($user_anime_watch_list  as $user_watch_list)
 
                                 <div class="col-lg-2 col-4 mb-3 mt-2">
@@ -156,7 +157,7 @@
 
                          @else
 
-                         <p>No Anime to List yet!</p>
+                         <p class="text-center">No Anime to List yet!</p>
     
                        @endif
 
@@ -166,6 +167,91 @@
     </div>
 </div>
 <!-- Watching List -->
+
+
+
+<!-- Planning List -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Your Planning Listing</h2>
+            <hr>
+        </div>
+
+                          @if(count($user_anime_planing_list) > 0 )
+                                @foreach($user_anime_planing_list  as $user_watch_list)
+
+                                <div class="col-lg-2 col-4 mb-3 mt-2">
+
+                                        <a href="{{ route('animeDetail' , $user_watch_list->anime_id)  }}">
+                                        <img src="{{$user_watch_list->anime_image}}"
+                                        alt="" class="anime-grid-list-image">
+                                        </a>
+
+                                        <a href="" class="text-decor">
+                                            <p class="anime-title-list-grid">{{$user_watch_list->english_title}}</p>
+                                        </a>
+
+                                </div>
+
+                                @endforeach
+
+                         @else
+
+                         <p class="text-center">No Anime to List yet!</p>
+    
+                       @endif
+
+
+
+        </div>
+    </div>
+</div>
+<!-- Planning List -->
+
+
+
+
+<!-- Watched List -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Your Watched Listing</h2>
+            <hr>
+        </div>
+
+                          @if(count($user_anime_watched_list) > 0 )
+                                @foreach($user_anime_watched_list  as $user_watch_list)
+
+                                <div class="col-lg-2 col-4 mb-3 mt-2">
+
+                                        <a href="{{ route('animeDetail' , $user_watch_list->anime_id)  }}">
+                                        <img src="{{$user_watch_list->anime_image}}"
+                                        alt="" class="anime-grid-list-image">
+                                        </a>
+
+                                        <a href="" class="text-decor">
+                                            <p class="anime-title-list-grid">{{$user_watch_list->english_title}}</p>
+                                        </a>
+
+                                </div>
+
+                                @endforeach
+
+                         @else
+
+                         <p class="text-center">No Anime to List yet!</p>
+    
+                       @endif
+
+
+
+        </div>
+    </div>
+</div>
+<!-- Watched List -->
+
+
 
 <!-- review cards section -->
 <div class="container">
@@ -235,7 +321,7 @@
 
             @else
                 <div class="row">
-                <p>Please Add To Your List!</p>
+                   <p class="text-center">No Anime to List yet!</p>
                 </div>
             @endif
 
@@ -243,7 +329,8 @@
             
             
           <img src="https://media2.giphy.com/media/8L0Pky6C83SzkzU55a/200w.gif?cid=82a1493bjun4l3r163mjwpt0s25mx355kt4j51mlaqdxi9ri&rid=200w.gif&ct=g"
-           alt="">
+          style="width:240px; !important" 
+          alt="">
 
             @endif
 

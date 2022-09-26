@@ -64,7 +64,7 @@
                                             ) 
                                             
                                     }}">
-                                Add in Watched List</a></li>
+                                <i class="fa fa-arrow-right"></i>  Watched List</a></li>
 
                             <li><a class="dropdown-item detail-page-add-list-item" 
                             href="{{ route('addToList', 
@@ -77,18 +77,20 @@
                                             
                                     }}"
                             
-                            >Add in Watching List</a></li>
+                            >
+                            <i class="fa fa-arrow-right"></i> Watching List</a></li>
                             <li><a class="dropdown-item detail-page-add-list-item" 
                             href="{{ route('addToList', 
                                                 [
                                                     'anime_id' => $anime_basic->anime_id, 
                                                     'user_id' => auth()->user()->id ,
-                                                    'status' => 'planning to watch'
+                                                    'status' => 'planning'
                                                 ]
                                             ) 
                                             
                                     }}"
-                                    >Add in Planning List</a></li>
+                                    >
+                            <i class="fa fa-arrow-right"></i>        Planning List</a></li>
                         </ul>
                     </div>
 
@@ -178,11 +180,12 @@
                 <h1 class="anime-detail-anime-title my-2">{{$anime_basic->english_title}}</h1>
             @endif    
 
-            @if($user_anime_list != '')
+            @if(isset($user_anime_list->status))
 
                 <small style="text-transform: capitalize; background:#EEB730; padding:6px; 
                 border-radius:10px; font-size:12px; color:white;">
                  {{$user_anime_list->status}} </small>
+             @else
              
 
             @endif
