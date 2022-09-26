@@ -178,13 +178,12 @@
                 <h1 class="anime-detail-anime-title my-2">{{$anime_basic->english_title}}</h1>
             @endif    
 
-            @if(isset($user_anime_list))
+            @if($user_anime_list != '')
 
                 <small style="text-transform: capitalize; background:#EEB730; padding:6px; 
                 border-radius:10px; font-size:12px; color:white;">
                  {{$user_anime_list->status}} </small>
-            
-              @else
+             
 
             @endif
 
