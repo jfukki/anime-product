@@ -148,7 +148,12 @@
                                         </a>
 
                                         <a href="" class="text-decor">
-                                            <p class="anime-title-list-grid">{{$user_watch_list->english_title}}</p>
+                                            <p class="anime-title-list-grid">
+                                                
+                                                {{ Str::limit($user_watch_list->english_title, 25) }}
+
+                                        
+                                        </p>
                                         </a>
 
                                 </div>
@@ -189,7 +194,11 @@
                                         </a>
 
                                         <a href="" class="text-decor">
-                                            <p class="anime-title-list-grid">{{$user_watch_list->english_title}}</p>
+                                            <p class="anime-title-list-grid">
+
+                                                {{ Str::limit($user_watch_list->english_title, 25) }}
+
+                                            </p>
                                         </a>
 
                                 </div>
@@ -231,7 +240,11 @@
                                         </a>
 
                                         <a href="" class="text-decor">
-                                            <p class="anime-title-list-grid">{{$user_watch_list->english_title}}</p>
+                                            <p class="anime-title-list-grid">
+
+                                                {{ Str::limit($user_watch_list->english_title, 20) }}
+
+                                            </p>
                                         </a>
 
                                 </div>
