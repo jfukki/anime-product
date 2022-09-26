@@ -90,14 +90,7 @@
         </div>
 
        
-        <a href="{{route('user-edit' , auth()->user()->id)}}" class="col-md-2 user-profile-card">
-            <span class="review-detail-card-value">
-            <i class="fa fa-gear"></i>
-
-            </span>
-            <br>
-            <span class="review-detail-card-title">Personal Settings</span>
-        </a>
+      
 
         <a href="{{route('editBannerAavatar', auth()->user()->id)}}" class="col-md-2 user-profile-card">
             <span class="review-detail-card-value">
@@ -121,6 +114,15 @@
         </a>
 
         
+        <a href="{{route('user-edit' , auth()->user()->id)}}" class="col-md-2 user-profile-card">
+            <span class="review-detail-card-value">
+            <i class="fa fa-gear"></i>
+
+            </span>
+            <br>
+            <span class="review-detail-card-title">Personal Settings</span>
+        </a>
+
 
     </div>
 </div>
