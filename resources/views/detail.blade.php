@@ -415,11 +415,11 @@
 
 
                     
-                    <div class="col-md-3  col-5 anime-detail-info-grid">
+                    <!-- <div class="col-md-3  col-5 anime-detail-info-grid">
 
                         <span class="anime-detail-info-grid-title">Aired: </span> <span class="anime-detail-info-grid-text">{{$anime_basic->aired}}</span>
 
-                    </div>
+                    </div> -->
 
 
                     
@@ -430,12 +430,12 @@
                     </div>
 
 
-                    
+<!--                     
                     <div class="col-md-3  col-12 anime-detail-info-grid">
 
                         <span class="anime-detail-info-grid-title">Broadcast: </span> <span class="anime-detail-info-grid-text">{{$anime_basic->broadcast}}</span>
 
-                    </div>
+                    </div> -->
 
 
                     
