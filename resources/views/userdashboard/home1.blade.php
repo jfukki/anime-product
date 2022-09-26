@@ -131,7 +131,7 @@
 
 
 
-                        @if(count($user_anime_watch_list))
+                        @if(isset($user_anime_watch_list) )
                                 @foreach($user_anime_watch_list  as $user_watch_list)
 
                                 <div class="col-lg-2 col-4 mb-3 mt-2">
