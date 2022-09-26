@@ -151,8 +151,14 @@
 
                                         <a href="" class="text-decor">
                                             <p class="anime-title-list-grid">
+                                                @if(isset($user_watch_list->english_title))
+                                                    {{ Str::limit($user_watch_list->english_title, 25) }}
+                                                @else
                                                 
-                                                {{ Str::limit($user_watch_list->english_title, 25) }}
+                                                {{ Str::limit($user_watch_list->japanese_title, 25) }}
+                                                
+                                                
+                                                @endif
 
                                         
                                         </p>
@@ -198,7 +204,14 @@
                                         <a href="" class="text-decor">
                                             <p class="anime-title-list-grid">
 
-                                                {{ Str::limit($user_watch_list->english_title, 25) }}
+                                            @if(isset($user_watch_list->english_title))
+                                                    {{ Str::limit($user_watch_list->english_title, 25) }}
+                                                @else
+                                                
+                                                {{ Str::limit($user_watch_list->japanese_title, 25) }}
+                                                
+                                                
+                                                @endif
 
                                             </p>
                                         </a>
@@ -244,7 +257,14 @@
                                         <a href="" class="text-decor">
                                             <p class="anime-title-list-grid">
 
-                                                {{ Str::limit($user_watch_list->english_title, 20) }}
+                                               @if(isset($user_watch_list->english_title))
+                                                    {{ Str::limit($user_watch_list->english_title, 25) }}
+                                                @else
+                                                
+                                                {{ Str::limit($user_watch_list->japanese_title, 25) }}
+                                                
+                                                
+                                                @endif
 
                                             </p>
                                         </a>

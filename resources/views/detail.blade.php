@@ -186,7 +186,7 @@
                 border-radius:10px; font-size:12px; color:white;">
                  {{$user_anime_list->status}} </small>
              @else
-             
+                 
 
             @endif
 
