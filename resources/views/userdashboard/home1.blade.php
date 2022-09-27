@@ -138,6 +138,7 @@
  
 
 
+                    @if(isset($user_anime_watch_list) )
 
                         @if(count($user_anime_watch_list) > 0 )
                                 @foreach($user_anime_watch_list  as $user_watch_list)
@@ -173,6 +174,7 @@
                          <p class="text-center">No Anime to List yet!</p>
     
                        @endif
+                    @endif
 
 
 
