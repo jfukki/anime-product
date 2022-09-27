@@ -50,7 +50,7 @@
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle detail-page-add-list" 
                         type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Add to List
+                            Add to
                         </button>
                         <ul class="dropdown-menu">
                             <li ><a class="dropdown-item detail-page-add-list-item" 
@@ -186,7 +186,7 @@
                 border-radius:10px; font-size:12px; color:white;">
                  {{$user_anime_list->status}} </small>
              @else
-                 
+
 
             @endif
 
