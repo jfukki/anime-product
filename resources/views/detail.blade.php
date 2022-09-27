@@ -99,7 +99,7 @@
 
 
                                     <!-- Review -->
-                                    <a  href="#"class="write-review-btn-detail-page-1 btn"> <i class="fa fa-pencil" style="font-size:12px;"></i> 
+                                    <a  href="{{route('reviewAdd', $anime_basic->anime_id)}}"class="write-review-btn-detail-page-1 btn"> <i class="fa fa-pencil" style="font-size:12px;"></i> 
                                     <!-- Write A Review -->
                                     </a>
                                     <!-- Review -->
