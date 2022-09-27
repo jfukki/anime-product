@@ -14,6 +14,7 @@ class AnimeReview extends Model
     protected $fillable = [
         'anime_id',
         'user_id', 
+        'user_name',
         'review_title',
         'review_text',
         'story',

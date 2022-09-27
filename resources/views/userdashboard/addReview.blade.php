@@ -10,13 +10,23 @@
             <h2>Write a Review for {{$anime_basic->english_title}}</h2>
          
         </div>
-
+        
         <div class="col-lg-12 mt-2">
+
+        @php
+
+             $user_name =  auth()->user()->name
+
+
+            
+        @endphp
 
              <form action="{{ route('reviewStore', 
                                     [
                                         'anime_id' => $anime_basic->anime_id, 
-                                        'user_id' => auth()->user()->id 
+                                        'user_id' => auth()->user()->id,
+                                        'user_name' =>  $user_name,
+
                                     ]
                                     
                                     )}}"  method="POST" enctype="multipart/form-data">
@@ -37,6 +47,7 @@
 
 
                             @else
+                           
                             
                                 <div class="mb-3">
                                 
@@ -71,7 +82,7 @@
 
                                     <label for="story" class="form-label review-label-text">Rate Story</label>
                                     
-                                    <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;"
+                                    <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;"
                                     class="form-control" name="story" id="story" placeholder="Rate Story" value="{{$anime_review->story}}" >
 
                                 </div>
@@ -83,7 +94,7 @@
 
                                     <label for="story" class="form-label review-label-text">Rate Story</label>
                                     
-                                    <input type="number"  pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;"
+                                    <input type="number"  pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;"
                                     class="form-control" name="story" id="story" placeholder="Rate Story"  >
                                     
                                 </div>
@@ -102,7 +113,7 @@
 
                                     <label for="animation" class="form-label review-label-text">Rate Animation</label>
                                     
-                                    <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;"
+                                    <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;"
                                     class="form-control" name="animation" id="animation" placeholder="Rate Story" value="{{$anime_review->animation}}" >
 
                                 </div>
@@ -114,7 +125,7 @@
 
                                     <label for="animation" class="form-label review-label-text">Rate Animation</label>
                                     
-                                    <input type="number"  pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;"
+                                    <input type="number"  pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;"
                                     class="form-control" name="animation" id="animation" placeholder="Rate Animation"  >
                                     
                                 </div>
@@ -134,7 +145,7 @@
 
                                     <label for="characters" class="form-label review-label-text">Rate Characters</label>
                                     
-                                    <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;"
+                                    <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;"
                                     class="form-control" name="characters" id="characters" placeholder="Rate Story" value="{{$anime_review->characters}}" >
 
                                 </div>
@@ -146,7 +157,7 @@
 
                                     <label for="characters" class="form-label review-label-text">Rate Characters</label>
                                     
-                                    <input type="number"  pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;"
+                                    <input type="number"  pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;"
                                     class="form-control" name="characters" id="characters" placeholder="Rate Animation"  >
                                     
                                 </div>
@@ -165,7 +176,7 @@
 
                                     <label for="sound" class="form-label review-label-text">Rate Sound/Music</label>
                                     
-                                    <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;"
+                                    <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;"
                                     class="form-control" name="sound" id="sound" placeholder="Rate Sound" value="{{$anime_review->music}}" >
 
                                 </div>
@@ -177,7 +188,7 @@
 
                                     <label for="sound" class="form-label review-label-text">Rate Music</label>
                                     
-                                    <input type="number"  pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;"
+                                    <input type="number"  pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;"
                                     class="form-control" name="sound" id="sound" placeholder="Rate Sound"  >
                                     
                                 </div>

@@ -1,21 +1,30 @@
 <div class="container extra-padding-container">
     <div class="row ">
 
-        <div class="col-md-4">
+    @if(count($anime_reviews) > 0)
+
+
+    @foreach($anime_reviews as $anime_review)
+        <div class="col-md-4 col-6">
 
                 <div class="card anime-review-list-card" style="width:20rem;">
-                        <img src="https://wallpapercrafter.com/desktop/71586-anime-girl-anime-artist-artwork-digital-art-hd-4k-rain.jpg"
-                        class="card-img-top" alt="..."  style="height:231px;">
+                        <img src="{{$anime_review->anime_image}}"
+                        class="card-img-top" alt="..."  style="height:320px;">
                         <div class="card-body">
-                            <h5 class="card-title "><a href="{{route('reviewDeail')}}" class="review-card-title">Review Title</a></h5>
-                            <p class="card-text review-card-description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h5 class="card-title "><a href="{{route('reviewDeail')}}" class="review-card-title">
+                                {{$anime_review->review_title}}
+                            </a></h5>
+                            <p class="card-text review-card-description">
+                                
+                                   {{ Str::limit($anime_review->review_text, 120) }}
+                            </p>
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">
-                                <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" 
-                                class="rounded-circle" style="width: 40px;"
+                                <img src='{{ URL::asset("images/user_images/{$anime_review->user_avatar}") }}' 
+                                class="rounded-circle" style="width: 60px; height:60px;"
                                 alt="Avatar" />
-                                - <span class="review-card-username">anie123</span> </li>
+                                - <span class="review-card-username">{{$anime_review->user_name}}</span> </li>
                                 
                             <li class="list-group-item">
                                 
@@ -36,6 +45,16 @@
 
 
         </div>
+
+        @endforeach
+        
+       @else
+       
+        <div class="col-md-4">
+            <p   >No reviews yet!</p>
+        </div>
+
+    @endif
 
         
     </div>

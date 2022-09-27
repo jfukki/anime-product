@@ -17,6 +17,7 @@ class CreateAnimeReviewsTable extends Migration
             $table->id();
             $table->integer('anime_id')->nullable();
             $table->integer('user_id')->nullable();
+            $table->string('user_name')->nullable();
             $table->string('review_title')->nullable();
             $table->longText('review_text')->nullable();
             $table->integer('story')->nullable();

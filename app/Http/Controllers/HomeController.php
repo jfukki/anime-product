@@ -19,14 +19,27 @@ class HomeController extends Controller
     public function home()
     {
 
+        $user_id = auth()->user()->id;
+
         $popular_anime  = DB::table('popular_animes')->inRandomOrder()->limit(12)->get();
         $horror_anime  = DB::table('horror_animes')->inRandomOrder()->limit(12)->get();
         $ranked_anime  = DB::table('ranked_animes')->inRandomOrder()->limit(12)->get();
 
+        $anime_reviews  = DB::table('anime_reviews')->orderBy('id', 'DESC')->get();
 
 
 
-        return view('home', ['popular_anime' => $popular_anime, 'horror_anime' => $horror_anime , 'ranked_anime' => $ranked_anime ]);
+        $anime_reviews = DB::table('anime_reviews')
+        ->join('animes', 'anime_reviews.anime_id', '=', 'animes.anime_id')   
+        ->join('user_details', 'anime_reviews.user_id', '=', 'user_details.user_id')    
+
+        ->orderBy('anime_reviews.id', 'desc')
+        ->get();
+        
+
+
+        return view('home', ['popular_anime' => $popular_anime, 'horror_anime' => $horror_anime , 'ranked_anime' => $ranked_anime ,
+                             'anime_reviews' => $anime_reviews]);
     }
 
 

@@ -30,14 +30,17 @@ class ReviewsController extends Controller
 
         $anime_review = AnimeReview::where('anime_id' , '=', $anime_id)->first();
 
+        
         $anime_basic = DB::table('animes')->where('anime_id', $anime_id)->first();
+        
 
         return view('userdashboard.addReview', ['anime_basic' => $anime_basic, 'anime_review' => $anime_review]);
     }
 
 
-    public function reviewStore(Request $req, $anime_id, $user_id)
+    public function reviewStore(Request $req, $anime_id, $user_id, $user_name)
     {
+         
 
         $UserAnimeReview = AnimeReview::updateOrCreate(
             ['anime_id' =>  $anime_id,
@@ -52,6 +55,8 @@ class ReviewsController extends Controller
                 'animation' => $req->animation,
                 'characters' => $req->characters,
                 'music' => $req->sound,
+                'user_name' => $user_name,
+
 
 
     
