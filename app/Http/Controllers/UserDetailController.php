@@ -214,7 +214,7 @@ class UserDetailController extends Controller
             $user = UserDetail::where('user_id' , '=', $user_id)->first();
     
             return view('userdashboard.home1', ['user' => $user]);
-
+            
         }
         else
         {

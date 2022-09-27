@@ -5,11 +5,11 @@
 
 
     @foreach($anime_reviews as $anime_review)
-        <div class="col-md-4 col-6">
+        <div class="col-md-4 col-12 mb-5">
 
-                <div class="card anime-review-list-card" style="width:20rem;">
+                <div class="card anime-review-list-card" >
                         <img src="{{$anime_review->anime_image}}"
-                        class="card-img-top" alt="..."  style="height:320px;">
+                        class="card-img-top img-fluid" alt="..."  >
                         <div class="card-body">
                             <h5 class="card-title "><a href="{{route('reviewDeail')}}" class="review-card-title">
                                 {{$anime_review->review_title}}
