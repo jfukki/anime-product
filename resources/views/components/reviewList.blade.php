@@ -9,7 +9,7 @@
 
                 <div class="card anime-review-list-card" >
                         <img src="{{$anime_review->anime_image}}"
-                        class="card-img-top img-fluid" alt="..."  >
+                        class="card-img-top img-fluid" alt="..."  style="height:320px;">
                         <div class="card-body">
                             <h5 class="card-title "><a href="{{route('reviewDeail')}}" class="review-card-title">
                                 {{$anime_review->review_title}}
