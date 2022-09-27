@@ -19,7 +19,7 @@
 
                                <span class="review-card-username"> 
                                     <img src='{{ URL::asset("images/user_images/{$anime_review->user_avatar}") }}' 
-                                    class="rounded-circle" style="width: 60px; height:60px;"
+                                    class="rounded-circle" style="width: 57px; height:57px;"
                                     alt="Avatar" />
                                     {{$anime_review->user_name}}
                                </span> <br> <small class="review-card-anime-title-bottom">{{$anime_review->english_title}}</small>
