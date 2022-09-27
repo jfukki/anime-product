@@ -18,9 +18,13 @@ class ReviewsController extends Controller
         return view('animeReviews');
     }
 
-    public function reviewDetail()
+    public function reviewDetail($id)
     {
-        return view("reviewDetail");
+        $anime_review_detail = DB::table('anime_reviews')
+        ->where('id', $id)
+        ->first();   
+
+        return view("reviewDetail", ['anime_review_detail' => $anime_review_detail]);
     }
 
 

@@ -29,6 +29,7 @@ class HomeController extends Controller
 
 
         $anime_reviews = DB::table('anime_reviews')
+        ->select('anime_reviews.review_title', 'anime_reviews.id', 'animes.english_title', 'anime_reviews.review_text', 'user_details.user_avatar', 'anime_reviews.user_name' )
         ->join('animes', 'anime_reviews.anime_id', '=', 'animes.anime_id')   
         ->join('user_details', 'anime_reviews.user_id', '=', 'user_details.user_id')    
 

@@ -85,7 +85,7 @@ Route::get('/browse', [BrowseController::class, 'index'])->name('browse');
 Route::get('/images', [BrowseController::class, 'randomImages'])->name('randomImages');
 
 Route::get('/reviews', [ReviewsController::class, 'index'])->name('reviews');
-Route::get('/review-detail', [ReviewsController::class, 'reviewDetail'])->name('reviewDeail');
+Route::get('/review-detail/{id}', [ReviewsController::class, 'reviewDetail'])->name('reviewDeail');
 Route::get('/review-add/{anime_id}', [ReviewsController::class, 'reviewAdd'])->name('reviewAdd');
 Route::post('/review-store/{anime_id}/{user_id}/{user_name}', [ReviewsController::class, 'reviewStore'])->name('reviewStore');
 

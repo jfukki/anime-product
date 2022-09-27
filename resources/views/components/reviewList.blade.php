@@ -13,7 +13,7 @@
                     <div class="review-card-list">
 
                     <h2 class="review-card-title">
-                        <a href="{{route('reviewDeail')}}">{{Str::limit($anime_review->review_title, 40)}}</a>
+                        <a href="{{route('reviewDeail' ,  $anime_review->id )}}">{{Str::limit($anime_review->review_title, 40)}}</a>
                     </h2>
                                 <p class="review-card-description" > {{ Str::limit($anime_review->review_text, 180) }}</p>
 
