@@ -192,7 +192,7 @@
             <h2>Your Planning Listing</h2>
             <hr>
         </div>
-
+                 @if(isset($user_anime_watch_list) )
                           @if(count($user_anime_planing_list) > 0 )
                                 @foreach($user_anime_planing_list  as $user_watch_list)
 
@@ -228,6 +228,7 @@
     
                        @endif
 
+                       @endif
 
 
         </div>
@@ -246,6 +247,7 @@
             <hr>
         </div>
 
+          @if(isset($user_anime_watch_list) )
                           @if(count($user_anime_watched_list) > 0 )
                                 @foreach($user_anime_watched_list  as $user_watch_list)
 
@@ -281,6 +283,7 @@
     
                        @endif
 
+                       @endif
 
 
         </div>
