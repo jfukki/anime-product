@@ -18,8 +18,7 @@ class HomeController extends Controller
 
     public function home()
     {
-
-        $user_id = auth()->user()->id;
+ 
 
         $popular_anime  = DB::table('popular_animes')->inRandomOrder()->limit(12)->get();
         $horror_anime  = DB::table('horror_animes')->inRandomOrder()->limit(12)->get();
