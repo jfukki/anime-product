@@ -616,29 +616,60 @@ h4
     /* margin-bottom: 2%; */
 }
 
-.review-card-title
+.review-card-list
 {
-    color: #4B5961 !important;
+    background: #251a36;
+    padding:16px;
+    border-radius: 15px;
+    box-shadow: rgb(0 0 0 / 65%) 0px 5px 15px;
+    height: 250px;
+}
+
+.review-card-title 
+{
+    height: 64px !important;
+}
+.review-card-title a
+{
+    color: whitesmoke !important;
     font-family: oxyBold;
     font-size: 16px !important;
     text-decoration: none !important;
+
 }
 
+.review-card-anime-title-bottom
+{
+    color: black !important;
+    font-family: oxyLight;
+    font-size: 13px !important;
+    line-height: 36px;
+}
 
 .review-card-description
 {
-    color: #1E1E1E !important;
-    font-family: oxyBold;
-    font-size: 14px !important;
+    color: whitesmoke !important;
+    font-family: oxyRegular;
+    font-size: 13px !important;
     text-decoration: none !important;
+    height: 80px;
 }
 
 
 .review-card-username
 {
-    color: #1E1E1E !important;
-    font-family: oxyBold;
+    color: #fff !important;
+    font-family: oxyLight;
     font-size: 14px !important;
+    text-decoration: none !important;
+    text-transform: capitalize;
+}
+
+.review-card-date
+{
+    color: #fff !important;
+    font-family: oxyLight;
+    font-size: 11px !important;
     text-decoration: none !important;
     text-transform: capitalize;
 }

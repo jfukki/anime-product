@@ -83,7 +83,7 @@
                                     <label for="story" class="form-label review-label-text">Rate Story</label>
                                     
                                     <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;"
-                                    class="form-control" name="story" id="story" placeholder="Rate Story" value="{{$anime_review->story}}" >
+                                    class="form-control" name="story" id="story" placeholder="Out of 9" value="{{$anime_review->story}}" >
 
                                 </div>
 
@@ -95,7 +95,7 @@
                                     <label for="story" class="form-label review-label-text">Rate Story</label>
                                     
                                     <input type="number"  pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;"
-                                    class="form-control" name="story" id="story" placeholder="Rate Story"  >
+                                    class="form-control" name="story" id="story" placeholder="Out of 9"  >
                                     
                                 </div>
 
@@ -114,7 +114,7 @@
                                     <label for="animation" class="form-label review-label-text">Rate Animation</label>
                                     
                                     <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;"
-                                    class="form-control" name="animation" id="animation" placeholder="Rate Story" value="{{$anime_review->animation}}" >
+                                    class="form-control" name="animation" id="animation" placeholder="Out of 9" value="{{$anime_review->animation}}" >
 
                                 </div>
 
@@ -126,7 +126,7 @@
                                     <label for="animation" class="form-label review-label-text">Rate Animation</label>
                                     
                                     <input type="number"  pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;"
-                                    class="form-control" name="animation" id="animation" placeholder="Rate Animation"  >
+                                    class="form-control" name="animation" id="animation" placeholder="Out of 9"  >
                                     
                                 </div>
 
@@ -146,7 +146,7 @@
                                     <label for="characters" class="form-label review-label-text">Rate Characters</label>
                                     
                                     <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;"
-                                    class="form-control" name="characters" id="characters" placeholder="Rate Story" value="{{$anime_review->characters}}" >
+                                    class="form-control" name="characters" id="characters" placeholder="Out of 9" value="{{$anime_review->characters}}" >
 
                                 </div>
 
@@ -158,7 +158,7 @@
                                     <label for="characters" class="form-label review-label-text">Rate Characters</label>
                                     
                                     <input type="number"  pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;"
-                                    class="form-control" name="characters" id="characters" placeholder="Rate Animation"  >
+                                    class="form-control" name="characters" id="characters" placeholder="Out of 9"  >
                                     
                                 </div>
 
@@ -177,7 +177,7 @@
                                     <label for="sound" class="form-label review-label-text">Rate Sound/Music</label>
                                     
                                     <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;"
-                                    class="form-control" name="sound" id="sound" placeholder="Rate Sound" value="{{$anime_review->music}}" >
+                                    class="form-control" name="sound" id="sound" placeholder="Out of 9" value="{{$anime_review->music}}" >
 
                                 </div>
 
@@ -189,7 +189,7 @@
                                     <label for="sound" class="form-label review-label-text">Rate Music</label>
                                     
                                     <input type="number"  pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==1) return false;"
-                                    class="form-control" name="sound" id="sound" placeholder="Rate Sound"  >
+                                    class="form-control" name="sound" id="sound" placeholder="Out of 9"   >
                                     
                                 </div>
 
