@@ -63,11 +63,11 @@
                             <label for="review" class="form-label review-label-text">Review</label>
                             @if(isset($anime_review->review_text))
 
-                                <textarea name="review" class="form-control" rows="16" placeholder="Please Enter Your Review Here.">{{$anime_review->review_text}}</textarea>
+                                <textarea name="review" id="reviewText" class="form-control" rows="16" placeholder="Please Enter Your Review Here.">{{$anime_review->review_text}}</textarea>
 
                             @else
                             
-                            <textarea name="review" class="form-control" rows="16" placeholder="Please Enter Your Review Here."></textarea>
+                            <textarea name="review" id="reviewText" class="form-control" rows="16" placeholder="Please Enter Your Review Here."></textarea>
                                 @endif    
 
                         </div>
