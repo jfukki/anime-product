@@ -322,7 +322,7 @@
         <img src="{{$list->anime_image}}"
         class="card-img-top" alt="..."  style="height:480px;">
         <div class="card-body">
-            <h5 class="card-title "><a href="{{route('reviewDeail')}}" class="review-card-title">
+            <h5 class="card-title "><a class="review-card-title">
             {{ Str::limit($list->japanese_title, 100) }}</a></h5>
             <p class="card-text review-card-description">
             
