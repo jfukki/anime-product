@@ -648,12 +648,19 @@ h4
 
 .review-card-description
 {
+ 
+    height: 64px !important;
+}
+
+
+.review-card-description p
+{
     color: whitesmoke !important;
     font-family: oxyLight;
     font-size: 14px !important;
     text-decoration: none !important;
-    height: 80px;
 }
+
 
 
 .review-card-username

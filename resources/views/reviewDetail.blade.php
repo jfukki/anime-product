@@ -79,7 +79,7 @@
 
             <div>
                 <p>
-                {{$anime_review_detail->review_text}}
+                {!!$anime_review_detail->review_text!!}
                 </p>
             </div>
         </div>
