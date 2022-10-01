@@ -22,7 +22,7 @@
     <!--Get your own code at fontawesome.com-->
 
     <script src="https://cdn.tiny.cloud/1/wcm2o31333pakn51tmjhvm698x7m3twydhud2479i4j7esws/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-    
+        
 <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
