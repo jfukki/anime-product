@@ -539,24 +539,32 @@
                   @if(count($anime_character) > 0)
 
                     @foreach($anime_character as $anime_character)
-                                <div class="col-lg-1 col-4 anime-grid-list text-center">
- 
-                                    <a href="">
-                                    <img src="{{$anime_character->character_image}}"
-                                    alt="" class="anime-grid-list-characters-image">
-                                    </a>
+                                <div class="col-lg-4 col-4 anime-grid-list text-center">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <a href="">
+                                                    <img src="{{$anime_character->character_image}}"
+                                                    alt="" class="anime-grid-list-characters-image">
+                                                </a>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <a href="" class="text-decor">
+                                                    <p class="anime-title-list-grid">
+                                                    {{ Str::limit($anime_character->character_name, 50) }}
+                                                        
+                                                        <br>
+                                                        <small class="anime-detail-characters-role">{{$anime_character->character_role}}</small>
+                                                    </p>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                   
 
 
                                     
-                                    <a href="" class="text-decor">
-                                        <p class="anime-title-list-grid">
-                                        {{ Str::limit($anime_character->character_name, 50) }}
-                                             
-                                            <br>
-                                            <small class="anime-detail-characters-role">{{$anime_character->character_role}}</small>
-                                        </p>
-                                        
-                                    </a>
+                                    
 
                                 </div>
                         @endforeach
