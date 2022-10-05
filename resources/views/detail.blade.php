@@ -539,7 +539,7 @@
                   @if(count($anime_character) > 0)
 
                     @foreach($anime_character as $anime_character)
-                                <div class="col-lg-3 col-4 anime-grid-list text-center">
+                                <div class="col-lg-3 col-1 anime-grid-list text-center">
                                         <div class="row characters-row-grid-anime-detail" >
                                             <div class="col-6">
                                                 <a href="">
