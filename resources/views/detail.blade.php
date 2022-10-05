@@ -539,16 +539,16 @@
                   @if(count($anime_character) > 0)
 
                     @foreach($anime_character as $anime_character)
-                                <div class="col-lg-4 col-4 anime-grid-list text-center">
+                                <div class="col-lg-3 col-4 anime-grid-list text-center">
                                         <div class="row characters-row-grid-anime-detail" >
-                                            <div class="col-10">
+                                            <div class="col-6">
                                                 <a href="">
                                                     <img src="{{$anime_character->character_image}}"
                                                     alt="" class="anime-grid-list-characters-image">
                                                 </a>
                                             </div>
 
-                                            <div class="col-2">
+                                            <div class="col-6">
                                                 <a href="" class="text-decor">
                                                     <p class="anime-title-list-grid">
                                                     {{ Str::limit($anime_character->character_name, 50) }}
