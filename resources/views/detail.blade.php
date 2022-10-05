@@ -609,7 +609,7 @@
                                         <br>
                                 @foreach($anime_pictures as $anime_pictures)
 
-                                <div class="col-lg-2 col-6 ">
+                                <div class="col-lg-2 col-6 mb-3">
 
                                     <a href="">
                                     <img src="{{$anime_pictures->anime_picture_url}}"
@@ -653,7 +653,7 @@
                        @if(count($anime_recommendations))
                                 @foreach($anime_recommendations  as $anime_recommendations)
 
-                                <div class="col-lg-2 col-4 anime-grid-list mb-3">
+                                <div class="col-lg-2 col-4 anime-grid-list mb-1">
 
                                         <a href="{{ route('animeDetail' , $anime_recommendations->anime_mal_id)  }}">
                                         <img src="{{$anime_recommendations->anime_picture}}"
