@@ -145,10 +145,11 @@ h4
     margin-bottom: 10%;
     /* text-align: justify; */
     color: #54229E;
-    font-size: 22px;
-    line-height: 24px;
-    font-family: 'oxyLight';
+    font-size: 11px;
+    line-height: 15px;
+    font-family: 'oxyBold';
     text-transform: capitalize;
+
 }
 
 .anime-title-list-grid:hover
