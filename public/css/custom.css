@@ -128,7 +128,6 @@ h4
 {
     font-size: 14px;
     color: #54229E;
-    font-size: 10px;
     line-height: 12px;
     font-family: oxyBold;
 }
@@ -139,14 +138,14 @@ h4
 
 .anime-title-list-grid
 {
-    margin-top: 10%;
+    margin-top: 6%;
     margin-bottom: 10%;
-    /* text-align: justify; */
+    text-align: justify;
     color: #54229E;
-    font-size: 0.8rem;
-    line-height: 16px;
-    font-family: oxyBold;
-    text-transform: capitalize;  
+    font-size: 22px;
+    line-height: 24px;
+    font-family: 'oxyLight';
+    text-transform: capitalize;
 }
 
 .anime-title-list-grid:hover
