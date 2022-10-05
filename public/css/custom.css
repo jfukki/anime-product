@@ -105,6 +105,11 @@ h4
     box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
 }
 
+.characters-row-grid-anime-detail
+{
+    border: 1px solid #683BAB;
+}
+
 .anime-grid-list-characters-image
 {
     border-radius: 50px;
