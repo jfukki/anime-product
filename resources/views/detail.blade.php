@@ -8,31 +8,22 @@
  
 
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-12 d-none d-md-block mt-4 text-center">
-            <div class="anime-detail-banner">
-                <img src="" alt="">
-                <img  class="user-detail-page-featured-banner" 
-            src='https://s4.anilist.co/file/anilistcdn/media/anime/banner/143270-Ivjs2nVpARtS.jpg' 
-            alt=""  class="img-fluid" style="
-            
-                        background-color: #242538;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        max-width: 100%;
-                        
-            
-            ">
+
+<div class="container-fluid mt-5">
+    
+            <div class="row img-row">
+                  <img src="{{$anime_basic->anime_image}}" alt="" />
+                  
             </div>
-        </div>
-    </div>
+
 </div>
 
-
-<div class="container mt-5">
+ <div class="container mt-2  ">
     <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-4"  style='  
+         position: relative;
+         top: -142px;
+         '>
             <div class="text-center">
             <img src="{{$anime_basic->anime_image}}"
              alt="" class="anime-detail-anime-cover-image">
@@ -213,7 +204,7 @@
  <div class="container-fluid">
    
 
-    <div class="container p-3 mt-5 anime-detail-anime-title-des-section">
+    <div class="container p-3 mt-3 anime-detail-anime-title-des-section">
         <div class="row">
             <div class="col-md-4 ">
                  

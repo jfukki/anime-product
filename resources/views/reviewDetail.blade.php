@@ -1,25 +1,46 @@
 @extends('main')
 
 @section('content')
+ 
 
 <!-- review featured banner image -->
 
+<div class="container-fluid mt-5">
+    
+            <div class="row img-row">
+                  <img src="{{$anime_detail->anime_image}}" alt="" />
+                  <div class="small-image col-lg-6">
+                        <div class="position-img">
+                              <img src="{{$anime_detail->anime_image}}" alt="" />
+                        </div>
+                        <div class="text-cente">
+                              <h5 class="title">{{$anime_detail->english_title}} </h5>
+                              <p class="ranked-review-detail">Ranked: #{{$anime_detail->rank}} </p>
+                    </div>
 
-<div class="container p-5 ">
-    <div class="row">
-        <img  class="review-detail-page-featured-banner" 
-        src="https://s4.anilist.co/file/anilistcdn/media/anime/banner/120377-5Nklb3Ibv87C.jpg" 
-        alt="">
-    </div>
+                    
+
+                  </div>
+
+                   
+
+            </div>
+
 </div>
 
 <!-- review featured banner image -->
+ 
+
 
 
 <!-- review cards section -->
-<div class="container extra-padding-container">
-    <div class="row">
-        <div class="col-md-2 review-detail-page-cards">
+ 
+<div class="d-block d-md-none" style="margin-top:26%;"  >
+    <br>
+</div>
+<div class="container extra-padding-container review-rating-cards-container ">
+    <div class="row text-center">
+        <div class="col-md-2 col-5 review-detail-page-cards">
             <span class="review-detail-card-value">
                 {{$anime_review_detail->story}}/9
             </span>
@@ -27,7 +48,7 @@
             <span class="review-detail-card-title">Story</span>
         </div>
 
-        <div class="col-md-2 review-detail-page-cards">
+        <div class="col-md-2 col-5 review-detail-page-cards">
             <span class="review-detail-card-value">
             {{$anime_review_detail->animation}}/10
             </span>
@@ -35,7 +56,7 @@
             <span class="review-detail-card-title">Animation</span>
         </div>
 
-        <div class="col-md-2 review-detail-page-cards">
+        <div class="col-md-2 col-5 review-detail-page-cards">
             <span class="review-detail-card-value">
             {{$anime_review_detail->characters}}/10
             </span>
@@ -43,7 +64,7 @@
             <span class="review-detail-card-title">Characters</span>
         </div>
 
-        <div class="col-md-2 review-detail-page-cards">
+        <div class="col-md-2 col-5 review-detail-page-cards">
             <span class="review-detail-card-value">
             {{$anime_review_detail->music}}/10
             </span>

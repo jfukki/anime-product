@@ -24,7 +24,14 @@ class ReviewsController extends Controller
         ->where('id', $id)
         ->first();   
 
-        return view("reviewDetail", ['anime_review_detail' => $anime_review_detail]);
+        $ani_id = $anime_review_detail->anime_id;
+
+         $anime_detail = DB::table('animes')
+            ->select('english_title', 'anime_image', 'rank')
+            ->where('anime_id', $ani_id)
+            ->first();
+
+        return view("reviewDetail", ['anime_review_detail' => $anime_review_detail, 'anime_detail' => $anime_detail]);
     }
 
 
