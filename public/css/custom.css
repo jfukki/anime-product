@@ -684,6 +684,12 @@ h4
     font-family: oxyBold;
   
   }
+
+  .title a{
+    text-decoration: none;
+    color: #54229E;
+
+  }
   .ranked-review-detail
   {
     font-size: 16px;

@@ -8,13 +8,24 @@
 <div class="container-fluid mt-5">
     
             <div class="row img-row">
-                  <img src="{{$anime_detail->anime_image}}" alt="" />
+               
+
+                    <img src="{{$anime_detail->anime_image}}" alt="" />
+        
+                
                   <div class="small-image col-lg-6">
                         <div class="position-img">
                               <img src="{{$anime_detail->anime_image}}" alt="" />
                         </div>
                         <div class="text-cente">
-                              <h5 class="title">{{$anime_detail->english_title}} </h5>
+                              <h5 class="title">
+                                    <a href="{{ route('animeDetail' , $anime_detail->anime_id)  }}">
+                                    {{$anime_detail->english_title}} <br> <hr>
+                                    {{$anime_detail->japanese_title}}
+                                    
+                              </a>
+                            
+                            </h5>
                               <p class="ranked-review-detail">Ranked: #{{$anime_detail->rank}} </p>
                     </div>
 

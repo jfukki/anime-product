@@ -27,7 +27,7 @@ class ReviewsController extends Controller
         $ani_id = $anime_review_detail->anime_id;
 
          $anime_detail = DB::table('animes')
-            ->select('english_title', 'anime_image', 'rank')
+            ->select('japanese_title','english_title', 'anime_image', 'rank', 'anime_id')
             ->where('anime_id', $ani_id)
             ->first();
 
