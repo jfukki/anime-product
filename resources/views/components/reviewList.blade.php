@@ -25,7 +25,19 @@
                                     class="rounded-circle" style="width: 57px; height:57px;"
                                     alt="Avatar" />
                                     {{$anime_review->user_name}}
-                               </span> <br> <small class="review-card-anime-title-bottom">{{$anime_review->english_title}}</small>
+                               </span> <br> <small class="review-card-anime-title-bottom">
+                                    
+                                @if($anime_review->english_title == null)
+    
+                                    {{$anime_review->japanese_title}}
+
+                                    @else
+
+                                    {{$anime_review->english_title}}
+
+                                @endif
+                                
+                                </small>
                                      
                     </div>
 
