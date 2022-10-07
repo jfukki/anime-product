@@ -178,7 +178,7 @@ class HomeController extends Controller
         $anime_plan_to_watch_status_count = DB::table('user_anime_status_lists')
         ->select('anime_id')
         ->where('anime_id', $id)
-        ->where('status' , 'planning to watch')
+        ->where('status' , 'planning')
         ->count();   
 
         $anime_watched_status_count = DB::table('user_anime_status_lists')

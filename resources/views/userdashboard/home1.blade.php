@@ -127,6 +127,97 @@
     </div>
 </div>
 
+
+<!-- User Anime Stats List -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2>
+                Your Anime Stats list
+            </h2>
+            <hr>
+
+        </div>
+    </div>
+
+    
+
+    <div class="row">
+        <div class="col-lg-8">
+        <table class="table">
+  <thead>
+    <tr>
+       
+       
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      
+      <td>
+        <div class="user-profile-watching-badge"></div> 
+      </td>
+      <td>
+      <p class="user-profile-badge-title"><a href="">Watching</a></p>
+      </td>
+      <td>{{$anime_watching_status_count}}</td>
+    </tr>
+    <tr>
+    <td>
+        <div class="user-profile-watched-badge"></div> 
+      </td>
+      <td>
+      <p class="user-profile-badge-title"><a href="">Watched</a></p>
+      </td>
+      <td>{{$anime_watched_status_count}}</td>
+       
+    </tr>
+    <tr>
+    <td>
+        <div class="user-profile-planing-badge"></div> 
+      </td>
+      <td>
+      <p class="user-profile-badge-title"><a href="">Plan to Watch</a></p>
+      </td>
+      <td>{{$anime_plan_to_watch_status_count}}</td>
+    </tr>
+
+
+    <tr>
+    <td>
+        <div class="user-profile-dropped-badge"></div> 
+      </td>
+      <td>
+      <p class="user-profile-badge-title"><a href="">Dropped</a></p>
+      </td>
+      <td>{{$anime_dropped_status_count}}</td>
+    </tr>
+
+
+  </tbody>
+</table>
+        </div>
+
+        <div class="col-lg-4">
+        meme here
+    </div>
+
+
+
+    </div>
+    
+   
+
+    
+</div>
+
+
+
+<!-- User Anime Stats List -->
+
+
+
 <!-- Watching List -->
 <div class="container">
     <div class="row">
@@ -292,6 +383,57 @@
 <!-- Watched List -->
 
 
+
+<!-- Dropped List -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Your Dropped Listing</h2>
+            <hr>
+        </div>
+                 @if(isset($user_anime_watch_list) )
+                          @if(count($user_anime_dropped_list) > 0 )
+                                @foreach($user_anime_dropped_list  as $user_anime_dropped)
+
+                                <div class="col-lg-2 col-4 mb-3 mt-2">
+
+                                        <a href="{{ route('animeDetail' , $user_anime_dropped->anime_id)  }}">
+                                        <img src="{{$user_anime_dropped->anime_image}}"
+                                        alt="" class="anime-grid-list-image">
+                                        </a>
+
+                                        <a href="" class="text-decor">
+                                            <p class="anime-title-list-grid">
+
+                                            @if(isset($user_anime_dropped->english_title))
+                                                    {{ Str::limit($user_anime_dropped->english_title, 25) }}
+                                                @else
+                                                
+                                                {{ Str::limit($user_anime_dropped->japanese_title, 25) }}
+                                                
+                                                
+                                                @endif
+
+                                            </p>
+                                        </a>
+
+                                </div>
+
+                                @endforeach
+
+                         @else
+
+                         <p class="text-center">No Anime to List yet!</p>
+    
+                       @endif
+
+                       @endif
+
+
+        </div>
+    </div>
+</div>
+<!-- Dropped List -->
 
 <!-- review cards section -->
 <div class="container">

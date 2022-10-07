@@ -64,6 +64,40 @@ class UserDetailController extends Controller
        ->orderBy('user_anime_status_lists.id', 'desc')
        ->get();
 
+       $user_anime_dropped_list = DB::table('user_anime_status_lists')
+       ->join('animes', 'user_anime_status_lists.anime_id', '=', 'animes.anime_id')    
+       ->where('user_anime_status_lists.status', 'dropped')
+       ->where('user_anime_status_lists.user_id', $user_id)
+       ->orderBy('user_anime_status_lists.id', 'desc')
+       ->get();
+
+
+       $anime_dropped_status_count = DB::table('user_anime_status_lists')
+       ->select('anime_id')
+       ->where('user_id', $user_id)
+       ->where('status' , 'dropped')
+       ->count();   
+
+
+       
+       $anime_watching_status_count = DB::table('user_anime_status_lists')
+       ->select('anime_id')
+       ->where('user_id', $user_id)
+       ->where('status' , 'watching')
+       ->count();   
+
+
+       $anime_plan_to_watch_status_count = DB::table('user_anime_status_lists')
+       ->select('anime_id')
+       ->where('user_id', $user_id)
+       ->where('status' , 'planning')
+       ->count();   
+
+       $anime_watched_status_count = DB::table('user_anime_status_lists')
+       ->select('anime_id')
+       ->where('user_id', $user_id)
+       ->where('status' , 'watched')
+       ->count(); 
         // heart list
 
         return view('userdashboard.home1', ['user'=> $user , 
@@ -72,6 +106,11 @@ class UserDetailController extends Controller
                                             'user_anime_watch_list' => $user_anime_watch_list,
                                             'user_anime_planing_list' => $user_anime_planing_list,
                                             'user_anime_watched_list' => $user_anime_watched_list,
+                                            'user_anime_dropped_list' => $user_anime_dropped_list,
+                                            'anime_dropped_status_count' => $anime_dropped_status_count,
+                                            'anime_watching_status_count' => $anime_watching_status_count,
+                                            'anime_watched_status_count' => $anime_watched_status_count,
+                                            'anime_plan_to_watch_status_count' => $anime_plan_to_watch_status_count,
                                         ]);
     }
 
