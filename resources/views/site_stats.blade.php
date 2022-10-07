@@ -19,7 +19,7 @@
             <div class="card-counter primary site-stats-card">
                 <i class="fa fa-pencil  site-stats-icon"></i>
                 <span class="count-name site-stats-title">Total Reviews |</span>
-                <span class="count-numbers site-stats-counter">0</span>
+                <span class="count-numbers site-stats-counter">{{$reviews_count}}</span>
             </div>
         </div>
 

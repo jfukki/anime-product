@@ -61,7 +61,7 @@
 
         <div class="col-md-2 col-5 review-detail-page-cards">
             <span class="review-detail-card-value">
-            {{$anime_review_detail->animation}}/10
+            {{$anime_review_detail->animation}}/9
             </span>
             <br>
             <span class="review-detail-card-title">Animation</span>
@@ -69,7 +69,7 @@
 
         <div class="col-md-2 col-5 review-detail-page-cards">
             <span class="review-detail-card-value">
-            {{$anime_review_detail->characters}}/10
+            {{$anime_review_detail->characters}}/9
             </span>
             <br>
             <span class="review-detail-card-title">Characters</span>
@@ -77,7 +77,7 @@
 
         <div class="col-md-2 col-5 review-detail-page-cards">
             <span class="review-detail-card-value">
-            {{$anime_review_detail->music}}/10
+            {{$anime_review_detail->music}}/9
             </span>
             <br>
             <span class="review-detail-card-title">Sound/Music</span>
@@ -85,7 +85,7 @@
 
         <!-- <div class="col-md-2 review-detail-page-cards">
             <span class="review-detail-card-value">
-                9.9/10
+                9/9
             </span>
             <br>
             <span class="review-detail-card-title">Overall</span>

@@ -16,11 +16,15 @@ class SiteStatsController extends Controller
         $anime_count = DB::table('animes')->count();
         $user_count = DB::table('users')->count();
         $fav_count = DB::table('user_favourite_lists')->count();
+        $reviews_count = DB::table('anime_reviews')->count();
+
 
         return view('site_stats', ['count' => $count, 
                                    'anime_count' => $anime_count,
                                    'user_count' => $user_count,
                                    'fav_count' => $fav_count,
+                                   'reviews_count' => $reviews_count,
+
                                 
                                    ]);
 
