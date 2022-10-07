@@ -97,6 +97,14 @@ h4
     height: 220px;
     
 }
+.anime-detail-review-card-story-ratng
+{
+    font-size: 36px !important;
+    font-family: oxyBold !important;
+    color: #e8daf0;
+    line-height: 44px;
+
+}
 .anime-review-card-des
 {
     

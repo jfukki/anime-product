@@ -540,7 +540,7 @@
                 <div class="col-lg-4 col-3">
                     <div>
                     <img src='{{ URL::asset("images/user_images/{$anime_detail_review->user_avatar}") }}' 
-                                                    class="rounded-circle" style="width: 57px; height:57px;"
+                                                    class="rounded-circle" style="width: 40px; height:40px;"
                                                     alt="Avatar" />
                     </div>
           
@@ -558,7 +558,7 @@
                 
                 <div class="col-lg-4 col-4">
                     <div>
-                       <p>Story: {{$anime_detail_review->story}}</p>
+                       <p>Story: <span class="anime-detail-review-card-story-ratng">{{$anime_detail_review->story}}</span></p>
                     </div>
           
                 </div>
