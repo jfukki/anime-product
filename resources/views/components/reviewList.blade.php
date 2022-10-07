@@ -49,10 +49,6 @@
 
   
 
-                               
-
-        
-
         @endforeach
         
         @else
