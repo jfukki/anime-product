@@ -3,10 +3,28 @@
 <div class="container">
     <div class="row">
 
+     
+
     @if(count($anime_reviews) > 0)
 
 
         @foreach($anime_reviews as $anime_review)
+
+        <div class="col-lg-4 ">
+        
+            <div class=" review-list-home-row"    >
+
+            <img src="{{$anime_review->anime_image}}" alt="" />
+
+                            <h2 class="review-card-title-test">
+                              {{Str::limit($anime_review->review_title, 40)}}
+                            </h2>
+                            <div class="review-card-description-test" > 
+                              {!! Str::limit($anime_review->review_text, 180) !!}
+                            </div>
+
+            </div>
+    </div>
 
         <div class="col-lg-4 col-12 mb-5" >
                             
@@ -36,7 +54,7 @@
                                     {{$anime_review->english_title}}
 
                                 @endif
-                                
+
                                 </small>
                                      
                     </div>

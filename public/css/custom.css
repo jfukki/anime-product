@@ -637,12 +637,63 @@ h4
 
 /* review module */
 
+.review-list-home-row {
+     
+    background: black;
+    position: relative;
+
+    background: #281a3d;
+    padding: 16px;
+    border-radius: 15px;
+    box-shadow: rgb(0 0 0 / 65%) 0px 5px 15px;
+    height: 250px;
+  }
+  
+  .review-list-home-row img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: blur(6px);
+  }
+
+  .review-card-title-test
+  {
+
+    position: absolute;
+    top: 7%;
+    left: 3%;
+    font-family: oxyLight;
+    font-size: 14px !important;
+    color: white;
+    /* transform: translate(-50%, -50%); */
+    background-color: #1b1b1dc7;
+    border-radius: 10px;
+    padding: 6px;
+
+  }
+
+  .review-card-description-test
+  {
+    color: whitesmoke !important;
+    font-family: oxyLight;
+    font-size: 14px !important;
+    text-decoration: none !important;
+    position: absolute;
+    top: 24%;
+    padding-right: 17px;
+    left: 4%;
+    /* transform: translate(-50%, -50%); */
+    height: 64px;
+    background-color: #1b1b1dc7;
+
+  }
 
 .img-row {
     height: 415px;
     background: black;
     position: relative;
   }
+
   .img-row img {
     height: 100%;
     width: 100%;
