@@ -20,7 +20,7 @@
                                                 {{Str::limit($anime_review->review_title, 40)}}
                                                 </h2>
                                                 <div class="review-card-description-test" > 
-                                                {!! Str::limit($anime_review->review_text, 40) !!}
+                                                {!! Str::limit($anime_review->review_text, 60) !!}
                                                 </div>
                                                 <br>
                                                 <br>
