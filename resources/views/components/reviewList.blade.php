@@ -17,7 +17,8 @@
                                              <img class="image" src="{{$anime_review->anime_image}}" alt="" />
 
                                                 <h2 class="review-card-title-test">
-                                                {{Str::limit($anime_review->review_title, 40)}}
+                                                  <a href="{{route('reviewDeail' , $anime_review->id)}}" style="text-decoration:none !important; color: white ">  {{Str::limit($anime_review->review_title, 40)}}
+                                                </a>
                                                 </h2>
                                                 <div class="review-card-description-test" > 
                                                 {!! Str::limit($anime_review->review_text, 80) !!}
@@ -36,7 +37,7 @@
                                                     
                                                 @if($anime_review->english_title == null)
                     
-                                                  <a href="{{route('reviewDeail' , $anime_review->id)}}">  {{$anime_review->japanese_title}} </a>
+                                                  <a href="{{route('reviewDeail' , $anime_review->id)}}" style="text-decoration:none; ">  {{$anime_review->japanese_title}} </a>
 
                                                     @else
 
