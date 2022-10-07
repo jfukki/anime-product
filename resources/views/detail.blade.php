@@ -548,7 +548,9 @@
 
                 <div class="col-lg-4 col-5">
                     <div>
-                        <p>{{$anime_detail_review->user_name}} <br> date</p>
+                        <p>{{$anime_detail_review->user_name}} <br> <small>
+                        {{  date('j \\ F Y', strtotime($anime_detail_review->created_at)) }}
+                        </small></p>
                     </div>
           
                 </div>
@@ -556,7 +558,7 @@
                 
                 <div class="col-lg-4 col-4">
                     <div>
-                       <p>Story: </p>
+                       <p>Story: {{$anime_detail_review->story}}</p>
                     </div>
           
                 </div>

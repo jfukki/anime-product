@@ -189,8 +189,8 @@ class HomeController extends Controller
 
         
         $anime_detail_review_card = DB::table('anime_reviews')
-        ->select('anime_reviews.review_title', 'anime_reviews.id', 'animes.english_title', 
-        'animes.japanese_title', 'animes.anime_image', 'anime_reviews.review_text', 'user_details.user_avatar', 'anime_reviews.user_name' )
+        ->select('anime_reviews.review_title', 'anime_reviews.id', 'anime_reviews.created_at', 'anime_reviews.review_text',
+        'anime_reviews.story','user_details.user_avatar', 'anime_reviews.user_name' )
         ->join('animes', 'anime_reviews.anime_id', '=', 'animes.anime_id')   
         ->join('user_details', 'anime_reviews.user_id', '=', 'user_details.user_id')    
         ->where('anime_reviews.anime_id' , $id)
