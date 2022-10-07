@@ -64,7 +64,23 @@
                     <small>Allowed Formats: JPEG, PNG. Max size: 6mb. Optimal dimensions: 160px-160px</small>
                 </div>
 
-                <button type="submit" class="btn btn-outline-dark genres-detail-page">Update My Info</button>
+                 
+
+                <div class="row">
+                            <div class="col-lg-3">
+                                
+                                 <button type="submit" class="btn btn-outline-dark genres-detail-page">Update</button>
+
+                            </div>
+
+                            <div class="col-lg-2">
+                                
+                                 <button type="submit" class="btn btn-outline-dark genres-detail-page">Cancle</button>
+
+                            </div>
+                        </div>
+
+
                 </form>
             </div>
         </div>

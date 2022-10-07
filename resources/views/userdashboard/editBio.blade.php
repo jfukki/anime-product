@@ -65,8 +65,19 @@
  
                 
 
+                        <div class="row">
+                            <div class="col-lg-3">
+                                
+                                 <button type="submit" class="btn btn-outline-dark genres-detail-page">Update</button>
 
-                <button type="submit" class="btn btn-outline-dark genres-detail-page">Update</button>
+                            </div>
+
+                            <div class="col-lg-2">
+                                
+                                 <button type="submit" class="btn btn-outline-dark genres-detail-page">Cancle</button>
+
+                            </div>
+                        </div>
                 </form>
             </div>
         </div>
