@@ -88,6 +88,39 @@ h4
  
 }
 
+.anime-detail-page-reviews-card
+{
+    background-color: #1E1E1E;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 60px 40px -7px;
+    height: 220px;
+    
+}
+.anime-review-card-des
+{
+    
+    font-size: 16px;
+    font-family: oxyRegular;
+    line-height: 20px;
+    color: #FBFBFB;
+}
+.anime-detail-page-reviews-card p
+{
+    text-transform: capitalize;
+    font-size: 14px;
+    font-family: oxyRegular;
+    line-height: 20px;
+    color: #FBFBFB;
+    text-align: center;
+}
+
+.anime-detail-page-reviews-card a
+{
+    text-decoration: none;
+}
+
+
 
 .anime-detail-cover-image-section
 {
@@ -782,7 +815,7 @@ h4
 
   .review-rating-cards-container
   {
-    margin-top: 12%;
+    margin-top: 16%;
 
   }
 

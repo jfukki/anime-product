@@ -46,7 +46,7 @@
 
 <!-- review cards section -->
  
-<div class="d-block d-md-none" style="margin-top:26%;"  >
+<div class="d-block d-md-none" style="margin-top:28% !important;"  >
     <br>
 </div>
 <div class="container extra-padding-container review-rating-cards-container ">

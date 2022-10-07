@@ -521,6 +521,69 @@
  </div>
 
 
+ <!-- Reviews -->
+
+ <div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Reviews</h2>
+            <hr>
+        </div>
+    </div>
+
+
+    <div class="row p-4">
+ @foreach($anime_detail_review_card as $key => $anime_detail_review)
+        <div class="col-lg-4 col-12 anime-detail-page-reviews-card">
+            
+            <div class="row">
+                <div class="col-lg-4 col-3">
+                    <div>
+                    <img src='{{ URL::asset("images/user_images/{$anime_detail_review->user_avatar}") }}' 
+                                                    class="rounded-circle" style="width: 57px; height:57px;"
+                                                    alt="Avatar" />
+                    </div>
+          
+                </div>
+
+                <div class="col-lg-4 col-5">
+                    <div>
+                        <p>{{$anime_detail_review->user_name}} <br> date</p>
+                    </div>
+          
+                </div>
+
+                
+                <div class="col-lg-4 col-4">
+                    <div>
+                       <p>Story: </p>
+                    </div>
+          
+                </div>
+
+                <div class="col-lg-12 col-12">
+                    <div>
+                       <span class="anime-review-card-des">
+                        
+                       {!! Str::limit($anime_detail_review->review_text, 230) !!}
+
+                       </span>
+                    </div>
+          
+                </div>
+
+                
+            </div>
+        </div>
+@endforeach
+
+
+
+    </div>
+ </div>
+
+ <!-- Reviews -->
+
  <!-- streaming links -->
 
  <div class="container p-3">

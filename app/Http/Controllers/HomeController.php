@@ -188,7 +188,15 @@ class HomeController extends Controller
         ->count();   
 
         
-
+        $anime_detail_review_card = DB::table('anime_reviews')
+        ->select('anime_reviews.review_title', 'anime_reviews.id', 'animes.english_title', 
+        'animes.japanese_title', 'animes.anime_image', 'anime_reviews.review_text', 'user_details.user_avatar', 'anime_reviews.user_name' )
+        ->join('animes', 'anime_reviews.anime_id', '=', 'animes.anime_id')   
+        ->join('user_details', 'anime_reviews.user_id', '=', 'user_details.user_id')    
+        ->where('anime_reviews.anime_id' , $id)
+        ->orderBy('anime_reviews.id', 'desc')
+        ->limit(3)
+        ->get();
 
 
         // views counter
@@ -247,6 +255,7 @@ class HomeController extends Controller
                     'anime_watched_status_count' => $anime_watched_status_count,
                     'anime_plan_to_watch_status_count' => $anime_plan_to_watch_status_count,
                     'anime_featured_picture' => $anime_featured_picture,
+                    'anime_detail_review_card' => $anime_detail_review_card,
                         
                   ]);
     
@@ -266,6 +275,7 @@ class HomeController extends Controller
                     'anime_watched_status_count' => $anime_watched_status_count,
                     'anime_plan_to_watch_status_count' => $anime_plan_to_watch_status_count,
                     'anime_featured_picture' => $anime_featured_picture,
+                    'anime_detail_review_card' => $anime_detail_review_card,
 
                     
                         
@@ -322,6 +332,7 @@ class HomeController extends Controller
                     'anime_watched_status_count' => $anime_watched_status_count,
                     'anime_plan_to_watch_status_count' => $anime_plan_to_watch_status_count,
                     'anime_featured_picture' => $anime_featured_picture,
+                    'anime_detail_review_card' => $anime_detail_review_card,
 
                         
                   ]);
@@ -342,6 +353,7 @@ class HomeController extends Controller
                     'anime_watched_status_count' => $anime_watched_status_count,
                     'anime_plan_to_watch_status_count' => $anime_plan_to_watch_status_count,
                     'anime_featured_picture' => $anime_featured_picture,
+                    'anime_detail_review_card' => $anime_detail_review_card,
 
                         
                   ]);
