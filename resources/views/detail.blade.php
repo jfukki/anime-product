@@ -211,21 +211,21 @@
                             <div class="row" style="margin-top:2%">
                                             
                                 <div class="col-lg-2 col-4" style="text-transform: capitalize; background:#EA4D01; padding:6px; 
-                                    border-radius:10px; font-size:12px; color:white;  margin-left:2%; margin-bottom:2%;">Total Reviews: {{$count_anime_reviews}}</div>
+                                    border-radius:10px; font-size:12px; color:white;  margin-left:2%; margin-bottom:2%; text-align: center;">Total Reviews: {{$count_anime_reviews}}</div>
 
                                 <div class="col-lg-2 col-4" style="text-transform: capitalize; background:#54229E; padding:6px; 
-                                    border-radius:10px; font-size:12px; color:white; margin-left:2%; margin-bottom:2%;">{{$anime_watching_status_count}} Watching  </div>
+                                    border-radius:10px; font-size:12px; color:white; margin-left:2%; margin-bottom:2%; text-align: center;">{{$anime_watching_status_count}} Watching  </div>
 
                                 <div class="col-lg-2 col-4" style="text-transform: capitalize; background:#6FB42A; padding:6px; 
-                                    border-radius:10px; font-size:12px; color:white;  margin-left:2%; margin-bottom:2%;">{{$anime_plan_to_watch_status_count}} Planning to watch</div>
+                                    border-radius:10px; font-size:12px; color:white;  margin-left:2%; margin-bottom:2%; text-align: center;">{{$anime_plan_to_watch_status_count}} Planning to watch</div>
 
             
                                 <div class="col-lg-2 col-4" style="text-transform: capitalize; background:#935B6F; padding:6px; 
-                                    border-radius:10px; font-size:12px; color:white;  margin-left:2%; margin-bottom:2%;">{{$anime_watched_status_count}} Watched </div>
+                                    border-radius:10px; font-size:12px; color:white;  margin-left:2%; margin-bottom:2%; text-align: center;">{{$anime_watched_status_count}} Watched </div>
 
                                     
                                 <div class="col-lg-2 col-4" style="text-transform: capitalize; background:#221F18; padding:6px; 
-                                    border-radius:10px; font-size:12px; color:white;  margin-left:2%; margin-bottom:2%;">{{$anime_dropped_status_count}} Droped this </div>
+                                    border-radius:10px; font-size:12px; color:white;  margin-left:2%; margin-bottom:2%; text-align: center;">{{$anime_dropped_status_count}} Droped this </div>
 
 
                             </div>
