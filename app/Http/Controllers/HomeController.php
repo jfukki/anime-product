@@ -152,6 +152,45 @@ class HomeController extends Controller
         
         $count_anime_fav =  $anime_fav_count -> count();
 
+
+        $anime_reviews_count = DB::table('anime_reviews')
+        ->select('anime_id')
+        ->where('anime_id', $id)
+        ->get();   
+        
+        $count_anime_reviews =  $anime_reviews_count -> count();
+
+
+         $anime_dropped_status_count = DB::table('user_anime_status_lists')
+        ->select('anime_id')
+        ->where('anime_id', $id)
+        ->where('status' , 'dropped')
+        ->count();   
+
+
+        $anime_watching_status_count = DB::table('user_anime_status_lists')
+        ->select('anime_id')
+        ->where('anime_id', $id)
+        ->where('status' , 'watching')
+        ->count();   
+
+
+        $anime_plan_to_watch_status_count = DB::table('user_anime_status_lists')
+        ->select('anime_id')
+        ->where('anime_id', $id)
+        ->where('status' , 'planning to watch')
+        ->count();   
+
+        $anime_watched_status_count = DB::table('user_anime_status_lists')
+        ->select('anime_id')
+        ->where('anime_id', $id)
+        ->where('status' , 'watched')
+        ->count();   
+
+        
+
+
+
         // views counter
 
 
@@ -199,6 +238,11 @@ class HomeController extends Controller
                     'user_fav_anime' =>  $user_fav_anime,
                     'count_anime_fav' => $count_anime_fav,
                     'user_anime_list' => $user_anime_list,
+                    'count_anime_reviews' => $count_anime_reviews,
+                    'anime_dropped_status_count' => $anime_dropped_status_count,
+                    'anime_watching_status_count' => $anime_watching_status_count,
+                    'anime_watched_status_count' => $anime_watched_status_count,
+                    'anime_plan_to_watch_status_count' => $anime_plan_to_watch_status_count,
                         
                   ]);
     
@@ -212,6 +256,13 @@ class HomeController extends Controller
                     'anime_pictures' => $anime_pictures,
                     'anime_recommendations' => $anime_recommendations,
                     'anime_streaming' =>  $anime_streaming,
+                    'count_anime_reviews' => $count_anime_reviews,
+                    'anime_dropped_status_count' => $anime_dropped_status_count,
+                    'anime_watching_status_count' => $anime_watching_status_count,
+                    'anime_watched_status_count' => $anime_watched_status_count,
+                    'anime_plan_to_watch_status_count' => $anime_plan_to_watch_status_count,
+
+                    
                         
                   ]);
                  }
@@ -259,6 +310,12 @@ class HomeController extends Controller
                     'anime_streaming' =>  $anime_streaming,
                     'user_fav_anime' =>  $user_fav_anime,
                     'user_anime_list' => $user_anime_list,
+                    'count_anime_reviews' => $count_anime_reviews,
+                    'anime_dropped_status_count' => $anime_dropped_status_count,
+                    'anime_watching_status_count' => $anime_watching_status_count,
+                    'anime_watched_status_count' => $anime_watched_status_count,
+                    'anime_plan_to_watch_status_count' => $anime_plan_to_watch_status_count,
+
                         
                   ]);
     
@@ -272,6 +329,12 @@ class HomeController extends Controller
                     'anime_pictures' => $anime_pictures,
                     'anime_recommendations' => $anime_recommendations,
                     'anime_streaming' =>  $anime_streaming,
+                    'count_anime_reviews' => $count_anime_reviews,
+                    'anime_dropped_status_count' => $anime_dropped_status_count,
+                    'anime_watching_status_count' => $anime_watching_status_count,
+                    'anime_watched_status_count' => $anime_watched_status_count,
+                    'anime_plan_to_watch_status_count' => $anime_plan_to_watch_status_count,
+
                         
                   ]);
                  }

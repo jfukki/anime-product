@@ -82,6 +82,23 @@
                                     }}"
                                     >
                             <i class="fa fa-arrow-right"></i>        Planning List</a></li>
+
+
+                            <li><a class="dropdown-item detail-page-add-list-item" 
+                            href="{{ route('addToList', 
+                                                [
+                                                    'anime_id' => $anime_basic->anime_id, 
+                                                    'user_id' => auth()->user()->id ,
+                                                    'status' => 'dropped'
+                                                ]
+                                            ) 
+                                            
+                                    }}"
+                                    >
+                            <i class="fa fa-arrow-right"></i>       Dropped List</a></li>
+
+
+                            
                         </ul>
                     </div>
 
@@ -130,6 +147,22 @@
                                     </a>
                                 <!-- Fav -->
 
+
+
+                                @if(isset($user_anime_list->status))
+
+ <br>
+                                        <small class="add-to-favourite-btn-detail-page-1 btn" style="text-transform: capitalize; background:#000; padding:6px; 
+                                        border-radius:10px; font-size:12px; color:white; width:225px;">
+                                    Your Anime Status:   {{$user_anime_list->status}} </small> <br>
+                            
+
+
+                                    @else
+
+
+@endif
+
                                  
 
                                 @endif
@@ -153,10 +186,12 @@
 
                         
                     <!-- Please Login -->
-
+                         
 
 
                 @endif   
+
+               
 
             </div>
         </div>
@@ -171,17 +206,29 @@
                 <h1 class="anime-detail-anime-title my-2">{{$anime_basic->english_title}}</h1>
             @endif    
 
-            @if(isset($user_anime_list->status))
+            
 
-                <small style="text-transform: capitalize; background:#EEB730; padding:6px; 
-                border-radius:10px; font-size:12px; color:white;">
-                 {{$user_anime_list->status}} </small>
-             @else
+                            <div class="row" style="margin-top:2%">
+                                            
+                                <div class="col-lg-2 col-4" style="text-transform: capitalize; background:#EA4D01; padding:6px; 
+                                    border-radius:10px; font-size:12px; color:white;  margin-left:2%; margin-bottom:2%;">Total Reviews: {{$count_anime_reviews}}</div>
 
+                                <div class="col-lg-2 col-4" style="text-transform: capitalize; background:#54229E; padding:6px; 
+                                    border-radius:10px; font-size:12px; color:white; margin-left:2%; margin-bottom:2%;">{{$anime_watching_status_count}} Watching  </div>
 
-            @endif
+                                <div class="col-lg-2 col-4" style="text-transform: capitalize; background:#6FB42A; padding:6px; 
+                                    border-radius:10px; font-size:12px; color:white;  margin-left:2%; margin-bottom:2%;">{{$anime_plan_to_watch_status_count}} Planning to watch</div>
 
             
+                                <div class="col-lg-2 col-4" style="text-transform: capitalize; background:#935B6F; padding:6px; 
+                                    border-radius:10px; font-size:12px; color:white;  margin-left:2%; margin-bottom:2%;">{{$anime_watched_status_count}} Watched </div>
+
+                                    
+                                <div class="col-lg-2 col-4" style="text-transform: capitalize; background:#221F18; padding:6px; 
+                                    border-radius:10px; font-size:12px; color:white;  margin-left:2%; margin-bottom:2%;">{{$anime_dropped_status_count}} Droped this </div>
+
+
+                            </div>
             </div>
             <div>
                 <h2 class="anime-detail-anime-synopsis mt-3">{{$anime_basic->english_title}} Synopsis</h2>
