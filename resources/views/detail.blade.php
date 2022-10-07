@@ -225,7 +225,7 @@
 
                                     
                                 <div class="col-lg-2 col-4" style="text-transform: capitalize; background:#221F18; padding:6px; 
-                                    border-radius:10px; font-size:12px; color:white;  margin-left:2%; margin-bottom:2%; text-align: center;">{{$anime_dropped_status_count}} Droped this </div>
+                                    border-radius:10px; font-size:12px; color:white;  margin-left:2%; margin-bottom:2%; text-align: center;">{{$anime_dropped_status_count}} Dropped this </div>
 
 
                             </div>
