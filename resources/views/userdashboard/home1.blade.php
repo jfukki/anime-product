@@ -144,7 +144,7 @@
     
 
     <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-7">
         <table class="table">
   <thead>
     <tr>
@@ -199,9 +199,29 @@
 </table>
         </div>
 
-        <div class="col-lg-4">
-        meme here
-    </div>
+        <div class="col-lg-5 mb-5">
+            
+            @if($anime_watched_status_count > 0)
+
+            <div class="text-center">
+                
+                 
+                <img src='{{ URL::asset("images/watch_anime.webp") }}' class="img-fluid" width="190" alt="">
+
+            </div>
+                     
+            @else
+
+              <div class="text-center">
+
+                    <h6>What?! Not a single watched?</h6>
+                    <img src='{{ URL::asset("images/profile_detail_page_no_watching_list_meme.jpg") }}' alt="">
+
+                </div>
+
+            @endif
+
+        </div>
 
 
 
@@ -440,7 +460,7 @@
     <div class="row">
         <div class="col-lg-12">
 
-            <h2>Your Heart List</h2>
+            <h2>Your Heart List  <i class="fa fa-heart"></i> </h2>
             <hr>
 
         </div>
