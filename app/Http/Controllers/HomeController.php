@@ -24,7 +24,7 @@ class HomeController extends Controller
         $horror_anime  = DB::table('horror_animes')->inRandomOrder()->limit(12)->get();
         $ranked_anime  = DB::table('ranked_animes')->inRandomOrder()->limit(12)->get();
 
-        $anime_reviews  = DB::table('anime_reviews')->orderBy('id', 'DESC')->get();
+        // $anime_reviews  = DB::table('anime_reviews')->orderBy('id', 'DESC')->limit(6)->get();
 
 
 
@@ -34,6 +34,7 @@ class HomeController extends Controller
         ->join('user_details', 'anime_reviews.user_id', '=', 'user_details.user_id')    
 
         ->orderBy('anime_reviews.id', 'desc')
+        ->limit(6)
         ->get();
         
 

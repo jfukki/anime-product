@@ -2,7 +2,11 @@
 
 @section('content')
 
-
+                        @if (session('status'))
+                                <div class="alert alert-success mt-5" style="background-color:#54229E !important; color: whitesmoke;">
+                                    {{ session('status') }}
+                                </div>
+                                @endif
 <div class="container user-edit-section">
     <div class="row">
         <div class="col-lg-12 text-center">
@@ -199,7 +203,7 @@
 
 
 
-
+                               
 
 
                         <div class="col-lg-12 col-12 mb-3">

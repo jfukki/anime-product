@@ -73,7 +73,14 @@ class ReviewsController extends Controller
     
             ]);
 
-            return redirect()->back();
+            if(isset($UserAnimeReview))
+            { 
+                return redirect()->back()->with('status', 'Review Updated!');;
+
+            }
+
+            // return redirect()->back();
+            return "something is wrong";
     }
 
 
