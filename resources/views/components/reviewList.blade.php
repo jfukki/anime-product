@@ -36,11 +36,11 @@
                                                     
                                                 @if($anime_review->english_title == null)
                     
-                                                    {{$anime_review->japanese_title}}
+                                                  <a href="{{route('reviewDeail' , $anime_review->id)}}">  {{$anime_review->japanese_title}} </a>
 
                                                     @else
 
-                                                    {{$anime_review->english_title}}
+                                                    <a href="">     {{$anime_review->english_title}}</a>
 
                                                 @endif
 
