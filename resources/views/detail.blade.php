@@ -533,7 +533,8 @@
 
 
     <div class="row p-4">
- @foreach($anime_detail_review_card as $key => $anime_detail_review)
+    @if(count($anime_detail_review_card ) > 0)
+        @foreach($anime_detail_review_card as $key => $anime_detail_review)
         <div class="col-lg-4 col-12 anime-detail-page-reviews-card">
             
             <div class="row">
@@ -577,8 +578,11 @@
                 
             </div>
         </div>
-@endforeach
+    @endforeach
 
+     @else
+            <p class="">No Reviews Yet!</p>
+   @endif
 
 
     </div>

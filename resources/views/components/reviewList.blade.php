@@ -39,7 +39,7 @@
                     
                                                   <a href="{{route('reviewDeail' , $anime_review->id)}}" style="text-decoration:none !important; color: #54229E ">  {{$anime_review->japanese_title}} </a>
 
-                                                    @else
+                                                     @else
 
                                                     <a href="{{route('reviewDeail' , $anime_review->id)}}" style="text-decoration:none !important; color: #54229E ">     {{$anime_review->english_title}}</a>
 
