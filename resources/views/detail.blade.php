@@ -549,9 +549,11 @@
 
                 <div class="col-lg-4 col-5">
                     <div>
-                        <p>{{$anime_detail_review->user_name}} <br> <small>
-                        {{  date('j \\ F Y', strtotime($anime_detail_review->created_at)) }}
-                        </small></p>
+                        <a href="{{route('reviewDeail' , $anime_detail_review->id)}}">
+                                <p>{{$anime_detail_review->user_name}} <br> <small>
+                                {{  date('j \\ F Y', strtotime($anime_detail_review->created_at)) }}
+                                </small></p>
+                        </a>
                     </div>
           
                 </div>

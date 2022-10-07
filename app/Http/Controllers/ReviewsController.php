@@ -38,10 +38,15 @@ class ReviewsController extends Controller
 
     public function reviewAdd($anime_id)
     {
+        $user_id = auth()->user()->id;
 
-        $anime_review = AnimeReview::where('anime_id' , '=', $anime_id)->first();
+        // $anime_review = AnimeReview::where('anime_id' , '=', $anime_id)->first();
+        $anime_review = DB::table('anime_reviews')
+            ->where('anime_id', $anime_id)
+            ->where('user_id',  $user_id)
+            ->first();
 
-        
+                  
         $anime_basic = DB::table('animes')->where('anime_id', $anime_id)->first();
         
 
