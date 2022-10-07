@@ -649,7 +649,7 @@ h4
     height: 250px;
   }
   
-  .review-list-home-row img {
+  .review-list-home-row .image {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -672,6 +672,18 @@ h4
 
   }
 
+.review-card-anime-title-bottom-test
+{
+    color: black !important;
+    font-family: oxyBold;
+    font-size: 13px !important;
+    line-height: 36px;
+    position: absolute;
+    top: 104%;
+    left: 3%;
+
+}
+
   .review-card-description-test
   {
     color: whitesmoke !important;
@@ -680,11 +692,27 @@ h4
     text-decoration: none !important;
     position: absolute;
     top: 24%;
-    padding-right: 17px;
+    padding: 17px;
+    margin-top:10px ;
     left: 4%;
     /* transform: translate(-50%, -50%); */
-    height: 64px;
+    height: 84px;
     background-color: #1b1b1dc7;
+    border-radius: 10px;
+
+  }
+
+  .review-card-username-test
+  {
+    color: #fff !important;
+    font-family: oxyRegular;
+    font-size: 13px !important;
+    text-decoration: none !important;
+    text-transform: capitalize;
+    position: absolute;
+    top: 84%;
+    left: 4%;
+    z-index: 11px;
 
   }
 

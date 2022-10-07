@@ -10,11 +10,11 @@
 
         @foreach($anime_reviews as $anime_review)
 
-        <div class="col-lg-4 ">
+        <div class="col-lg-4 col-12 mb-5 ">
         
             <div class=" review-list-home-row"    >
 
-            <img src="{{$anime_review->anime_image}}" alt="" />
+            <img class="image" src="{{$anime_review->anime_image}}" alt="" />
 
                             <h2 class="review-card-title-test">
                               {{Str::limit($anime_review->review_title, 40)}}
@@ -22,28 +22,15 @@
                             <div class="review-card-description-test" > 
                               {!! Str::limit($anime_review->review_text, 180) !!}
                             </div>
+                            <br>
+                            <br>
 
-            </div>
-    </div>
-
-        <div class="col-lg-4 col-12 mb-5" >
-                            
-                    <div class="review-card-list">
-
-                    <h2 class="review-card-title">
-                        <a href="{{route('reviewDeail' ,  $anime_review->id )}}">{{Str::limit($anime_review->review_title, 40)}}</a>
-                    </h2>
-                                <!-- <p class="review-card-description" > {{ Str::limit($anime_review->review_text, 180) }}</p> -->
-                                <div class="review-card-description" > {!! Str::limit($anime_review->review_text, 180) !!} </div>
-<br>
-<br>
-
-                               <span class="review-card-username"> 
+                            <span class="review-card-username-test"> 
                                     <img src='{{ URL::asset("images/user_images/{$anime_review->user_avatar}") }}' 
                                     class="rounded-circle" style="width: 57px; height:57px;"
                                     alt="Avatar" />
                                     {{$anime_review->user_name}}
-                               </span> <br> <small class="review-card-anime-title-bottom">
+                               </span> <br> <small class="review-card-anime-title-bottom-test">
                                     
                                 @if($anime_review->english_title == null)
     
@@ -56,10 +43,15 @@
                                 @endif
 
                                 </small>
-                                     
-                    </div>
 
-        </div>
+            </div>
+    </div>
+
+  
+
+                               
+
+        
 
         @endforeach
         
