@@ -23,8 +23,12 @@
             ">
 
            @else
-            <h2>Pleaes upload banner!!</h2> 
-            <img src='https://media.giphy.com/avatars/Kawaiichxuu/xc3QyjNBbopp.gif' style="width: 120px; height:auto;"  alt=""  >
+           
+            <!-- <h2>Pleaes upload banner!!</h2>  -->
+
+            <img class="user-detail-page-featured-banner"  src='{{ URL::asset("images/update_me.png") }}' class="img-fluid"   alt="">
+
+            
 
            @endif 
       </div>
