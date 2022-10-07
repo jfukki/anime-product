@@ -12,7 +12,22 @@
 <div class="container-fluid mt-5">
     
             <div class="row img-row">
-                  <img src="{{$anime_basic->anime_image}}" alt="" />
+
+               
+            @if(isset($anime_featured_picture->anime_picture_url)  )
+
+            <img src="{{$anime_featured_picture->anime_picture_url}}" alt="" />
+           
+
+            @else
+
+            <img src="{{$anime_basic->anime_image}}" alt="" />
+
+
+
+            @endif
+                  
+
                   
             </div>
 
