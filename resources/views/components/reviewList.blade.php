@@ -10,7 +10,7 @@
 
                         @foreach($anime_reviews as $anime_review)
 
-                        <div class="col-lg-4 col-12 mb-5 ">
+                        <div class="col-lg-4 col-12 mb-5  mt-2">
                         
                             <div class=" review-list-home-row"    >
 
