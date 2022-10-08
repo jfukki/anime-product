@@ -89,6 +89,8 @@ Route::get('/review-detail/{id}', [ReviewsController::class, 'reviewDetail'])->n
 Route::get('/review-add/{anime_id}', [ReviewsController::class, 'reviewAdd'])->name('reviewAdd');
 Route::post('/review-store/{anime_id}/{user_id}/{user_name}', [ReviewsController::class, 'reviewStore'])->name('reviewStore');
 
+Route::get('/anime-reviews/{anime_id}', [ReviewsController::class, 'animeReviewListing'])->name('animeReviewsListing');
+
 
 
 Route::get('/site-stats', [SiteStatsController::class, 'index'])->name('site-stats');

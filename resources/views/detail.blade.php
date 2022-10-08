@@ -535,7 +535,7 @@
 
             <div class="col-lg-2 col-5">
                 
-                <h2 class="anime-detail-page-view-all-btn"><a href="">View All</a></h2>
+                <h2 class="anime-detail-page-view-all-btn"><a href="{{route('animeReviewsListing', $anime_basic->anime_id)}}">View All</a></h2>
                 
             </div>
         @endif

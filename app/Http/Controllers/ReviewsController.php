@@ -89,4 +89,31 @@ class ReviewsController extends Controller
     }
 
 
+
+    public function animeReviewListing($anime_id)
+    {
+        $anime_detail = DB::table('animes')
+        ->where('anime_id', $anime_id)
+        ->select('anime_image', 'japanese_title', 'english_title', 'rank', 'anime_id')
+        ->first();  
+
+        $anime_reviews = DB::table('anime_reviews')
+        ->select('anime_reviews.review_title', 'anime_reviews.id', 'animes.english_title', 'animes.japanese_title',
+         'animes.anime_image', 'anime_reviews.review_text', 'user_details.user_avatar', 
+         'anime_reviews.user_name' )
+        ->join('animes', 'anime_reviews.anime_id', '=', 'animes.anime_id')   
+        ->join('user_details', 'anime_reviews.user_id', '=', 'user_details.user_id')   
+        ->where('animes.anime_id', $anime_id) 
+        ->orderBy('anime_reviews.id', 'desc')
+        ->paginate(10);
+     
+        $reviews_count = $anime_reviews->count();
+
+
+        return view('animeReviewsListPage', [   'anime_detail' => $anime_detail, 
+                                                'anime_reviews' => $anime_reviews,
+                                                'reviews_count' => $reviews_count    
+                                            ]);
+    } 
+
 }

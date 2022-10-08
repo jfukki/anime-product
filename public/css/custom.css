@@ -710,7 +710,7 @@ h4
     color: white;
     /* transform: translate(-50%, -50%); */
     background-color: #54229E;
-    border-radius: 10px;
+    border-radius: 30px;
     padding: 0px 10px 0px 10px;
 
   }
@@ -766,6 +766,9 @@ h4
     position: relative;
   }
 
+
+  
+
   .img-row img {
     height: 100%;
     width: 100%;
@@ -785,8 +788,7 @@ h4
     filter: blur(0);
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
-  
-  }
+    }
   .small-image {
       position: absolute;
       top: 92%;
