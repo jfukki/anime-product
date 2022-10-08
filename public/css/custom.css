@@ -1536,3 +1536,14 @@ review
     padding: 0.675rem 0.85rem !important;
 
 }
+
+
+.new-user-name-grid
+{
+    font-size: 14px !important;
+    line-height: 20px;
+    font-family: oxyBold !important;
+    color: #683BAB;
+    text-transform: capitalize;
+
+}

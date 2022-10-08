@@ -38,9 +38,22 @@ class HomeController extends Controller
         ->get();
         
 
+        // our recent users
+
+        $new_users = DB::table('user_details')
+                            ->select('user_details.user_id', 'user_details.user_avatar','users.name')
+                            ->join('users', 'user_details.user_id', '=', 'users.id')
+                            ->orderBy('user_id','desc')
+                            ->limit(12)
+                            ->get();
+
+
 
         return view('home', ['popular_anime' => $popular_anime, 'horror_anime' => $horror_anime , 'ranked_anime' => $ranked_anime ,
-                             'anime_reviews' => $anime_reviews]);
+                             'anime_reviews' => $anime_reviews,
+                             'new_users' => $new_users,
+                            
+                            ]);
     }
 
 
