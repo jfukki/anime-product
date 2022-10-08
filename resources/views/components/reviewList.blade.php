@@ -38,11 +38,16 @@
                                                     
                                                 @if($anime_review->english_title == null)
                     
-                                                  <a href="{{route('reviewDeail' , $anime_review->id)}}" style="text-decoration:none !important; color: #54229E ">  {{$anime_review->japanese_title}} </a>
+                                                  <a href="{{route('reviewDeail' , $anime_review->id)}}" style="text-decoration:none !important; color: #54229E ">
+                                                             {!! Str::limit($anime_review->japanese_title, 40) !!}
+                                                  </a>
 
                                                      @else
 
-                                                    <a href="{{route('reviewDeail' , $anime_review->id)}}" style="text-decoration:none !important; color: #54229E ">     {{$anime_review->english_title}}</a>
+                                                    <a href="{{route('reviewDeail' , $anime_review->id)}}" style="text-decoration:none !important; color: #54229E ">
+                                                         
+                                                {!! Str::limit($anime_review->english_title, 40) !!}
+                                                        </a>
 
                                                 @endif
 
