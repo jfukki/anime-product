@@ -523,11 +523,24 @@
 
  <!-- Reviews -->
 
- <div class="container">
+ <div class="container mt-5">
     <div class="row">
-        <div class="col-lg-12">
+
+
+        <div class="col-lg-10 col-7">
             <h2>Reviews</h2>
-            <hr>
+        </div>
+
+        @if(count($anime_detail_review_card ) > 0)
+
+            <div class="col-lg-2 col-5">
+                
+                <h2 class="anime-detail-page-view-all-btn"><a href="">View All</a></h2>
+                
+            </div>
+        @endif
+        <div class="col-lg-12">
+          <hr>
         </div>
     </div>
 

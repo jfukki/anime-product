@@ -1213,6 +1213,33 @@ h4
 /* Login Signup */
 
 
+
+.anime-detail-page-view-all-btn a
+{
+    color: whitesmoke !important;
+}
+
+.anime-detail-page-view-all-btn:hover
+{
+    background-color: black !important;
+}
+
+
+.anime-detail-page-view-all-btn
+{
+
+    background-color: #683BAB !important;
+    width: 130px !important;
+    padding: 2px;
+    border-radius: 20px;
+    font-size: 14px !important;
+    text-align: center;
+    color: whitesmoke !important;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+}
+
+
+
 .title-bg-homepage
 {
 
