@@ -60,13 +60,15 @@
             @if(count($new_users) > 0)
                     @foreach($new_users as $new_user)
 
-                    <div class="col-lg-2 col-6 text-center">
+                    <div class="col-lg-1 col-6 text-center">
                         <a href="">
                                 <img src='{{ URL::asset("images/user_images/{$new_user->user_avatar}") }}' 
                                     class="rounded-circle" style="
                                         width: 91px;
                                         height: 90px;
                                         border: solid 3px #a66ee5;
+                                        box-shadow: rgb(0 0 0 / 20%) 0px 60px 40px -7px;
+
                                         "
                                     alt="Avatar" />
                         </a>
