@@ -30,7 +30,7 @@
 
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter Your Name">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter Your Password">
                     <small class="form-alert">@error('password')  {{$message}} @enderror</small>   
                 </div>
                 <div class="mb-3">

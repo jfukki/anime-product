@@ -165,7 +165,13 @@
       <td>
       <p class="user-profile-badge-title"><a href="">Watching</a></p>
       </td>
-      <td>{{$anime_watching_status_count}}</td>
+      <td>
+        @if($anime_watching_status_count > 0)
+        {{$anime_watching_status_count}}
+        @else
+            0
+        @endif
+      </td>
     </tr>
     <tr>
     <td>
@@ -174,7 +180,15 @@
       <td>
       <p class="user-profile-badge-title"><a href="">Watched</a></p>
       </td>
-      <td>{{$anime_watched_status_count}}</td>
+      <td>
+        @if($anime_watched_status_count > 0)
+        
+            {{$anime_watched_status_count}}
+       
+        @else
+            0
+        @endif
+    </td>
        
     </tr>
     <tr>
@@ -184,7 +198,16 @@
       <td>
       <p class="user-profile-badge-title"><a href="">Plan to Watch</a></p>
       </td>
-      <td>{{$anime_plan_to_watch_status_count}}</td>
+      <td>
+        @if($anime_plan_to_watch_status_count > 0)
+        
+        {{$anime_plan_to_watch_status_count}}
+
+   
+        @else
+            0
+        @endif
+    </td>
     </tr>
 
 
@@ -195,7 +218,17 @@
       <td>
       <p class="user-profile-badge-title"><a href="">Dropped</a></p>
       </td>
-      <td>{{$anime_dropped_status_count}}</td>
+      <td>
+
+        @if($anime_dropped_status_count > 0)
+        
+            {{$anime_dropped_status_count}}
+
+        @else
+            0
+        @endif
+
+      </td>
     </tr>
 
 
