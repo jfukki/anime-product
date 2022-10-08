@@ -72,9 +72,9 @@
 
                             </div>
 
-                            <div class="col-lg-2">
+                            <div class="col-lg-2" style="margin-left:10px;">
                                 
-                                 <button type="submit" class="btn btn-outline-dark genres-detail-page">Cancle</button>
+                                 <a href="{{ route('my-profile')}}" class="btn btn-outline-dark genres-detail-page" >Cancle</a>
 
                             </div>
                         </div>
