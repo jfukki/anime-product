@@ -17,7 +17,8 @@
                                              <img class="image" src="{{$anime_review->anime_image}}" alt="" />
 
                                                 <h2 class="review-card-title-test">
-                                                  <a href="{{route('reviewDeail' , $anime_review->id)}}" style="text-decoration:none !important; color: white ">  {{Str::limit($anime_review->review_title, 40)}}
+                                                  <a href="{{route('reviewDeail' , $anime_review->id)}}" style="text-decoration:none !important; color: white "> 
+                                                   {{Str::limit($anime_review->review_title, 40)}}
                                                 </a>
                                                 </h2>
                                                 <div class="review-card-description-test" > 
