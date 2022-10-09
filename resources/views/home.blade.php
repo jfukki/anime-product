@@ -70,7 +70,9 @@
                                         box-shadow: rgb(0 0 0 / 20%) 0px 60px 40px -7px;
 
                                         "
-                                    alt="Avatar" />
+                                    alt="Avatar"  />
+
+                                    
                         </a>
 
                         <p class="new-user-name-grid"> 
