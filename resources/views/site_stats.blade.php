@@ -47,6 +47,14 @@
             </div>
         </div>
 
+        <div class="col-md-4">
+            <div class="card-counter primary site-stats-card">
+                <i class="fa fa-flag  site-stats-icon"></i>
+                <span class="count-name site-stats-title">Total Countries |</span>
+                <span class="count-numbers site-stats-counter">{{$country_info}}</span>
+            </div>
+        </div>
+
         
         
     </div>

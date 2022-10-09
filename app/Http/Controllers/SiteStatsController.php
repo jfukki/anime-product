@@ -23,14 +23,14 @@ class SiteStatsController extends Controller
         $ip = $request->ip(); 
         //   $ip = '162.159.24.227'; 
           
-         return $currentUserInfo = Location::get($ip);
+         return $country_info = Location::get($ip);
 
         return view('site_stats', ['count' => $count, 
                                    'anime_count' => $anime_count,
                                    'user_count' => $user_count,
                                    'fav_count' => $fav_count,
                                    'reviews_count' => $reviews_count,
-
+                                    'country_info' => $country_info,
                                 
                                    ]);
 
