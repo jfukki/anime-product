@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Stevebauman\Location\Facades\Location;
+// use Stevebauman\Location\Facades\Location;
+use Location;
 
 class SiteStatsController extends Controller
 {
@@ -20,10 +21,13 @@ class SiteStatsController extends Controller
         $reviews_count = DB::table('anime_reviews')->count();
 
         //   Dynamic IP address
-        $ip = $request->ip(); 
+        // $ip = $request->ip(); 
         //   $ip = '162.159.24.227'; 
           
-          $country_info = Location::get($ip);
+        //   $country_info = Location::get($ip);
+            $ip = $request->ip();
+            $data = \Location::get($ip);
+            dd($data);
 
         return view('site_stats', ['count' => $count, 
                                    'anime_count' => $anime_count,
