@@ -4,11 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Location;
 
 class SiteStatsController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
         // searches counter
 
@@ -19,21 +18,13 @@ class SiteStatsController extends Controller
         $fav_count = DB::table('user_favourite_lists')->count();
         $reviews_count = DB::table('anime_reviews')->count();
 
-        //   Dynamic IP address
-        // $ip = $request->ip(); 
-        //   $ip = '162.159.24.227'; 
-          
-        //   $country_info = Location::get($ip);
-            $ip = $request->ip();
-            $data = Location::get($ip);
-            dd($data);
 
         return view('site_stats', ['count' => $count, 
                                    'anime_count' => $anime_count,
                                    'user_count' => $user_count,
                                    'fav_count' => $fav_count,
                                    'reviews_count' => $reviews_count,
-                                    'country_info' => $country_info,
+
                                 
                                    ]);
 
