@@ -574,7 +574,7 @@
                 
                 <div class="col-lg-4 col-4">
                     <div>
-                       <p>Story: <span class="anime-detail-review-card-story-ratng">{{$anime_detail_review->story}}</span></p>
+                       <p>Story: <span class="anime-detail-review-card-story-ratng">{{$anime_detail_review->story}}</span> <small>/ 9 </small></p>
                     </div>
           
                 </div>
