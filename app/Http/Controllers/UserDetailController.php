@@ -331,4 +331,36 @@ class UserDetailController extends Controller
             return  "something went wrong...";
         }
     }
+
+
+    public function userReviewList()
+    {
+
+        $user_id = auth()->user()->id;
+        
+        $user = UserDetail::where('user_id' , '=', $user_id)->first();
+
+        $user_detail = User::find($user_id);
+
+         $anime_reviews = DB::table('anime_reviews')
+        ->select('anime_reviews.review_title', 'anime_reviews.id', 'animes.english_title', 'animes.japanese_title',
+         'animes.anime_image', 'anime_reviews.review_text', 'user_details.user_avatar', 
+         'anime_reviews.user_name' )
+        ->join('animes', 'anime_reviews.anime_id', '=', 'animes.anime_id')   
+        ->join('user_details', 'anime_reviews.user_id', '=', 'user_details.user_id')   
+        ->where('anime_reviews.user_id', $user_id) 
+        ->orderBy('anime_reviews.id', 'desc')
+        ->paginate(10);
+     
+        $reviews_count = $anime_reviews->count();
+
+        return view('userdashboard.userReviewsList', [
+                                                        'anime_reviews' => $anime_reviews,
+                                                        'reviews_count' => $reviews_count,
+                                                        'user' => $user,
+                                                        'user_detail' => $user_detail,
+
+                                                    
+                                                      ]);
+    }
 }

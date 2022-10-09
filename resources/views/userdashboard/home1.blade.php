@@ -84,14 +84,15 @@
             <span class="review-detail-card-title" style="color:white">My Heart List</span>
         </div>
 
-        <div class="col-md-2 user-profile-card">
+        <a href="{{route('userReviewList')}}" class="col-md-2 user-profile-card">
+            
             <span class="review-detail-card-value">
             <i class="fa fa-pencil"></i>
 
             </span>
             <br>
             <span class="review-detail-card-title">My Reviews</span>
-        </div>
+        </a>
 
        
       

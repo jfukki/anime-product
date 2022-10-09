@@ -62,6 +62,8 @@ Route::get('/addtofavlistsearchitem/{anime_id}/{user_id}', [UserFavouriteListCon
 Route::get('/my-list', [MyListController::class, 'index'])->name('my-list');
 Route::get('/my-profile', [UserDetailController::class, 'index'])->name('my-profile');
 
+Route::get('/my-review-list', [UserDetailController::class, 'userReviewList'])->name('userReviewList');
+
 
 Route::get('/user-edit/{user_id}', [UserDetailController::class, 'userEdit'])->name('user-edit');
 Route::post('/user-update/{user_id}', [UserDetailController::class, 'userUpdate'])->name('userUpdate');
