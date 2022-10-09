@@ -6,7 +6,7 @@
 
     <div class="row">
     
-            <div class="col-lg-12">
+            <div class="col-lg-12 d-none d-md-block">
                 <h2>Totlal Reviews: {{$reviews_count}}</h2>
                 <hr>
             </div>
