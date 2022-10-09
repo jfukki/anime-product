@@ -63,6 +63,8 @@ Route::get('/my-list', [MyListController::class, 'index'])->name('my-list');
 Route::get('/my-profile', [UserDetailController::class, 'index'])->name('my-profile');
 
 Route::get('/my-review-list', [UserDetailController::class, 'userReviewList'])->name('userReviewList');
+Route::get('/delete-my-review/{id}', [UserDetailController::class, 'deleteUserReview'])->name('deleteUserReview');
+
 
 
 Route::get('/user-edit/{user_id}', [UserDetailController::class, 'userEdit'])->name('user-edit');

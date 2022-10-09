@@ -363,4 +363,11 @@ class UserDetailController extends Controller
                                                     
                                                       ]);
     }
+
+    public function deleteUserReview($id)
+    {
+        
+        DB::table('anime_reviews')->delete($id);
+        return back();
+    }
 }

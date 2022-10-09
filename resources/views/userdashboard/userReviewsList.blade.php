@@ -82,13 +82,13 @@
 <!-- review cards section -->
 <div class="container p-5  ">
     <div class="row">
-        <div class="col-md-2 user-profile-card-s">
+        <a href="{{route('my-profile')}}" class="col-md-2 user-profile-card-s">
             <span class="review-detail-card-value">
                 <i class="fa fa-heart" style="color:white"></i>
             </span>
             <br>
             <span class="review-detail-card-title" style="color:white">My Heart List</span>
-        </div>
+        </a>
 
         <a href="{{route('userReviewList')}}" class="col-md-2 user-profile-card">
             
@@ -193,8 +193,12 @@
 
                                                 <a href="{{route('reviewDeail' , $anime_review->id)}}" style="text-decoration:none !important; color: #54229E ">
                                                      
-                                            {!! Str::limit($anime_review->english_title, 40) !!}
+                                            {!! Str::limit($anime_review->english_title, 30) !!}
                                                     </a>
+
+                                                    <a href="{{route('deleteUserReview', $anime_review->id)}}">
+                                                        <i class="fa fa-trash" style="color: #BB2D3B;"></i>
+                                                    </a>                                                    
 
                                             @endif
 
