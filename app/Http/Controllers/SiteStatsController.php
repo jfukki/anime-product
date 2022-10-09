@@ -20,10 +20,10 @@ class SiteStatsController extends Controller
         $reviews_count = DB::table('anime_reviews')->count();
 
         //   Dynamic IP address
-    return    $ip = $request->ip(); 
+        $ip = $request->ip(); 
         //   $ip = '162.159.24.227'; 
           
-          $currentUserInfo = Location::get($ip);
+         return $currentUserInfo = Location::get($ip);
 
         return view('site_stats', ['count' => $count, 
                                    'anime_count' => $anime_count,
