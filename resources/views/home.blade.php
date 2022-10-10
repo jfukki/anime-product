@@ -49,7 +49,7 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="title-bg-homepage">Thank you for joining us</h2>
+            <h2 class="title-bg-homepage">Thank you for Signing up</h2>
             <hr>
         </div>
     </div>
