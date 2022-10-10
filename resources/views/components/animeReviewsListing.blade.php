@@ -21,8 +21,8 @@
                                                     class="rounded-circle" style="width: 57px; height:57px;"
                                                     alt="Avatar" />
                                                    <span style="color: white !important;" > {{$anime_review->user_name}}</span>
-
-                                            </span>  | <small style="font-size:10px; color: white !important;">Date here</small>
+                                                  
+                                            </span>  | <small style="font-size:10px; color: white !important;"> {{  date('j \\ F Y', strtotime($anime_review->created_at)) }}</small>
             </div>
             <div class="mt-4" >
 
