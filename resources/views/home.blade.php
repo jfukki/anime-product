@@ -1,8 +1,8 @@
 @extends('main')
-@section('meta-description', 'Anime Recommendations, Anime Episodes, Anime wishlist, Anime track, Anime wallpapers, Famous Anime Characters & Much More')
+@section('meta-description', 'Anime Trailers, Anime Recommendations, Anime Episodes, Anime wishlist, Anime track, Anime wallpapers, Famous Anime Characters & Much More')
 @section('meta-keywords', 'anime, anime recommendations, anime record, anime track, anime characters, upcoming anime, popular anime')
 
-@section('title', 'Anime Recommendations & Much More')
+@section('title', 'Anime Trailers, Reviews, Recommendations & Much More')
 
 
 @section('content')
@@ -32,7 +32,7 @@
 
         <div class="col-lg-5 mt-5   ">
             <br>
-             <p class="home-main-section-text mt-2">Anime Recommendations, Wishlist, Anime Track, Reviews, Forum & Much More!</p>
+             <p class="home-main-section-text mt-2">Anime Trailers, Recommendations, Wishlist, Anime Track, Reviews, Forum & Much More!</p>
         </div>
 
     </div>
