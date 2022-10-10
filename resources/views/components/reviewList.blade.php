@@ -17,7 +17,7 @@
                                              <img class="image" src="{{$anime_review->anime_image}}" alt="" />
 
                                                 <h2 class="review-card-title-test">
-                                                  <a href="{{route('reviewDeail' , $anime_review->id)}}" style="text-decoration:none !important; color: white "> 
+                                                  <a href="{{route('animeReviewsListing', $anime_review->anime_id)}}" style="text-decoration:none !important; color: white "> 
                                                    {{Str::limit($anime_review->review_title, 40)}}
                                                 </a>
                                                 </h2>
@@ -35,16 +35,16 @@
                                             </span> 
                                             <br> 
                                             <small class="review-card-anime-title-bottom-test">
-                                                    
+                                           
                                                 @if($anime_review->english_title == null)
-                    
-                                                  <a href="{{route('reviewDeail' , $anime_review->id)}}" style="text-decoration:none !important; color: #54229E ">
+                                                
+                                                  <a href="{{route('animeReviewsListing', $anime_review->anime_id)}}" style="text-decoration:none !important; color: #54229E ">
                                                              {!! Str::limit($anime_review->japanese_title, 40) !!}
                                                   </a>
 
                                                      @else
 
-                                                    <a href="{{route('reviewDeail' , $anime_review->id)}}" style="text-decoration:none !important; color: #54229E ">
+                                                    <a href="{{route('animeReviewsListing', $anime_review->anime_id)}}" style="text-decoration:none !important; color: #54229E ">
                                                          
                                                 {!! Str::limit($anime_review->english_title, 40) !!}
                                                         </a>
