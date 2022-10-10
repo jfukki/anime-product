@@ -563,7 +563,8 @@
                 <div class="col-lg-4 col-5">
                     <div>
                         <a href="{{route('reviewDeail' , $anime_detail_review->id)}}">
-                                <p>{{$anime_detail_review->user_name}} <br> <small>
+                                <p>{{$anime_detail_review->user_name}} <br>
+                                 <small style="font-size:9px; !important;">
                                 {{  date('j \\ F Y', strtotime($anime_detail_review->created_at)) }}
                                 </small></p>
                         </a>
