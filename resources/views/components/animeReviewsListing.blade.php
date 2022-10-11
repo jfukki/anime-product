@@ -37,9 +37,9 @@
             </div>
 
             <div class="row mt-4">
-                <div class="col-lg-3 col-6" style="color: white !important;">story: <span style="color: #AD9D49 !important; font-size:29px !important;">{{$anime_review->story}}</span> / 9 </div>
-                <div class="col-lg-3 col-6" style="color: white !important;">animation:   <span style="color: #E5F961 !important; font-size:29px !important;">{{$anime_review->animation}}</span> / 9</div>
-                <div class="col-lg-3 col-6" style="color: white !important;">sound:   <span style="color: #6FB42A !important; font-size:29px !important;">{{$anime_review->music}} </span>/ 9</div>
+                <div class="col-lg-3 col-6" style="color: white !important;">story: <span style="color: #fff !important; font-size:29px !important;">{{$anime_review->story}}</span> / 9 </div>
+                <div class="col-lg-3 col-6" style="color: white !important;">animation:   <span style="color: #fff !important; font-size:29px !important;">{{$anime_review->animation}}</span> / 9</div>
+                <div class="col-lg-3 col-6" style="color: white !important;">sound:   <span style="color: #fff !important; font-size:29px !important;">{{$anime_review->music}} </span>/ 9</div>
                 <div class="col-lg-3 col-6" style="color: white !important;">characters:   <span style="color: #fff !important; font-size:29px !important;">{{$anime_review->characters}}</span> / 9</div>
 
 
