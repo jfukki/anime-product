@@ -17,4 +17,10 @@ class AdminController extends Controller
     {
         return view('adminDashboard.main');
     }
+
+    public function dashboard()
+
+    {
+        return view('adminDashboard.main');
+    }
 }

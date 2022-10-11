@@ -14,7 +14,7 @@ use App\Http\Controllers\MyListController;
 use App\Http\Controllers\UserDetailController;
 use App\Http\Controllers\UserAnimeStatusListController;
 use App\Http\Controllers\Admin\AdminController;
-
+use App\Http\Controllers\Admin\BlogPostController;
 
 
 
@@ -118,6 +118,12 @@ Route::get('/insertRankedAnime/{id}', [AnimeController::class, 'rankedAnimeInser
 Route::get('/admin/login', [AdminController::class, 'loginIndex']); 
 
 Route::post('/admin/login', [AdminController::class, 'login'])->name('login');
+
+Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('adminDashboar'); 
+
+
+Route::get('/admin/blog', [BlogPostController::class, 'adminBlog'])->name('adminBlog'); 
+
 
 
 
