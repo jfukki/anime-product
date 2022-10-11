@@ -22,7 +22,7 @@
                                                 </a>
                                                 </h2>
                                                 <div class="review-card-description-test" > 
-                                                {!! Str::limit($anime_review->review_text, 80) !!}
+                                                {!! Str::limit($anime_review->review_text, 130) !!}
                                                 </div>
                                                 <br>
                                                 <br>
