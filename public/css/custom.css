@@ -177,8 +177,8 @@ h4
 .anime-grid-list-characters-image
 {
     border-radius: 50px;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
 
 }
@@ -202,7 +202,21 @@ h4
     /* text-align: justify; */
     color: #54229E;
     font-size: 11px;
-    line-height: 15px;
+    line-height: 13px;
+    font-family: 'oxyBold';
+    text-transform: capitalize;
+
+}
+
+
+.anime-detail-characters-title-list-grid
+{
+    margin-top: 16%;
+    margin-bottom: 10%;
+    /* text-align: justify; */
+    color: #54229E;
+    font-size: 16px;
+    line-height: 20px;
     font-family: 'oxyBold';
     text-transform: capitalize;
 

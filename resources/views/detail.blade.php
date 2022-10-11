@@ -551,7 +551,8 @@
         <div class="col-lg-4 col-12 anime-detail-page-reviews-card">
             
             <div class="row">
-                <div class="col-lg-4 col-3">
+                
+                <div  class="col-lg-4 col-3 ">
                     <div>
                     <img src='{{ URL::asset("images/user_images/{$anime_detail_review->user_avatar}") }}' 
                                                     class="rounded-circle" style="width: 40px; height:40px;"
@@ -677,7 +678,7 @@
                   @if(count($anime_character) > 0)
 
                     @foreach($anime_character as $anime_character)
-                                <div class="col-lg-3 col-12 anime-grid-list text-center">
+                                <div class="col-lg-4 col-12 anime-grid-list text-center">
                                         <div class="row characters-row-grid-anime-detail" >
                                             <div class="col-6">
                                                 <a href="">
@@ -688,7 +689,7 @@
 
                                             <div class="col-6">
                                                 <a href="" class="text-decor">
-                                                    <p class="anime-title-list-grid">
+                                                    <p class="anime-detail-characters-title-list-grid">
                                                     {{ Str::limit($anime_character->character_name, 50) }}
                                                         
                                                         <br>

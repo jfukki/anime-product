@@ -5,55 +5,60 @@
 
      
 
-                    @if(count($anime_reviews) > 0)
+    @if(count($anime_reviews) > 0)
 
 
-                        @foreach($anime_reviews as $anime_review)
+        @foreach($anime_reviews as $anime_review)
 
-                        <div class="col-lg-4 col-12 mb-5  mt-2">
-                        
-                            <div class=" review-list-home-row"    >
+        <div class="col-lg-4 col-12 mb-5  mt-2 zoom">
+        
+            <a href=" {{route('animeReviewsListing', $anime_review->anime_id)}}">
 
-                                             <img class="image" src="{{$anime_review->anime_image}}" alt="" />
+            <div class=" review-list-home-row"    >
 
-                                                <h2 class="review-card-title-test">
-                                                  <a href="{{route('animeReviewsListing', $anime_review->anime_id)}}" style="text-decoration:none !important; color: white "> 
-                                                   {{Str::limit($anime_review->review_title, 40)}}
-                                                </a>
-                                                </h2>
-                                                <div class="review-card-description-test" > 
-                                                {!! Str::limit($anime_review->review_text, 130) !!}
-                                                </div>
-                                                <br>
-                                                <br>
+                <img class="image" src="{{$anime_review->anime_image}}" alt="" />
 
-                                            <span class="review-card-username-test"> 
-                                                    <img src='{{ URL::asset("images/user_images/{$anime_review->user_avatar}") }}' 
-                                                    class="rounded-circle" style="width: 57px; height:57px;"
-                                                    alt="Avatar" />
-                                                    {{$anime_review->user_name}}
-                                            </span> 
-                                            <br> 
-                                            <small class="review-card-anime-title-bottom-test">
-                                           
-                                                @if($anime_review->english_title == null)
-                                                
-                                                  <a href="{{route('animeReviewsListing', $anime_review->anime_id)}}" style="text-decoration:none !important; color: #54229E ">
-                                                             {!! Str::limit($anime_review->japanese_title, 40) !!}
-                                                  </a>
+                <h2 class="review-card-title-test">
+                    <a href="{{route('animeReviewsListing', $anime_review->anime_id)}}" style="text-decoration:none !important; color: white "> 
+                    {{Str::limit($anime_review->review_title, 40)}}
+                </a>
+                </h2>
+                <div class="review-card-description-test" > 
+                {!! Str::limit($anime_review->review_text, 130) !!}
+                </div>
+                <br>
+                <br>
 
-                                                     @else
+                <span class="review-card-username-test"> 
+                    <img src='{{ URL::asset("images/user_images/{$anime_review->user_avatar}") }}' 
+                    class="rounded-circle" style="width: 57px; height:57px;"
+                    alt="Avatar" />
+                    {{$anime_review->user_name}}
+                </span> 
+                <br> 
+                <small class="review-card-anime-title-bottom-test">
 
-                                                    <a href="{{route('animeReviewsListing', $anime_review->anime_id)}}" style="text-decoration:none !important; color: #54229E ">
-                                                         
-                                                {!! Str::limit($anime_review->english_title, 40) !!}
-                                                        </a>
+                @if($anime_review->english_title == null)
+                
+                    <a href="{{route('animeReviewsListing', $anime_review->anime_id)}}" style="text-decoration:none !important; color: #54229E ">
+                                {!! Str::limit($anime_review->japanese_title, 40) !!}
+                    </a>
 
-                                                @endif
+                        @else
 
-                                            </small>
+                    <a href="{{route('animeReviewsListing', $anime_review->anime_id)}}" style="text-decoration:none !important; color: #54229E ">
+                            
+                {!! Str::limit($anime_review->english_title, 40) !!}
+                        </a>
 
-                            </div>
+                @endif
+
+                </small>
+
+                </div>
+
+
+                          </a>
                       </div>
  
                         @endforeach
