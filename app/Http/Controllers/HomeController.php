@@ -27,7 +27,11 @@ class HomeController extends Controller
 
         $data = \Location::get($ip);
     
-        $country = Country::insert(
+        $country = Country::updateOrCreate(
+
+                [                    
+                    'countryName' =>  $data->countryName, 
+                ],
 
                 [                    
                     'countryName' =>  $data->countryName, 
