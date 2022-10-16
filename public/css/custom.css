@@ -1575,3 +1575,37 @@ review
     text-transform: capitalize;
 
 }
+
+
+/* top airing anime  */
+
+.top-airing-anime-count
+{
+    font-family: oxyBold;
+    color: #54229E;
+    font-size: 220px;
+    line-height: 230px;
+    
+}
+
+
+
+.top-airing-anime-image
+{
+    border-radius: 10px;
+   
+    width: 190px;
+    height: 85%;
+
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+
+.top-airing-anime-title
+{
+    font-family: oxyBold;
+    color: #54229E;
+    font-size: 11px;
+    line-height: 16px;
+    margin-top: 10px;
+}
+/* top airing anime  */

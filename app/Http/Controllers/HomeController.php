@@ -47,11 +47,18 @@ class HomeController extends Controller
                             ->limit(12)
                             ->get();
 
+// top airing anime 
+
+ $top_airing_anime = DB::table('animes')
+                    ->select('anime_image', 'english_title' , 'japanese_title' , 'anime_id')
+                    ->inRandomOrder()->limit(6)->get();
 
 
         return view('home', ['popular_anime' => $popular_anime, 'horror_anime' => $horror_anime , 'ranked_anime' => $ranked_anime ,
                              'anime_reviews' => $anime_reviews,
                              'new_users' => $new_users,
+                             'top_airing_anime' => $top_airing_anime,
+
                             
                             ]);
     }

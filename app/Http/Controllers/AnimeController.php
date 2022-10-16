@@ -8,12 +8,77 @@ use App\Models\Anime;
 use App\Models\PopularAnime;
 use App\Models\HorrorAnime;
 use App\Models\RankedAnime;
+use App\Models\TopAiringAnime;
+
 
 
 
 
 class AnimeController extends Controller
 {
+
+
+    public function topAiringAnimeInsert()
+    {
+       
+        
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://api.jikan.moe/v4/top/anime?filter=airing&limit=25',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'GET',
+        ));
+
+        $topAiringAnime = [];
+
+        $response = curl_exec($curl);
+
+        curl_close($curl);
+       
+        $topAiringAnime = json_decode($response, true);
+
+
+        if(isset($topAiringAnime['data'])){
+            
+            $data =  $topAiringAnime['data'];
+        }
+
+         // insert top airing anime
+
+
+            $topAiringAnime  = $data;
+            DB::table('top_airing_animes')->truncate(); //empty table before inserting latest data
+
+            foreach($topAiringAnime as $key => $topAiring)
+            {
+               
+               $AnimeInformation = TopAiringAnime::insert(
+                   [
+                    
+                       'anime_id' =>  $topAiringAnime[$key]['mal_id'],
+                       'japanese_title' => $topAiringAnime[$key]['title_japanese'],
+                       'english_title' => $topAiringAnime[$key]['title_english'],
+                       'anime_image' => $topAiringAnime[$key]['images']['jpg']['large_image_url'],
+           
+                     ]
+              
+   
+               );
+                
+                                
+            }
+
+
+        
+
+    }
+
 
     public function popularAnimeInsert($page)
     {

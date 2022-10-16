@@ -129,6 +129,38 @@
 <!-- Recent Reviews -->
 
 
+
+<!-- This Week Top Airing Anime -->
+
+
+<div class="container mt-5 ">
+    <div class="row">
+        <div class="col-lg-10 col-8">
+            <h2 class="title-bg-homepage">This Week Top Airing Anime</h2>
+           
+        </div>
+
+        <!-- <div class="col-lg-2 col-4">
+            <a href="" class="view-all-text">View All</a>
+        </div> -->
+
+
+    </div>
+
+    <div class="col-lg-12">
+        <hr>
+        </div>
+
+        
+        @include('components.topAiringAnimeList')
+
+
+</div>
+
+
+<!-- This Week Top Airing Anime -->
+
+
 <!-- Top Ranked Anime -->
 
 
