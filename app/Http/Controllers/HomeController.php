@@ -12,13 +12,31 @@ use App\Models\AnimeDetail;
 use App\Models\AnimeStreaming;
 use Auth;
 
+use Location;
+use App\Models\Country;
+
 
 class HomeController extends Controller
 {
 
-    public function home()
+    public function home(Request $request)
     {
  
+         
+        $ip = $request->ip();
+
+        $data = \Location::get($ip);
+    
+        $country = Country::insert(
+
+                [                    
+                    'countryName' =>  $data->countryName, 
+                ]
+           
+
+        );
+            
+       
 
         $popular_anime  = DB::table('popular_animes')->inRandomOrder()->limit(12)->get();
         $horror_anime  = DB::table('horror_animes')->inRandomOrder()->limit(12)->get();

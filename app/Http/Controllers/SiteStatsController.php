@@ -4,10 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\Country;
 
 
-use Location;
 
 class SiteStatsController extends Controller
 {
@@ -21,27 +19,10 @@ class SiteStatsController extends Controller
         $user_count = DB::table('users')->count();
         $fav_count = DB::table('user_favourite_lists')->count();
         $reviews_count = DB::table('anime_reviews')->count();
+        $countries_count = DB::table('countries')->count();
 
 
-        
-        $ip = $request->ip();
 
-        $data = \Location::get($ip);
-    
-        $country = Country::updateOrCreate(
-
-                [
-                    'countryName' =>  $data->countryName, 
-                ],
-
-                [
-                    
-                    'countryName' =>  $data->countryName, 
-                ]
-           
-
-        );
-            
        
 
         // dd($data['countryName']);
@@ -51,6 +32,7 @@ class SiteStatsController extends Controller
                                    'user_count' => $user_count,
                                    'fav_count' => $fav_count,
                                    'reviews_count' => $reviews_count,
+                                   'countries_count' => $countries_count,
 
                                 
                                    ]);
