@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+use Location;
+
 class SiteStatsController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         // searches counter
 
@@ -18,6 +20,13 @@ class SiteStatsController extends Controller
         $fav_count = DB::table('user_favourite_lists')->count();
         $reviews_count = DB::table('anime_reviews')->count();
 
+
+        
+        $ip = $request->ip();
+
+        $data = \Location::get($ip);
+    
+        dd($data);
 
         return view('site_stats', ['count' => $count, 
                                    'anime_count' => $anime_count,
@@ -31,6 +40,8 @@ class SiteStatsController extends Controller
         // reviews counter
 
         // users counter
+
+
 
 
     }
