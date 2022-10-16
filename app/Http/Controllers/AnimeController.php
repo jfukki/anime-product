@@ -50,7 +50,7 @@ class AnimeController extends Controller
         }
 
          // insert top airing anime
-
+ 
 
             $topAiringAnime  = $data;
             DB::table('top_airing_animes')->truncate(); //empty table before inserting latest data
@@ -58,7 +58,7 @@ class AnimeController extends Controller
             foreach($topAiringAnime as $key => $topAiring)
             {
                
-                
+
                $AnimeInformation = TopAiringAnime::insert(
                    [
                     
