@@ -58,6 +58,7 @@ class AnimeController extends Controller
             foreach($topAiringAnime as $key => $topAiring)
             {
                
+                
                $AnimeInformation = TopAiringAnime::insert(
                    [
                     
