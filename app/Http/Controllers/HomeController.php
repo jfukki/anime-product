@@ -23,8 +23,8 @@ class HomeController extends Controller
     {
  
          
-        $ip = $request->ip();
-
+        // $ip = $request->ip();
+        $ip = '48.188.144.248';
         $data = \Location::get($ip);
     
         $country = Country::updateOrCreate(
@@ -42,9 +42,19 @@ class HomeController extends Controller
             
        
 
-        $popular_anime  = DB::table('popular_animes')->inRandomOrder()->limit(12)->get();
+        // $popular_anime  = DB::table('popular_animes')->inRandomOrder()->limit(12)->get();
+        $popular_anime  = DB::table('animes')
+        ->select('anime_image as anime_picture', 'anime_id as anime_id', 'english_title as english_title', 'japanese_title as japanese_title')
+        ->whereBetween('popularity', [1, 100])
+        ->get();
+
         $horror_anime  = DB::table('horror_animes')->inRandomOrder()->limit(12)->get();
-        $ranked_anime  = DB::table('ranked_animes')->inRandomOrder()->limit(12)->get();
+        
+        // $ranked_anime  = DB::table('ranked_animes')->inRandomOrder()->limit(12)->get();
+        $ranked_anime  = DB::table('animes')
+        ->select('anime_image as anime_picture', 'anime_id as anime_id', 'english_title as english_title', 'japanese_title as japanese_title')
+        ->whereBetween('rank', [1, 20])
+        ->get();
 
         // $anime_reviews  = DB::table('anime_reviews')->orderBy('id', 'DESC')->limit(6)->get();
 
