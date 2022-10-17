@@ -24,21 +24,21 @@ class HomeController extends Controller
  
          
         // $ip = $request->ip();
-        // $ip = '48.188.144.248';
-        // $data = \Location::get($ip);
+        $ip = '48.188.144.248';
+        $data = \Location::get($ip);
     
-        // $country = Country::updateOrCreate(
+        $country = Country::updateOrCreate(
 
-        //         [                    
-        //             'countryName' =>  $data->countryName, 
-        //         ],
+                [                    
+                    'countryName' =>  $data->countryName, 
+                ],
 
-        //         [                    
-        //             'countryName' =>  $data->countryName, 
-        //         ]
+                [                    
+                    'countryName' =>  $data->countryName, 
+                ]
            
 
-        // );
+        );
             
        
 
