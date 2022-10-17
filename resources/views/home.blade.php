@@ -232,28 +232,27 @@
 <!-- Horror Anime -->
 
 
-
+<!-- 
 <div class="container mt-5 " >
     <div class="row">
         <div class="col-lg-10 col-7">
             <h2 class="title-bg-homepage">Horror Anime</h2>
            
-        </div>
+        </div> -->
 
         <!-- <div class="col-lg-2  col-2">
             <a href="" class="view-all-text">View All</a>
         </div> -->
-        <div class="col-lg-12">
+        <!-- <div class="col-lg-12">
         <hr>
         </div>
 
     </div>
-
-    @include('components.horrorAnime')
-
+ 
 
 
-</div>
+
+</div> -->
 
      
   
