@@ -86,7 +86,7 @@
 
             @else
 
-                    <p class="text-center">No users yet!! Feeling SAD :/ </p>
+                    <p class="">No users yet!! Feeling SAD :/ </p>
 
              @endif 
 

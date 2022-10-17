@@ -48,7 +48,7 @@ class HomeController extends Controller
         ->whereBetween('popularity', [1, 50])
         ->inRandomOrder()->limit(12)->get();
 
-        $horror_anime  = DB::table('horror_animes')->inRandomOrder()->limit(12)->get();
+        // $horror_anime  = DB::table('horror_animes')->inRandomOrder()->limit(12)->get();
         
         // $ranked_anime  = DB::table('ranked_animes')->inRandomOrder()->limit(12)->get();
         $ranked_anime  = DB::table('animes')
@@ -86,7 +86,9 @@ class HomeController extends Controller
                     ->limit(6)->get();
 
 
-        return view('home', ['popular_anime' => $popular_anime, 'horror_anime' => $horror_anime , 'ranked_anime' => $ranked_anime ,
+        return view('home', [
+                            'popular_anime' => $popular_anime, 
+                            'ranked_anime' => $ranked_anime ,
                              'anime_reviews' => $anime_reviews,
                              'new_users' => $new_users,
                              'top_airing_anime' => $top_airing_anime,
